@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "/81iOJz5JVEQkFSTreOV9vHksOwbTYVZsEegG5HvBSk=",
+  "Source": "HireWise.API",
+  "BasePath": "_content/HireWise.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HireWise.API\\wwwroot",
+      "Source": "HireWise.API",
+      "ContentRoot": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
+      "BasePath": "_content/HireWise.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\photo-images\\Files",
+      "SourceId": "HireWise.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
+      "BasePath": "_content/HireWise.API",
+      "RelativePath": "photo-images/Files",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photo-images\\Files"
+    }
+  ]
+}

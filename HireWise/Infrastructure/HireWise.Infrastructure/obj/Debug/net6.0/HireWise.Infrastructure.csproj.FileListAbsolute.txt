@@ -1,0 +1,17 @@
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Infrastructure.deps.json
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Infrastructure.dll
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Infrastructure.pdb
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Application.dll
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Domain.dll
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Application.pdb
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\bin\Debug\net6.0\HireWise.Domain.pdb
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.csproj.AssemblyReference.cache
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.AssemblyInfoInputs.cache
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.AssemblyInfo.cs
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.csproj.CoreCompileInputs.cache
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.csproj.CopyComplete
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.dll
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\refint\HireWise.Infrastructure.dll
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\HireWise.Infrastructure.pdb
+D:\HireWise\HireWise\Infrastructure\HireWise.Infrastructure\obj\Debug\net6.0\ref\HireWise.Infrastructure.dll
