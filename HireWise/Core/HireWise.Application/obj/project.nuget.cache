@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/QlNVGjj9WQNYkgdf8Ivk7ANfr72/EWOPriYvTS6fXQCbVpn5D/gnPSNzvGM18to8jDvJRexgC6R3VQHDs9nnw==",
+  "dgSpecHash": "6JSx6rSKWC+j0RH2fEuwQzv/YjfKF7yPrLoj9Fko4tLSmfmiCk5xvSFZIlrPid1SBDVtOoE1Dsb3K2nzZvwc4A==",
   "success": true,
-  "projectFilePath": "D:\\HireWise\\HireWise\\Core\\HireWise.Application\\HireWise.Application.csproj",
+  "projectFilePath": "C:\\Users\\Polater\\Documents\\GitHub\\hire-wise\\HireWise\\Core\\HireWise.Application\\HireWise.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Polater\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Polater\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

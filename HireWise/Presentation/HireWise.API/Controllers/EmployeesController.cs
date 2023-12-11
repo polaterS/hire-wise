@@ -74,7 +74,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
         public async Task<IActionResult> Post(CreateEmployeeCommandRequest createEmployeeCommandRequest)
         {
@@ -83,7 +83,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpPut]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Updating, Definition = "Update Employee")]
         public async Task<IActionResult> Put([FromBody]UpdateEmployeeCommandRequest updateEmployeeCommandRequest)
         {
@@ -92,7 +92,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpDelete("{Id}")]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Deleting, Definition = "Delete Employee")]
         public async Task<IActionResult> Delete([FromRoute] RemoveEmployeeCommandRequest removeEmployeeCommandRequest)
         {
@@ -101,7 +101,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpPost("[action]")]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Upload Employee File")]
         public async Task<IActionResult> Upload([FromQuery] UploadEmployeeImageCommandRequest uploadEmployeeImageCommandRequest)
         {
@@ -111,7 +111,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpGet("[Action]/{id}")]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Reading, Definition = "Get Employee Images")]
         public async Task<IActionResult> GetEmployeeImages([FromRoute] GetEmployeeImagesQueryRequest getEmployeeImagesQueryRequest)
         {
@@ -120,7 +120,7 @@ namespace HireWise.API.Controllers
         }
 
         [HttpDelete("[Action]/{Id}")]
-        [Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Deleting, Definition = "Delete Employee Image")]
         public async Task<IActionResult> DeleteEmployeeImage([FromRoute] RemoveEmployeeImageCommandRequest removeEmployeeImageCommandRequest, [FromQuery] string imageId)
         {

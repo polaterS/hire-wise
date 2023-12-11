@@ -10,3 +10,16 @@ D:\HireWise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.dll
 D:\HireWise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\refint\HireWise.Domain.dll
 D:\HireWise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.pdb
 D:\HireWise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\ref\HireWise.Domain.dll
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\bin\Debug\net6.0\HireWise.Domain.deps.json
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\bin\Debug\net6.0\HireWise.Domain.dll
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\bin\Debug\net6.0\HireWise.Domain.pdb
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.csproj.AssemblyReference.cache
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.AssemblyInfoInputs.cache
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.AssemblyInfo.cs
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.sourcelink.json
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.dll
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\refint\HireWise.Domain.dll
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\HireWise.Domain.pdb
+C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Domain\obj\Debug\net6.0\ref\HireWise.Domain.dll

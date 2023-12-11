@@ -2,13 +2,9 @@
 using HireWise.Application.Enums;
 using HireWise.Application.Features.Commands.AppUser.AssignRoleToUser;
 using HireWise.Application.Features.Commands.AppUser.CreateUser;
-using HireWise.Application.Features.Commands.AppUser.LoginUser;
-using HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint;
 using HireWise.Application.Features.Queries.AppUser.GetAllUsers;
 using HireWise.Application.Features.Queries.AppUser.GetRolesToUser;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HireWise.API.Controllers
@@ -29,14 +25,6 @@ namespace HireWise.API.Controllers
             CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
             return Ok(response);
         }
-
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
-        {
-            LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
-            return Ok(response);
-        }
-
         [HttpGet]
         //[Authorize(AuthenticationSchemes = "Admin")]
         [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get All Users", Menu = "Users")]

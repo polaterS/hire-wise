@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/81iOJz5JVEQkFSTreOV9vHksOwbTYVZsEegG5HvBSk=",
+  "Hash": "MPvN2BbGXPHWkFhbBuNjHnI9qe9MCqEq1AOCpqTPyAk=",
   "Source": "HireWise.API",
   "BasePath": "_content/HireWise.API",
   "Mode": "Default",
@@ -10,22 +10,24 @@
     {
       "Name": "HireWise.API\\wwwroot",
       "Source": "HireWise.API",
-      "ContentRoot": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Polater\\Documents\\GitHub\\hire-wise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
       "BasePath": "_content/HireWise.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\photo-images\\Files",
+      "Identity": "C:\\Users\\Polater\\Documents\\GitHub\\hire-wise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\photo-images\\Files",
       "SourceId": "HireWise.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\HireWise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Polater\\Documents\\GitHub\\hire-wise\\HireWise\\Presentation\\HireWise.API\\wwwroot\\",
       "BasePath": "_content/HireWise.API",
       "RelativePath": "photo-images/Files",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
