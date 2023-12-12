@@ -17391,3 +17391,118 @@ Content-Type: application/json; charset=utf-8
 2023-12-11 21:59:05.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.5549ms
 2023-12-11 21:59:05.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
 2023-12-11 21:59:05.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.0101ms
+2023-12-12 12:42:22.013 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 12:42:23.183 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-12 12:42:23.184 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-12 12:42:23.189 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 12:42:23.191 +03:00 [INF] Hosting environment: Development
+2023-12-12 12:42:23.192 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-12 12:42:26.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-12 12:42:26.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 387.1441ms
+2023-12-12 12:42:26.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 12:42:26.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-12 12:42:26.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 9.0057ms
+2023-12-12 12:42:26.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.5683ms
+2023-12-12 12:42:27.061 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-12 12:42:27.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 364.8848ms
+2023-12-12 12:46:02.845 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 263
+2023-12-12 12:46:02.868 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 263
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-12 12:46:02.876 +03:00 [INF] CORS policy execution successful.
+2023-12-12 12:46:02.902 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.Post (HireWise.API)'
+2023-12-12 12:46:03.697 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController (HireWise.API).
+2023-12-12 12:46:03.776 +03:00 [INF] RequestBody: {
+  "firstName": "adsasd",
+  "lastName": "asdasdas",
+  "email": "suheybpolater@gmail.commm",
+  "phone": "0534444444",
+  "dateOfBirth": "2023-12-12T09:45:38.662Z",
+  "citizenshipNumber": "654854984984",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1
+}
+2023-12-12 12:49:54.970 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 12:50:02.580 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 12:50:02.839 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-12 12:50:02.840 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-12 12:50:02.843 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 12:50:02.845 +03:00 [INF] Hosting environment: Development
+2023-12-12 12:50:02.846 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-12 12:50:03.212 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-12 12:50:03.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 184.7123ms
+2023-12-12 12:50:03.403 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 12:50:03.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 3.7367ms
+2023-12-12 12:50:03.411 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-12 12:50:03.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.5896ms
+2023-12-12 12:50:03.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-12 12:50:03.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.1648ms
+2023-12-12 12:50:19.056 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 235
+2023-12-12 12:50:19.078 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 235
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-12 12:50:19.085 +03:00 [INF] CORS policy execution successful.
+2023-12-12 12:50:19.111 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.Post (HireWise.API)'
+2023-12-12 12:50:19.386 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController (HireWise.API).
+2023-12-12 12:50:19.427 +03:00 [INF] RequestBody: {
+  "firstName": "asdasd",
+  "lastName": "dasdasd",
+  "email": "asdasd",
+  "phone": "asdasdas",
+  "dateOfBirth": "2023-12-12T09:50:07.628Z",
+  "citizenshipNumber": "sadasd",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1
+}
+2023-12-12 12:50:20.994 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-12 12:50:21.447 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10)
+RETURNING "Id";
+2023-12-12 12:50:21.588 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2023-12-12 12:50:21.595 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.Post (HireWise.API) in 2199.3698ms
+2023-12-12 12:50:21.598 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.Post (HireWise.API)'
+2023-12-12 12:50:21.604 +03:00 [INF] Response:
+StatusCode: 201
+2023-12-12 12:50:21.609 +03:00 [INF] HTTP POST /api/Employees responded 201 in 2535.5226 ms
+2023-12-12 12:50:21.633 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 235 - 201 0 - 2576.7504ms

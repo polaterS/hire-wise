@@ -73,9 +73,9 @@ namespace HireWise.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost]
         //[Authorize(AuthenticationSchemes = "Admin")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
+        //[AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
+        [HttpPost]
         public async Task<IActionResult> Post(CreateEmployeeCommandRequest createEmployeeCommandRequest)
         {
             CreateEmployeeCommandResponse response = await _mediator.Send(createEmployeeCommandRequest);
