@@ -30,7 +30,7 @@ builder.Services.AddStorage<LocalStorage>();
 //builder.Services.AddStorage(StorageType.Azure);
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy=>policy
-.WithOrigins("https://localhost:7298", "https://localhost:52849")
+.WithOrigins("http://localhost:3000", "https://localhost:7298", "https://localhost:52849")
 .AllowAnyMethod()
 .AllowAnyOrigin()
 ));
@@ -138,7 +138,7 @@ app.UseSerilogRequestLogging();
 app.UseStaticFiles();
 
 app.UseHttpLogging();
-app.UseCors();
+app.UseCors("AllowSpecificOrigin");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
