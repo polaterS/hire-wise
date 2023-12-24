@@ -27,9 +27,9 @@ namespace HireWise.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest)
         {
-            assignRoleEndpointCommandRequest.Type = typeof(Program);
             AssignRoleEndpointCommandResponse response = await _mediator.Send(assignRoleEndpointCommandRequest);
             return Ok(response);
         }
+
     }
 }

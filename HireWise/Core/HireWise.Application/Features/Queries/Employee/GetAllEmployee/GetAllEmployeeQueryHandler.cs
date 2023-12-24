@@ -23,7 +23,6 @@ namespace HireWise.Application.Features.Queries.Employee.GetAllEmployee
                 e.CitizenshipNumber,
                 e.CreatedDate,
                 e.UpdatedDate,
-                e.Roles
             }).ToList();
             var totalEmployeeCount = employees.Count;
 

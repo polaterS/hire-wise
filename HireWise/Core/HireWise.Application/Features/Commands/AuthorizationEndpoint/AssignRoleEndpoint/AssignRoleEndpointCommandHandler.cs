@@ -1,5 +1,7 @@
 ﻿using HireWise.Application.Abstractions.Services;
 using MediatR;
+using System;
+using System.Reflection;
 
 namespace HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint
 {
@@ -15,7 +17,6 @@ namespace HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRol
         public async Task<AssignRoleEndpointCommandResponse> Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken)
         {
             await _authorizationEndpointService.AssignRoleEndpointAsync(request.Roles, request.Menu, request.Code, request.Type);
-
             return new()
             {
 

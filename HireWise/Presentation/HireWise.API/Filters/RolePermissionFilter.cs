@@ -20,7 +20,7 @@ namespace HireWise.API.Filters
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             var name = context.HttpContext.User.Identity?.Name;
-            if (!string.IsNullOrEmpty(name) && name != "polaterrrr")
+            if (!string.IsNullOrEmpty(name) && name != "admin")
             {
                 var descriptor = context.ActionDescriptor as ControllerActionDescriptor;
                 var attribute = descriptor.MethodInfo.GetCustomAttribute(typeof(AuthorizeDefinitionAttribute)) as AuthorizeDefinitionAttribute;

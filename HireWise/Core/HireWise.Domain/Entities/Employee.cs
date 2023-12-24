@@ -20,7 +20,6 @@ namespace HireWise.Domain.Entities
         public ICollection<EmployeeImageFile> EmployeeImageFiles { get; set; }
         public ICollection<Language> Languages { get; set; }
         public ICollection<Address> Addresses { get; set; }
-        public ICollection<AppRole>Roles  { get; set; }
         public ICollection<Family> Families { get; set; }
         public ICollection<SchoolExperience> SchoolExperiences { get; set; }
         public ICollection<WorkExperience> WorkExperiences { get; set; }

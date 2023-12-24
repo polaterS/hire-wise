@@ -3,7 +3,6 @@ using HireWise.Application.Abstractions.Storage;
 using HireWise.Application.Consts;
 using HireWise.Application.CutomAttributes;
 using HireWise.Application.Enums;
-using HireWise.Application.Features.Commands.Employee.AddRoleEmployee;
 using HireWise.Application.Features.Commands.Employee.CreateEmployee;
 using HireWise.Application.Features.Commands.Employee.RemoveEmployee;
 using HireWise.Application.Features.Commands.Employee.UpdateEmployee;
@@ -13,11 +12,10 @@ using HireWise.Application.Features.Queries.Employee.GetAllEmployee;
 using HireWise.Application.Features.Queries.Employee.GetByIdEmployee;
 using HireWise.Application.Features.Queries.EmployeeImageFile.GetEmployeeImages;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace HireWise.API.Controllers
+namespace HireWise.API.Controllers.EmployeesController
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -74,7 +72,7 @@ namespace HireWise.API.Controllers
         }
 
         //[Authorize(AuthenticationSchemes = "Admin")]
-        //[AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
         [HttpPost]
         public async Task<IActionResult> Post(CreateEmployeeCommandRequest createEmployeeCommandRequest)
         {

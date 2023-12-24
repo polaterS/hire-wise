@@ -5,6 +5,7 @@ using HireWise.Application.Features.Commands.AppUser.CreateUser;
 using HireWise.Application.Features.Queries.AppUser.GetAllUsers;
 using HireWise.Application.Features.Queries.AppUser.GetRolesToUser;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HireWise.API.Controllers
@@ -26,7 +27,7 @@ namespace HireWise.API.Controllers
             return Ok(response);
         }
         [HttpGet]
-        //[Authorize(AuthenticationSchemes = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get All Users", Menu = "Users")]
         public async Task<IActionResult> GetAllUsers([FromQuery] GetAllUsersQueryRequest getAllUsersQueryRequest)
         {
