@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireWise.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7ebd1dda3f22f9157908f1cea199d47ede11ee8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b805a3f677c204a77c280b2b9ac0d6d7b4fa2696")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireWise.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireWise.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

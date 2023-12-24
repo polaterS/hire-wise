@@ -25,7 +25,8 @@ namespace HireWise.Persistence.Context
         public DbSet<EmployeeImageFile> EmployeeImageFiles { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Endpoint> Endpoints { get; set; }
-         
+        public DbSet<Position> Positions { get; set; }
+
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var datas = ChangeTracker.Entries<BaseEntity>();

@@ -20903,3 +20903,70 @@ StatusCode: 404
 2023-12-21 17:01:39.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.8149ms
 2023-12-21 17:01:40.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
 2023-12-21 17:01:40.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 222.6408ms
+2023-12-24 19:40:12.880 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 19:40:14.045 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 19:40:14.055 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 19:40:14.061 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 19:40:14.062 +03:00 [INF] Hosting environment: Development
+2023-12-24 19:40:14.064 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 19:40:16.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 19:40:17.016 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 664.9755ms
+2023-12-24 19:40:17.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 19:40:17.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 19:40:17.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 36.0702ms
+2023-12-24 19:40:17.516 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 349.6952ms
+2023-12-24 19:40:18.003 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 19:40:18.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 878.2950ms
+2023-12-24 19:40:33.616 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Auth/Login application/json 59
+2023-12-24 19:40:33.650 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 59
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 19:40:33.666 +03:00 [INF] CORS policy execution successful.
+2023-12-24 19:40:33.713 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthController.Login (HireWise.API)'
+2023-12-24 19:40:34.473 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HireWise.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller HireWise.API.Controllers.AuthController (HireWise.API).
+2023-12-24 19:40:34.588 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "admin",
+  "password": "Ankara06."
+}
+2023-12-24 19:40:37.327 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-24 19:40:38.505 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-12-24 19:40:39.491 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-12-24 19:40:39.871 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2023-12-24 19:40:40.012 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2023-12-24 19:40:40.031 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 19:40:40.049 +03:00 [INF] Executed action HireWise.API.Controllers.AuthController.Login (HireWise.API) in 5556.6518ms
+2023-12-24 19:40:40.059 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthController.Login (HireWise.API)'
+2023-12-24 19:40:40.068 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJuYmYiOjE3MDM0MzYwMzgsImV4cCI6MTcwMzQzNjA1MywiaXNzIjoid3d3LmhpcmV3aXNlYXBpLmNvbSIsImF1ZCI6Ind3dy5oaXJld2lzZS5jb20ifQ.Fq57zKU-XW0UXE5-29OeZJVNTrsgdKq1x6UBwHsmApI","expiration":"2023-12-24T16:40:53.9833589Z","refreshToken":"oxq3B9Z9fknnLDqkH3/NvmQZ64ozqNSD2waHTLeNzqc="}}
+2023-12-24 19:40:40.078 +03:00 [INF] HTTP POST /api/Auth/Login responded 200 in 6437.6725 ms
+2023-12-24 19:40:40.116 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Auth/Login application/json 59 - 200 - application/json;+charset=utf-8 6500.1112ms
