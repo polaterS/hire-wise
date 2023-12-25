@@ -20970,3 +20970,968 @@ Content-Type: application/json; charset=utf-8
 2023-12-24 19:40:40.068 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJuYmYiOjE3MDM0MzYwMzgsImV4cCI6MTcwMzQzNjA1MywiaXNzIjoid3d3LmhpcmV3aXNlYXBpLmNvbSIsImF1ZCI6Ind3dy5oaXJld2lzZS5jb20ifQ.Fq57zKU-XW0UXE5-29OeZJVNTrsgdKq1x6UBwHsmApI","expiration":"2023-12-24T16:40:53.9833589Z","refreshToken":"oxq3B9Z9fknnLDqkH3/NvmQZ64ozqNSD2waHTLeNzqc="}}
 2023-12-24 19:40:40.078 +03:00 [INF] HTTP POST /api/Auth/Login responded 200 in 6437.6725 ms
 2023-12-24 19:40:40.116 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Auth/Login application/json 59 - 200 - application/json;+charset=utf-8 6500.1112ms
+2023-12-24 21:14:11.256 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 21:14:11.489 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 21:14:11.490 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 21:14:11.492 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 21:14:11.493 +03:00 [INF] Hosting environment: Development
+2023-12-24 21:14:11.494 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 21:14:11.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 21:14:12.092 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 191.2738ms
+2023-12-24 21:14:12.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 21:14:12.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 21:14:12.110 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.2790ms
+2023-12-24 21:14:12.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.5995ms
+2023-12-24 21:14:12.286 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 21:14:12.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 228.6378ms
+2023-12-24 21:14:28.492 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Auth/Login application/json 59
+2023-12-24 21:14:28.504 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 59
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:14:28.508 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:14:28.521 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthController.Login (HireWise.API)'
+2023-12-24 21:14:28.690 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HireWise.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller HireWise.API.Controllers.AuthController (HireWise.API).
+2023-12-24 21:14:28.712 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "admin",
+  "password": "Ankara06."
+}
+2023-12-24 21:14:29.584 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-24 21:14:29.921 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-12-24 21:14:30.158 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-12-24 21:14:30.261 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2023-12-24 21:14:30.312 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2023-12-24 21:14:30.320 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 21:14:30.330 +03:00 [INF] Executed action HireWise.API.Controllers.AuthController.Login (HireWise.API) in 1631.6586ms
+2023-12-24 21:14:30.333 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthController.Login (HireWise.API)'
+2023-12-24 21:14:30.336 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJuYmYiOjE3MDM0NDE2NzAsImV4cCI6MTcwMzQ0MTk3MCwiaXNzIjoid3d3LmhpcmV3aXNlYXBpLmNvbSIsImF1ZCI6Ind3dy5oaXJld2lzZS5jb20ifQ.q2UgYdl0Sm2Kn571t1-smTzfNUk_8Y6Z6Qmv4xrJeNE","expiration":"2023-12-24T18:19:30.0529653Z","refreshToken":"IPRXlpgGIBexV65tlBLvZSrb+HTr7vgGcz4s4uVQaVo="}}
+2023-12-24 21:14:30.339 +03:00 [INF] HTTP POST /api/Auth/Login responded 200 in 1837.9566 ms
+2023-12-24 21:14:30.350 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Auth/Login application/json 59 - 200 - application/json;+charset=utf-8 1858.2874ms
+2023-12-24 21:20:18.521 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 21:20:18.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 14.8974ms
+2023-12-24 21:20:18.562 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 21:20:18.564 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 21:20:18.570 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.7683ms
+2023-12-24 21:20:18.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.6094ms
+2023-12-24 21:20:18.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 21:20:18.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - -
+2023-12-24 21:20:18.780 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-12-24 21:20:18.782 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - - - 200 628 image/png 12.5470ms
+2023-12-24 21:20:18.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 28.0609ms
+2023-12-24 21:22:33.842 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 21:22:34.091 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 21:22:34.092 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 21:22:34.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 21:22:34.095 +03:00 [INF] Hosting environment: Development
+2023-12-24 21:22:34.096 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 21:22:37.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 21:22:37.736 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 183.8544ms
+2023-12-24 21:22:37.752 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 21:22:37.752 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 21:22:37.758 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.8551ms
+2023-12-24 21:22:37.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.7501ms
+2023-12-24 21:22:37.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 21:22:37.991 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.3140ms
+2023-12-24 21:25:48.054 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 147
+2023-12-24 21:25:48.064 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/AuthorizationEndpoints
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 147
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:25:48.069 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:25:48.096 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:25:48.313 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandRequest) on controller HireWise.API.Controllers.AuthorizationEndpointsController (HireWise.API).
+2023-12-24 21:25:48.345 +03:00 [INF] RequestBody: {
+  "roles": [
+    "admin"
+  ],
+  "code": "string",
+  "menu": "Departments",
+  "typeIdentifier": "HireWise.API.Controllers.DepartmentsController"
+}
+2023-12-24 21:25:48.524 +03:00 [INF] Executed action HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API) in 201.3888ms
+2023-12-24 21:25:48.529 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:25:48.550 +03:00 [ERR] HTTP POST /api/AuthorizationEndpoints responded 500 in 487.8458 ms
+System.ArgumentException: Provided TypeIdentifier is not a valid type
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-12-24 21:25:48.673 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Provided TypeIdentifier is not a valid type
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-24 21:25:48.688 +03:00 [ERR] Provided TypeIdentifier is not a valid type
+2023-12-24 21:25:48.704 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 147 - 500 - application/json 649.9954ms
+2023-12-24 21:28:35.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices - -
+2023-12-24 21:28:35.110 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:28:35.112 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:28:35.131 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 21:28:35.151 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HireWise.Application.Dto.Configuration.Menu, HireWise.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-24 21:28:35.158 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 21:28:35.160 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 23.7502ms
+2023-12-24 21:28:35.167 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:28:35.169 +03:00 [INF] ResponseBody: [{"name":"Application Services","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get Authorize Definition Endpoints","code":"GET.Reading.GetAuthorizeDefinitionEndpoints"}]},{"name":"Roles","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get Roles","code":"GET.Reading.GetRoles"},{"actionType":"Reading","httpType":"GET","definition":"Get Role By Id","code":"GET.Reading.GetRoleById"},{"actionType":"Writing","httpType":"POST","definition":"Create Role","code":"POST.Writing.CreateRole"},{"actionType":"Updating","httpType":"PUT","definition":"Update Role","code":"PUT.Updating.UpdateRole"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Role","code":"DELETE.Deleting.DeleteRole"}]},{"name":"Users","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get All Users","code":"GET.Reading.GetAllUsers"},{"actionType":"Reading","httpType":"GET","definition":"Get Roles To Users","code":"GET.Reading.GetRolesToUsers"},{"actionType":"Reading","httpType":"POST","definition":"Assign Role To User","code":"POST.Reading.AssignRoleToUser"}]},{"name":"Employees","actions":[{"actionType":"Writing","httpType":"POST","definition":"Create Employee","code":"POST.Writing.CreateEmployee"},{"actionType":"Updating","httpType":"PUT","definition":"Update Employee","code":"PUT.Updating.UpdateEmployee"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Employee","code":"DELETE.Deleting.DeleteEmployee"},{"actionType":"Writing","httpType":"POST","definition":"Upload Employee File","code":"POST.Writing.UploadEmployeeFile"},{"actionType":"Reading","httpType":"GET","definition":"Get Employee Images","code":"GET.Reading.GetEmployeeImages"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Employee Image","code":"DELETE.Deleting.DeleteEmployeeImage"}]}]
+2023-12-24 21:28:35.171 +03:00 [INF] HTTP GET /api/ApplicationServices responded 200 in 61.0156 ms
+2023-12-24 21:28:35.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 66.4723ms
+2023-12-24 21:30:32.191 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 154
+2023-12-24 21:30:32.194 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/AuthorizationEndpoints
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 154
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:30:32.197 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:30:32.203 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:30:32.231 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandRequest) on controller HireWise.API.Controllers.AuthorizationEndpointsController (HireWise.API).
+2023-12-24 21:30:32.237 +03:00 [INF] RequestBody: {
+  "roles": ["Admin"],
+  "code": "POST.Writing.CreateRole",
+  "menu": "RolesManagement",
+  "typeIdentifier": "YourApp.API.Controllers.RolesController"
+}
+
+2023-12-24 21:30:32.319 +03:00 [INF] Executed action HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API) in 82.444ms
+2023-12-24 21:30:32.321 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:30:32.340 +03:00 [ERR] HTTP POST /api/AuthorizationEndpoints responded 500 in 146.9069 ms
+System.ArgumentException: Provided TypeIdentifier is not a valid type
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-12-24 21:30:32.349 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Provided TypeIdentifier is not a valid type
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 23
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-24 21:30:32.356 +03:00 [ERR] Provided TypeIdentifier is not a valid type
+2023-12-24 21:30:32.357 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 154 - 500 - application/json 166.1414ms
+2023-12-24 21:52:00.503 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 21:52:00.727 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 21:52:00.729 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 21:52:00.731 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 21:52:00.731 +03:00 [INF] Hosting environment: Development
+2023-12-24 21:52:00.732 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 21:52:01.227 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 21:52:01.404 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 180.4049ms
+2023-12-24 21:52:01.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 21:52:01.421 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 21:52:01.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.1925ms
+2023-12-24 21:52:01.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.6227ms
+2023-12-24 21:52:01.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 21:52:01.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.2764ms
+2023-12-24 21:52:35.498 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 111
+2023-12-24 21:52:35.516 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/AuthorizationEndpoints
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 111
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:52:35.522 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:52:35.542 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:52:35.784 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandRequest) on controller HireWise.API.Controllers.AuthorizationEndpointsController (HireWise.API).
+2023-12-24 21:52:35.807 +03:00 [INF] RequestBody: {
+  "roles": ["Admin"],
+  "code": "POST.Writing.CreateRole",
+  "menu": "RolesManagement",
+  "endpointType": 1
+}
+2023-12-24 21:52:36.946 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-24 21:52:37.335 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__menu_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."CreatedDate", m."Name", m."UpdatedDate"
+FROM "Menus" AS m
+WHERE m."Name" = @__menu_0
+LIMIT 1
+2023-12-24 21:52:37.604 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Menus" ("CreatedDate", "Name", "UpdatedDate")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2023-12-24 21:52:37.920 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t."CreatedDate0", t."Name", t."UpdatedDate0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE (e."Code" = @__code_0) AND (m."Name" = @__menu_1)
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2023-12-24 21:52:38.119 +03:00 [INF] Executed action HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API) in 2326.4709ms
+2023-12-24 21:52:38.125 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:52:38.241 +03:00 [ERR] HTTP POST /api/AuthorizationEndpoints responded 500 in 2727.9793 ms
+System.ArgumentException: Unknown EndpointType
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.ResolveEndpointTypeToControllerType(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 25
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.GetAuthorizeDefinitionEndpoints(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 31
+   at HireWise.Persistence.Services.AuthorizationEndpointService.AssignRoleEndpointAsync(String[] roles, String menu, String code, EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Services\AuthorizationEndpointService.cs:line 53
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 19
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-12-24 21:52:38.346 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Unknown EndpointType
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.ResolveEndpointTypeToControllerType(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 25
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.GetAuthorizeDefinitionEndpoints(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 31
+   at HireWise.Persistence.Services.AuthorizationEndpointService.AssignRoleEndpointAsync(String[] roles, String menu, String code, EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Services\AuthorizationEndpointService.cs:line 53
+   at HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandHandler.Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\AuthorizationEndpoint\AssignRoleEndpoint\AssignRoleEndpointCommandHandler.cs:line 19
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint(AssignRoleEndpointCommandRequest assignRoleEndpointCommandRequest) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\AuthorizationEndpointsController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-24 21:52:38.362 +03:00 [ERR] Unknown EndpointType
+2023-12-24 21:52:38.385 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 111 - 500 - application/json 2886.5912ms
+2023-12-24 21:52:44.286 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints application/json 111
+2023-12-24 21:52:44.293 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/AuthorizationEndpoints
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 111
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:52:44.295 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:52:44.296 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (HireWise.API)'
+2023-12-24 21:52:44.309 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint.AssignRoleEndpointCommandRequest) on controller HireWise.API.Controllers.AuthorizationEndpointsController (HireWise.API).
+2023-12-24 21:52:44.313 +03:00 [INF] RequestBody: {
+  "roles": ["Admin"],
+  "code": "POST.Writing.CreateRole",
+  "menu": "RolesManagement",
+  "endpointType": 0
+}
+2023-12-24 21:52:44.357 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-24 21:52:44.370 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__menu_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."CreatedDate", m."Name", m."UpdatedDate"
+FROM "Menus" AS m
+WHERE m."Name" = @__menu_0
+LIMIT 1
+2023-12-24 21:52:44.392 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t."CreatedDate0", t."Name", t."UpdatedDate0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE (e."Code" = @__code_0) AND (m."Name" = @__menu_1)
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2023-12-24 21:54:53.759 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 21:54:54.007 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 21:54:54.008 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 21:54:54.011 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 21:54:54.012 +03:00 [INF] Hosting environment: Development
+2023-12-24 21:54:54.013 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 21:54:54.287 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 21:54:54.474 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 190.0606ms
+2023-12-24 21:54:54.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 21:54:54.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.4904ms
+2023-12-24 21:54:54.498 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 21:54:54.545 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.4560ms
+2023-12-24 21:54:54.662 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 21:54:54.787 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.2428ms
+2023-12-24 21:55:05.860 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 68
+2023-12-24 21:55:05.871 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/AuthorizationEndpoints/GetRolesToEndpoint
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 68
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:55:05.876 +03:00 [INF] CORS policy execution successful.
+2023-12-24 21:55:05.889 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (HireWise.API)'
+2023-12-24 21:55:06.049 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(HireWise.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoints.GetRolesToEndpointQueryRequest) on controller HireWise.API.Controllers.AuthorizationEndpointsController (HireWise.API).
+2023-12-24 21:55:06.070 +03:00 [INF] RequestBody: {
+  "code": "POST.Writing.CreateRole",
+  "menu": "RolesManagement"
+}
+2023-12-24 21:55:06.911 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-24 21:55:07.396 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE (e."Code" = @__code_0) AND (m."Name" = @__menu_1)
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2023-12-24 21:55:07.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoints.GetRolesToEndpointQueryResponse'.
+2023-12-24 21:55:07.441 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 21:55:07.449 +03:00 [INF] Executed action HireWise.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (HireWise.API) in 1393.423ms
+2023-12-24 21:55:07.451 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (HireWise.API)'
+2023-12-24 21:55:07.454 +03:00 [INF] ResponseBody: {"roles":null}
+2023-12-24 21:55:07.457 +03:00 [INF] HTTP POST /api/AuthorizationEndpoints/GetRolesToEndpoint responded 200 in 1589.5905 ms
+2023-12-24 21:55:07.469 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 68 - 200 - application/json;+charset=utf-8 1608.3076ms
+2023-12-24 21:55:30.528 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices - -
+2023-12-24 21:55:30.541 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:55:30.545 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:55:30.563 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints(System.String) on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 21:55:30.571 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2023-12-24 21:55:30.580 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2023-12-24 21:55:30.582 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 16.8605ms
+2023-12-24 21:55:30.589 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:55:30.591 +03:00 [INF] ResponseBody: [{"key":"endpointTypeName","value":["The endpointTypeName field is required."]}]
+2023-12-24 21:55:30.593 +03:00 [INF] HTTP GET /api/ApplicationServices responded 400 in 51.1652 ms
+2023-12-24 21:55:30.596 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices - - - 400 - application/json;+charset=utf-8 67.7277ms
+2023-12-24 21:56:23.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=RolesController - -
+2023-12-24 21:56:23.095 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:56:23.100 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:56:23.112 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints(System.String) on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 21:56:23.135 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HireWise.Application.Dto.Configuration.Menu, HireWise.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-24 21:56:23.141 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 21:56:23.145 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 28.0892ms
+2023-12-24 21:56:23.157 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:56:23.160 +03:00 [INF] ResponseBody: []
+2023-12-24 21:56:23.161 +03:00 [INF] HTTP GET /api/ApplicationServices responded 200 in 66.5174 ms
+2023-12-24 21:56:23.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=RolesController - - - 200 - application/json;+charset=utf-8 78.5623ms
+2023-12-24 21:56:36.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=EmployeesController - -
+2023-12-24 21:56:36.359 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:56:36.362 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:56:36.364 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints(System.String) on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 21:56:42.869 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 6500.3492ms
+2023-12-24 21:56:42.875 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:56:42.921 +03:00 [ERR] HTTP GET /api/ApplicationServices responded 500 in 6562.8049 ms
+System.ArgumentException: Unknown EndpointType
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.ResolveEndpointTypeToControllerType(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 25
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.GetAuthorizeDefinitionEndpoints(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 31
+   at HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints(String endpointTypeName) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\ApplicationServicesController.cs:line 28
+   at lambda_method54(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-12-24 21:56:42.976 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Unknown EndpointType
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.ResolveEndpointTypeToControllerType(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 25
+   at HireWise.Infrastructure.Services.Configurations.ApplicationService.GetAuthorizeDefinitionEndpoints(EndpointType endpointType) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Infrastructure\Services\Configurations\ApplicationService.cs:line 31
+   at HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints(String endpointTypeName) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\ApplicationServicesController.cs:line 28
+   at lambda_method54(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 151
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-24 21:56:43.006 +03:00 [ERR] Unknown EndpointType
+2023-12-24 21:56:43.013 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=EmployeesController - - - 500 - application/json 6658.1188ms
+2023-12-24 21:56:55.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=DepartmentsController - -
+2023-12-24 21:56:55.731 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 21:57:00.822 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:57:00.825 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints(System.String) on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 21:57:00.828 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-12-24 21:57:00.830 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: text/plain; charset=utf-8
+2023-12-24 21:57:00.831 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 3.7119ms
+2023-12-24 21:57:00.836 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 21:57:01.247 +03:00 [INF] ResponseBody: Invalid endpoint type.
+2023-12-24 21:57:01.249 +03:00 [INF] HTTP GET /api/ApplicationServices responded 400 in 5517.6423 ms
+2023-12-24 21:57:01.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices?endpointTypeName=DepartmentsController - - - 400 - text/plain;+charset=utf-8 5523.4398ms
+2023-12-24 22:34:36.028 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 22:34:36.262 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 22:34:36.263 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 22:34:36.265 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 22:34:36.266 +03:00 [INF] Hosting environment: Development
+2023-12-24 22:34:36.267 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 22:34:36.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 22:34:36.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 183.2860ms
+2023-12-24 22:34:36.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 22:34:36.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 22:34:36.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.8662ms
+2023-12-24 22:34:36.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.7047ms
+2023-12-24 22:34:36.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 22:34:37.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 215.9613ms
+2023-12-24 22:34:39.442 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/ApplicationServices - -
+2023-12-24 22:34:39.452 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/ApplicationServices
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-24 22:34:39.467 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 22:34:39.606 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller HireWise.API.Controllers.ApplicationServicesController (HireWise.API).
+2023-12-24 22:34:39.619 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HireWise.Application.Dto.Configuration.Menu, HireWise.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-24 22:34:39.624 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-24 22:34:39.630 +03:00 [INF] Executed action HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API) in 16.6558ms
+2023-12-24 22:34:39.635 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (HireWise.API)'
+2023-12-24 22:34:39.638 +03:00 [INF] ResponseBody: [{"name":"Application Services","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get Authorize Definition Endpoints","code":"GET.Reading.GetAuthorizeDefinitionEndpoints"}]},{"name":"Roles","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get Roles","code":"GET.Reading.GetRoles"},{"actionType":"Reading","httpType":"GET","definition":"Get Role By Id","code":"GET.Reading.GetRoleById"},{"actionType":"Writing","httpType":"POST","definition":"Create Role","code":"POST.Writing.CreateRole"},{"actionType":"Updating","httpType":"PUT","definition":"Update Role","code":"PUT.Updating.UpdateRole"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Role","code":"DELETE.Deleting.DeleteRole"}]},{"name":"Users","actions":[{"actionType":"Reading","httpType":"GET","definition":"Get All Users","code":"GET.Reading.GetAllUsers"},{"actionType":"Reading","httpType":"GET","definition":"Get Roles To Users","code":"GET.Reading.GetRolesToUsers"},{"actionType":"Reading","httpType":"POST","definition":"Assign Role To User","code":"POST.Reading.AssignRoleToUser"}]},{"name":"Employees","actions":[{"actionType":"Writing","httpType":"POST","definition":"Create Employee","code":"POST.Writing.CreateEmployee"},{"actionType":"Updating","httpType":"PUT","definition":"Update Employee","code":"PUT.Updating.UpdateEmployee"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Employee","code":"DELETE.Deleting.DeleteEmployee"},{"actionType":"Writing","httpType":"POST","definition":"Upload Employee File","code":"POST.Writing.UploadEmployeeFile"},{"actionType":"Reading","httpType":"GET","definition":"Get Employee Images","code":"GET.Reading.GetEmployeeImages"},{"actionType":"Deleting","httpType":"DELETE","definition":"Delete Employee Image","code":"DELETE.Deleting.DeleteEmployeeImage"}]}]
+2023-12-24 22:34:39.642 +03:00 [INF] HTTP GET /api/ApplicationServices responded 200 in 190.6232 ms
+2023-12-24 22:34:39.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 203.5642ms
+2023-12-24 22:47:03.424 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-24 22:47:03.704 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-24 22:47:03.705 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-24 22:47:03.708 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-24 22:47:03.709 +03:00 [INF] Hosting environment: Development
+2023-12-24 22:47:03.710 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-24 22:47:04.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-24 22:47:04.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 205.1460ms
+2023-12-24 22:47:04.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-24 22:47:04.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-24 22:47:04.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.3174ms
+2023-12-24 22:47:04.360 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.6243ms
+2023-12-24 22:47:04.459 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-24 22:47:04.688 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.2227ms
+2023-12-25 11:30:59.388 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-25 11:31:00.210 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-25 11:31:00.213 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-25 11:31:00.217 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 11:31:00.218 +03:00 [INF] Hosting environment: Development
+2023-12-25 11:31:00.219 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-25 11:31:01.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-25 11:31:01.570 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 273.3910ms
+2023-12-25 11:31:01.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 11:31:01.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.7293ms
+2023-12-25 11:31:01.584 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-25 11:31:03.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1927.4599ms
+2023-12-25 11:31:03.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-25 11:31:03.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 236.6611ms
+2023-12-25 11:31:17.967 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Positions - -
+2023-12-25 11:31:17.987 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Positions
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-25 11:31:18.011 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:31:18.477 +03:00 [INF] Route matched with {action = "Get", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Position.GetAllPosition.GetAllPositionQueryRequest) on controller HireWise.API.Controllers.PositionsController (HireWise.API).
+2023-12-25 11:31:19.824 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-25 11:31:20.191 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Positions" AS p
+2023-12-25 11:31:20.261 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-25 11:31:20.267 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-25 11:31:20.313 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name"
+FROM "Positions" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2023-12-25 11:31:20.330 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Position.GetAllPosition.GetAllPositionQueryResponse'.
+2023-12-25 11:31:20.343 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-25 11:31:20.353 +03:00 [INF] Executed action HireWise.API.Controllers.PositionsController.Get (HireWise.API) in 1861.7201ms
+2023-12-25 11:31:20.358 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:31:20.364 +03:00 [INF] ResponseBody: {"totalPositionCount":0,"positions":[]}
+2023-12-25 11:31:20.367 +03:00 [INF] HTTP GET /api/Positions responded 200 in 2383.6678 ms
+2023-12-25 11:31:20.386 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Positions - - - 200 - application/json;+charset=utf-8 2420.0350ms
+2023-12-25 11:32:07.016 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Positions application/json 33
+2023-12-25 11:32:07.023 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Positions
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 33
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-25 11:32:07.029 +03:00 [INF] CORS policy execution successful.
+2023-12-25 11:32:07.044 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.PositionsController.Post (HireWise.API)'
+2023-12-25 11:32:07.063 +03:00 [INF] Route matched with {action = "Post", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Position.CreatePosition.CreatePositionCommandRequest) on controller HireWise.API.Controllers.PositionsController (HireWise.API).
+2023-12-25 11:32:07.075 +03:00 [INF] RequestBody: {
+  "name": "Backend Developer"
+}
+2023-12-25 11:32:07.123 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-25 11:32:07.377 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Positions" ("CreatedDate", "Name", "UpdatedDate")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2023-12-25 11:32:07.481 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2023-12-25 11:32:07.486 +03:00 [INF] Executed action HireWise.API.Controllers.PositionsController.Post (HireWise.API) in 418.4173ms
+2023-12-25 11:32:07.494 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.PositionsController.Post (HireWise.API)'
+2023-12-25 11:32:07.499 +03:00 [INF] Response:
+StatusCode: 201
+2023-12-25 11:32:07.501 +03:00 [INF] HTTP POST /api/Positions responded 201 in 479.5263 ms
+2023-12-25 11:32:07.508 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Positions application/json 33 - 201 0 - 492.0568ms
+2023-12-25 11:32:32.989 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Positions/1 - -
+2023-12-25 11:32:32.997 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Positions/1
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-25 11:32:33.002 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:32:33.015 +03:00 [INF] Route matched with {action = "Get", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Position.GetByIdPosition.GetByIdPositionQueryRequest) on controller HireWise.API.Controllers.PositionsController (HireWise.API).
+2023-12-25 11:32:33.035 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-25 11:32:33.130 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."UpdatedDate"
+FROM "Positions" AS p
+WHERE p."Id" = @__Parse_0
+LIMIT 1
+2023-12-25 11:32:33.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Position.GetByIdPosition.GetByIdPositionQueryResponse'.
+2023-12-25 11:32:33.160 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-25 11:32:33.162 +03:00 [INF] Executed action HireWise.API.Controllers.PositionsController.Get (HireWise.API) in 138.2503ms
+2023-12-25 11:32:33.165 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:32:33.166 +03:00 [INF] ResponseBody: {"name":"Backend Developer"}
+2023-12-25 11:32:33.167 +03:00 [INF] HTTP GET /api/Positions/1 responded 200 in 170.7458 ms
+2023-12-25 11:32:33.170 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Positions/1 - - - 200 - application/json;+charset=utf-8 180.7918ms
+2023-12-25 11:32:44.434 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Positions - -
+2023-12-25 11:32:44.436 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Positions
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-25 11:32:44.438 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:32:44.442 +03:00 [INF] Route matched with {action = "Get", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Position.GetAllPosition.GetAllPositionQueryRequest) on controller HireWise.API.Controllers.PositionsController (HireWise.API).
+2023-12-25 11:32:44.450 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-25 11:32:44.459 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Positions" AS p
+2023-12-25 11:32:44.470 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name"
+FROM "Positions" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2023-12-25 11:32:44.481 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Position.GetAllPosition.GetAllPositionQueryResponse'.
+2023-12-25 11:32:44.484 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-25 11:32:44.486 +03:00 [INF] Executed action HireWise.API.Controllers.PositionsController.Get (HireWise.API) in 36.3283ms
+2023-12-25 11:32:44.490 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.PositionsController.Get (HireWise.API)'
+2023-12-25 11:32:44.491 +03:00 [INF] ResponseBody: {"totalPositionCount":1,"positions":[{"id":1,"name":"Backend Developer"}]}
+2023-12-25 11:32:44.492 +03:00 [INF] HTTP GET /api/Positions responded 200 in 56.4062 ms
+2023-12-25 11:32:44.494 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Positions - - - 200 - application/json;+charset=utf-8 59.7983ms

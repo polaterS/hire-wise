@@ -68,6 +68,9 @@ namespace HireWise.Persistence
 
             services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
             services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
+
+            services.AddScoped<IPositionReadRepository, PositionReadRepository>();
+            services.AddScoped<IPositionWriteRepository, PositionWriteRepository>();
         }
     }
 }
