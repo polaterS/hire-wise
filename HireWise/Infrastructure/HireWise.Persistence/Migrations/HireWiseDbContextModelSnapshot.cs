@@ -34,7 +34,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("RolesId");
 
-                    b.ToTable("AppRoleEndpoint");
+                    b.ToTable("AppRoleEndpoint", (string)null);
                 });
 
             modelBuilder.Entity("DepartmentPosition", b =>
@@ -49,7 +49,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("PositionsId");
 
-                    b.ToTable("DepartmentPosition");
+                    b.ToTable("DepartmentPosition", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Address", b =>
@@ -92,7 +92,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Addresses");
+                    b.ToTable("Addresses", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Department", b =>
@@ -128,7 +128,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Employee", b =>
@@ -190,7 +190,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Endpoint", b =>
@@ -230,7 +230,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("MenuId");
 
-                    b.ToTable("Endpoints");
+                    b.ToTable("Endpoints", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Family", b =>
@@ -269,7 +269,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Families");
+                    b.ToTable("Families", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.File", b =>
@@ -304,7 +304,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Files");
+                    b.ToTable("Files", (string)null);
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("File");
                 });
@@ -329,7 +329,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genders");
+                    b.ToTable("Genders", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Identity.AppRole", b =>
@@ -461,7 +461,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.MaritalStatu", b =>
@@ -484,7 +484,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MaritalStatus");
+                    b.ToTable("MaritalStatus", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Menu", b =>
@@ -507,7 +507,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menus", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Position", b =>
@@ -530,7 +530,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions");
+                    b.ToTable("Positions", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.SchoolExperience", b =>
@@ -571,7 +571,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("SchoolExperiences");
+                    b.ToTable("SchoolExperiences", (string)null);
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.WorkExperience", b =>
@@ -613,7 +613,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("WorkExperiences");
+                    b.ToTable("WorkExperiences", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

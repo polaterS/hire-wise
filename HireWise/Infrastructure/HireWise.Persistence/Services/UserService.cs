@@ -23,13 +23,15 @@ namespace HireWise.Persistence.Services
 
         public async Task<CreateUserResponse> CreateAsync(CreateUser model)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+            var newUser = new AppUser
             {
                 Id = Guid.NewGuid().ToString(),
-                UserName = model.Username,
+                UserName = model.Email, // UserName olarak Email kullanılabilir.
                 Email = model.Email,
-                NameSurname = model.NameSurname,
-            }, model.Password);
+                NameSurname = model.NameSurname
+            };
+
+            IdentityResult result = await _userManager.CreateAsync(newUser, model.Password);
 
             CreateUserResponse response = new() { Succeeded = result.Succeeded };
 
@@ -66,8 +68,6 @@ namespace HireWise.Persistence.Services
                 Email = user.Email,
                 NameSurname = user.NameSurname,
                 TwoFactorEnabled = user.TwoFactorEnabled,
-                UserName = user.UserName
-
             }).ToList();
         }
 

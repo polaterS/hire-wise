@@ -35,11 +35,11 @@ namespace HireWise.Persistence.Services
             _userService = userService;
         }
 
-        public async Task<Token> LoginAsync(string usernameOrEmail, string password, int accessTokenLifeTime)
+        public async Task<Token> LoginAsync(string email, string password, int accessTokenLifeTime)
         {
-            Domain.Entities.Identity.AppUser user = await _userManager.FindByNameAsync(usernameOrEmail);
+            Domain.Entities.Identity.AppUser user = await _userManager.FindByEmailAsync(email);
             if (user == null)
-                user = await _userManager.FindByEmailAsync(usernameOrEmail);
+                user = await _userManager.FindByEmailAsync(email);
             if (user == null)
                 throw new NotFoundUserException();
 

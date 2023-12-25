@@ -14,7 +14,7 @@ namespace HireWise.Application.Features.Commands.AppUser.LoginUser
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
         {
-            var token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 300);
+            var token = await _authService.LoginAsync(request.Email, request.Password, 300);
             return new LoginUserSuccessCommandResponse()
             {
                 Token = token,

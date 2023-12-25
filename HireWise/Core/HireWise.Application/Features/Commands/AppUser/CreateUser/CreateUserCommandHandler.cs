@@ -20,8 +20,7 @@ namespace HireWise.Application.Features.Commands.AppUser.CreateUser
                 Email = request.Email,
                 NameSurname = request.NameSurname,
                 Password = request.Password,
-                PasswordConfirm = request.PasswordConfirm,
-                Username = request.Username,
+                PasswordConfirm = request.PasswordConfirm
             });
 
             return new()
