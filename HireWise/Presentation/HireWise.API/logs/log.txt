@@ -21935,3 +21935,58 @@ Content-Type: application/json; charset=utf-8
 2023-12-25 11:32:44.491 +03:00 [INF] ResponseBody: {"totalPositionCount":1,"positions":[{"id":1,"name":"Backend Developer"}]}
 2023-12-25 11:32:44.492 +03:00 [INF] HTTP GET /api/Positions responded 200 in 56.4062 ms
 2023-12-25 11:32:44.494 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Positions - - - 200 - application/json;+charset=utf-8 59.7983ms
+2023-12-25 14:06:22.487 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-25 14:06:23.411 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-25 14:06:23.412 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-25 14:06:23.416 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 14:06:23.417 +03:00 [INF] Hosting environment: Development
+2023-12-25 14:06:23.418 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-25 14:06:23.911 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-25 14:06:24.130 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 228.3684ms
+2023-12-25 14:06:24.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 14:06:24.139 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.6346ms
+2023-12-25 14:06:24.141 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-25 14:06:24.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.5489ms
+2023-12-25 14:06:24.322 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-25 14:06:24.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.1334ms
+2023-12-25 14:08:30.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Users - -
+2023-12-25 14:08:30.854 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-12-25 14:08:30.869 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.UsersController.GetAllUsers (HireWise.API)'
+2023-12-25 14:08:31.330 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(HireWise.Application.Features.Queries.AppUser.GetAllUsers.GetAllUsersQueryRequest) on controller HireWise.API.Controllers.UsersController (HireWise.API).
+2023-12-25 14:08:32.526 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2023-12-25 14:08:32.733 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-25 14:08:32.738 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-25 14:08:32.930 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2023-12-25 14:08:33.073 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "AspNetUsers" AS a
+2023-12-25 14:08:33.097 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.AppUser.GetAllUsers.GetAllUsersQueryResponse'.
+2023-12-25 14:08:33.108 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2023-12-25 14:08:33.118 +03:00 [INF] Executed action HireWise.API.Controllers.UsersController.GetAllUsers (HireWise.API) in 1774.6328ms
+2023-12-25 14:08:33.123 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.UsersController.GetAllUsers (HireWise.API)'
+2023-12-25 14:08:33.127 +03:00 [INF] ResponseBody: {"users":[{"id":"417dfab1-1f6f-46b7-8400-0f3ddb670cb7","email":"omererencin@gmail.com","nameSurname":"ömer erencin","userName":"erencin1","twoFactorEnabled":false},{"id":"a8b25db7-f1d7-4551-98b0-87a3de361d96","email":"admin@yourstore.com","nameSurname":"admin admin","userName":"admin","twoFactorEnabled":false},{"id":"b601cb2a-6a99-42e1-b48c-c2ff4ce0f2c9","email":"suheybpolater@gmail.com","nameSurname":"Muhammed Süheyb Polater","userName":"polaters","twoFactorEnabled":false},{"id":"0d73364a-6166-4b40-8fbb-c3a3f9b5fb1d","email":"suheybpolater@gmail.com","nameSurname":"suheyb polater","userName":"polaterrr","twoFactorEnabled":false},{"id":"db53b725-3677-42e8-a240-413cd25dc444","email":"suheybpolater@gmail.com","nameSurname":"Muhammed Süheyb Polater","userName":"polater1","twoFactorEnabled":false}],"totalUsersCount":7}
+2023-12-25 14:08:33.137 +03:00 [INF] HTTP GET /api/Users responded 200 in 2286.4162 ms
+2023-12-25 14:08:33.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Users - - - 200 - application/json;+charset=utf-8 2309.8142ms
