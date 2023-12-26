@@ -16,11 +16,18 @@ namespace HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRol
 
         public async Task<AssignRoleEndpointCommandResponse> Handle(AssignRoleEndpointCommandRequest request, CancellationToken cancellationToken)
         {
-            await _authorizationEndpointService.AssignRoleEndpointAsync(request.Roles, request.Menu, request.Code, request.Type);
-            return new()
-            {
+            // Dönüşüm yapın
+            Type type = Type.GetType(request.Type.TypeName);
 
-            };
+            if (type == null)
+            {
+                // Uygun hata işleme veya varsayılan değer atama
+                throw new InvalidOperationException("Verilen tip adı geçerli bir Type'a çözülemedi.");
+            }
+
+            // Dönüştürülmüş tipi kullanarak metod çağırımı yapın
+            await _authorizationEndpointService.AssignRoleEndpointAsync(request.Roles, request.Menu, request.Code, type);
+            return new AssignRoleEndpointCommandResponse();
         }
     }
 }

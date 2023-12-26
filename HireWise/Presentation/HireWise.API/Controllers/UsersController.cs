@@ -8,7 +8,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HireWise.API.Controllers
+namespace HireWise.API.Controllers.UsersController
 {
     [Route("api/[controller]")]
     [ApiController]
