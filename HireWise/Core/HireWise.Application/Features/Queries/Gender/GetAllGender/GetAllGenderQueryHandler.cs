@@ -13,8 +13,8 @@ namespace HireWise.Application.Features.Queries.Gender.GetAllGender
 
         public async Task<GetAllGenderQueryResponse> Handle(GetAllGenderQueryRequest request, CancellationToken cancellationToken)
         {
-            var totalLanguageCount = _genderReadRepository.GetAll(false).Count();
-            var languages = _genderReadRepository.GetAll(false).Skip(request.Page * request.Size).Take(request.Size)
+            var totalGenderCount = _genderReadRepository.GetAll(false).Count();
+            var genders = _genderReadRepository.GetAll(false).Skip(request.Page * request.Size).Take(request.Size)
             .Select(d => new
             {
                 d.Id,
@@ -23,8 +23,8 @@ namespace HireWise.Application.Features.Queries.Gender.GetAllGender
 
             return new()
             {
-                Languages = languages,
-                TotalLanguageCount = totalLanguageCount
+                Genders = genders,
+                TotalGenderCount = totalGenderCount
             };
         }
     }

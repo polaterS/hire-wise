@@ -2,7 +2,7 @@
 {
     public class GetAllGenderQueryResponse
     {
-        public int TotalLanguageCount { get; set; }
-        public object Languages { get; set; }
+        public int TotalGenderCount { get; set; }
+        public object Genders { get; set; }
     }
 }
