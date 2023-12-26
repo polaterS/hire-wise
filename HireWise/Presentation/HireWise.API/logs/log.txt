@@ -1498,3 +1498,17 @@ Content-Type: application/json; charset=utf-8
 2023-12-27 00:37:08.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.0817ms
 2023-12-27 00:37:08.232 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
 2023-12-27 00:37:08.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 192.9394ms
+2023-12-27 00:38:24.612 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-27 00:38:24.857 +03:00 [INF] Now listening on: https://localhost:7298
+2023-12-27 00:38:24.857 +03:00 [INF] Now listening on: http://localhost:5232
+2023-12-27 00:38:24.860 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-27 00:38:24.861 +03:00 [INF] Hosting environment: Development
+2023-12-27 00:38:24.862 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2023-12-27 00:38:25.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2023-12-27 00:38:25.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 196.1388ms
+2023-12-27 00:38:25.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2023-12-27 00:38:25.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2023-12-27 00:38:25.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.5420ms
+2023-12-27 00:38:25.886 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.5096ms
+2023-12-27 00:38:25.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2023-12-27 00:38:26.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.3711ms

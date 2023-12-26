@@ -34,7 +34,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("RolesId");
 
-                    b.ToTable("AppRoleEndpoint", (string)null);
+                    b.ToTable("AppRoleEndpoint");
                 });
 
             modelBuilder.Entity("DepartmentPosition", b =>
@@ -49,7 +49,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("PositionsId");
 
-                    b.ToTable("DepartmentPosition", (string)null);
+                    b.ToTable("DepartmentPosition");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Address", b =>
@@ -92,7 +92,34 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Addresses", (string)null);
+                    b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("HireWise.Domain.Entities.AnnouncementAndNews", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Header")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AnnouncementAndNews");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Department", b =>
@@ -115,7 +142,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Employee", b =>
@@ -177,7 +204,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Endpoint", b =>
@@ -217,7 +244,41 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("MenuId");
 
-                    b.ToTable("Endpoints", (string)null);
+                    b.ToTable("Endpoints");
+                });
+
+            modelBuilder.Entity("HireWise.Domain.Entities.EventAndSeminar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("EventDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EventAndSeminars");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Family", b =>
@@ -256,7 +317,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Families", (string)null);
+                    b.ToTable("Families");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.File", b =>
@@ -291,7 +352,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Files", (string)null);
+                    b.ToTable("Files");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("File");
                 });
@@ -316,7 +377,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genders", (string)null);
+                    b.ToTable("Genders");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Identity.AppRole", b =>
@@ -419,6 +480,60 @@ namespace HireWise.Persistence.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("HireWise.Domain.Entities.JobPosting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ApplicationDeadline")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Experience")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Operation")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Qualifications")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("JobPosts");
+                });
+
             modelBuilder.Entity("HireWise.Domain.Entities.Language", b =>
                 {
                     b.Property<int>("Id")
@@ -448,7 +563,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Languages", (string)null);
+                    b.ToTable("Languages");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.MaritalStatu", b =>
@@ -471,7 +586,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MaritalStatus", (string)null);
+                    b.ToTable("MaritalStatus");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Menu", b =>
@@ -494,7 +609,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Menus", (string)null);
+                    b.ToTable("Menus");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.Position", b =>
@@ -517,7 +632,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions", (string)null);
+                    b.ToTable("Positions");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.SchoolExperience", b =>
@@ -558,7 +673,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("SchoolExperiences", (string)null);
+                    b.ToTable("SchoolExperiences");
                 });
 
             modelBuilder.Entity("HireWise.Domain.Entities.WorkExperience", b =>
@@ -600,7 +715,7 @@ namespace HireWise.Persistence.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("WorkExperiences", (string)null);
+                    b.ToTable("WorkExperiences");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
