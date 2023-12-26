@@ -14,6 +14,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
         public int DepartmentId { get; set; }
         public int GenderId { get; set; }
         public int MaritalStatuId { get; set; }
+        public int? PositionId { get; set; }
         //public List<EmployeeImageFileDto> EmployeeImageFiles { get; set; }
         public List<LanguageDto> Languages { get; set; }
         public List<AddressDto> Addresses { get; set; }

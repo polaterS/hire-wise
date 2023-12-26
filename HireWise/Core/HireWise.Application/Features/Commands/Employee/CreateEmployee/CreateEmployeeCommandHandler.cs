@@ -26,6 +26,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
                 DepartmentId = request.DepartmentId,
                 GenderId = request.GenderId,
                 MaritalStatuId = request.MaritalStatuId,
+                PositionId = request.PositionId,
                 //EmployeeImageFiles = MapEmployeeImageFiles(request.EmployeeImageFiles),
                 Languages = MapLanguages(request.Languages),
                 Addresses = MapAddresses(request.Addresses),

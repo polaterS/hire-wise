@@ -17,10 +17,6 @@ namespace HireWise.Application.Features.Queries.Department.GetByIdDepartment
             return new()
             {
                 Name = department.Name,
-                Salary = department.Salary,
-                Position = department.Position,
-                HireDate = department.HireDate,
-                TerminationDate = department.TerminationDate,
             };
         }
     }

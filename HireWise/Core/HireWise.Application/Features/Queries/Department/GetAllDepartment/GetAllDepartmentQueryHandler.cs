@@ -19,10 +19,6 @@ namespace HireWise.Application.Features.Queries.Department.GetAllDepartment
             {
                 d.Id,
                 d.Name,
-                d.Salary,
-                d.Position,
-                d.HireDate,
-                d.TerminationDate
             }).ToList();
 
             return new()

@@ -17,10 +17,6 @@ namespace HireWise.Application.Features.Commands.Department.UpdateDepartment
         {
             HireWise.Domain.Entities.Department department = await _departmentReadRepository.GetByIdAsync(request.Id);
             department.Name = request.Name;
-            department.Position = request.Position;
-            department.Salary = request.Salary;
-            department.HireDate = request.HireDate;
-            department.TerminationDate = request.TerminationDate;
             await _departmentWriteRepository.SaveAsync();
             return new();
         }

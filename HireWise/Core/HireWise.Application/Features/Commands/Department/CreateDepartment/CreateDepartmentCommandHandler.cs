@@ -16,11 +16,6 @@ namespace HireWise.Application.Features.Commands.Department.CreateDepartment
             await _departmentWriteRepository.AddAsync(new()
             {
                 Name = request.Name,
-                Position = request.Position,
-                Salary = request.Salary,
-                HireDate = request.HireDate,
-                TerminationDate = request.TerminationDate,
-
             });
             await _departmentWriteRepository.SaveAsync();
 
