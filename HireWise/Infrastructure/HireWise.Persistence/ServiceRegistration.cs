@@ -80,6 +80,12 @@ namespace HireWise.Persistence
 
             services.AddScoped<IEventAndSeminarReadRepository, EventAndSeminarReadRepository>();
             services.AddScoped<IEventAndSeminarWriteRepository, EventAndSeminarWriteRepository>();
+
+            services.AddScoped<IEmployeeReportReadRepository, EmployeeReportReadRepository>();
+            services.AddScoped<IEmployeeReportWriteRepository, EmployeeReportWriteRepository>();
+
+            services.AddScoped<IDepartmentReportReadRepository, DepartmentReportReadRepository>();
+            services.AddScoped<IDepartmentReportWriteRepository, DepartmentReportWriteRepository>();
         }
     }
 }

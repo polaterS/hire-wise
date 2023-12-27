@@ -29,6 +29,8 @@ namespace HireWise.Persistence.Context
         public DbSet<AnnouncementAndNews> AnnouncementAndNews { get; set; }
         public DbSet<EventAndSeminar> EventAndSeminars { get; set; }
         public DbSet<JobPosting> JobPosts { get; set; }
+        public DbSet<EmployeeReport> EmployeeReport { get; set; }
+        public DbSet<DepartmentReport> DepartmentReport { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
