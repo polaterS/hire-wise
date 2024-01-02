@@ -32,21 +32,21 @@ builder.Services.AddStorage<LocalStorage>();
 var allowedOrigin = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
 
 // Add services to the container.
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("HwCors", policy =>
-    {
-        policy.WithOrigins(allowedOrigin)
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-    });
-});
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("HwCors", policy =>
+//    {
+//        policy.WithOrigins(allowedOrigin)
+//                .AllowAnyHeader()
+//                .AllowAnyMethod();
+//    });
+//});
 
-//builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy
-//    .AllowAnyOrigin()
-//    .AllowAnyMethod()
-//    .AllowAnyHeader()
-//));
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+));
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -151,7 +151,7 @@ app.UseSerilogRequestLogging();
 app.UseStaticFiles();
 
 app.UseHttpLogging();
-app.UseCors("HwCors");
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

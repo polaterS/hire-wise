@@ -1,8 +1,5 @@
 ﻿using HireWise.Application;
 using HireWise.Application.Abstractions.Storage;
-using HireWise.Application.Consts;
-using HireWise.Application.CutomAttributes;
-using HireWise.Application.Enums;
 using HireWise.Application.Features.Commands.Employee.CreateEmployee;
 using HireWise.Application.Features.Commands.Employee.RemoveEmployee;
 using HireWise.Application.Features.Commands.Employee.UpdateEmployee;
