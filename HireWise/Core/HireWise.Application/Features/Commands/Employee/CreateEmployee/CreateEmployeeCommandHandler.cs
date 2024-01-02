@@ -51,11 +51,11 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
         //        EmployeeId = dto.EmployeeId
         //    }).ToList();
         //}
-        private ICollection<HireWise.Domain.Entities.Language> MapLanguages(List<LanguageDto> dtos)
+        private ICollection<Domain.Entities.Language> MapLanguages(List<LanguageDto> dtos)
         {
             if (dtos == null) return null; // Null kontrolü
 
-            return dtos.Select(dto => new HireWise.Domain.Entities.Language
+            return dtos.Select(dto => new Domain.Entities.Language
             {
                 Name = dto.Name,
                 ProficiencyLevel = dto.ProficiencyLevel
@@ -110,7 +110,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
             return dtos.Select(dto => new HireWise.Domain.Entities.WorkExperience
             {
                 CompanyName = dto.CompanyName,
-                Departmant = dto.Departmant, 
+                Departmant = dto.Departmant,
                 Position = dto.Position,
                 WorkDateOfStart = dto.WorkDateOfStart,
                 WorkDateOfEnd = dto.WorkDateOfEnd

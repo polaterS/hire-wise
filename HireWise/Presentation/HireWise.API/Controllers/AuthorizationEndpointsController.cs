@@ -1,7 +1,6 @@
 ﻿using HireWise.Application.Features.Commands.AuthorizationEndpoint.AssignRoleEndpoint;
 using HireWise.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoints;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HireWise.API.Controllers
@@ -30,6 +29,5 @@ namespace HireWise.API.Controllers
             AssignRoleEndpointCommandResponse response = await _mediator.Send(assignRoleEndpointCommandRequest);
             return Ok(response);
         }
-
     }
 }
