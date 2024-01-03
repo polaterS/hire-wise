@@ -20,7 +20,7 @@ namespace HireWise.Application.Features.Queries.JobPosting.GetByIdJobPosting
                 CompanyName = jobPosting.CompanyName,
                 Experience = jobPosting.Experience,
                 Location = jobPosting.Location,
-                Operation = jobPosting.Operation,
+                ModeOfOperation = jobPosting.ModeOfOperation,
                 Description = jobPosting.Description,
                 Qualifications = jobPosting.Qualifications,
                 Benefits = jobPosting.Benefits,

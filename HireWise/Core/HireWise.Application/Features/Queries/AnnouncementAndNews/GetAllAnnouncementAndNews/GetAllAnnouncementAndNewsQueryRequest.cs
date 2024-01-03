@@ -5,6 +5,6 @@ namespace HireWise.Application.Features.Queries.AnnouncementAndNews.GetAllAnnoun
     public class GetAllAnnouncementAndNewsQueryRequest : IRequest<GetAllAnnouncementAndNewsQueryResponse>
     {
         public int Page { get; set; } = 0;
-        public int Size { get; set; } = 5;
+        public int Size { get; set; } = int.MaxValue;
     }
 }

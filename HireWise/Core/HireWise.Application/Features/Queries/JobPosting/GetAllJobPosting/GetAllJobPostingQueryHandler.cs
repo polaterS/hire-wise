@@ -25,7 +25,7 @@ namespace HireWise.Application.Features.Queries.JobPosting.GetAllJobPosting
                 d.Benefits,
                 d.Qualifications,
                 d.Experience,
-                d.Operation,
+                d.ModeOfOperation,
                 d.Position
             }).ToList();
 

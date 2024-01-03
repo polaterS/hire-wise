@@ -5,6 +5,6 @@ namespace HireWise.Application.Features.Queries.EventAndSeminar.GetAllEventAndSe
     public class GetAllEventAndSeminarQueryRequest : IRequest<GetAllEventAndSeminarQueryResponse>
     {
         public int Page { get; set; } = 0;
-        public int Size { get; set; } = 5;
+        public int Size { get; set; } = int.MaxValue;
     }
 }

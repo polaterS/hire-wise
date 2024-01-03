@@ -20,7 +20,7 @@ namespace HireWise.Application.Features.Commands.JobPosting.UpdateJobPosting
             jobPosting.CompanyName = request.CompanyName;
             jobPosting.Experience = request.Experience;
             jobPosting.Location = request.Location;
-            jobPosting.Operation = request.Operation;
+            jobPosting.ModeOfOperation = request.ModeOfOperation;
             jobPosting.Description = request.Description;
             jobPosting.Qualifications = request.Qualifications;
             jobPosting.Benefits = request.Benefits;

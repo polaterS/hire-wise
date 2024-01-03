@@ -19,7 +19,7 @@ namespace HireWise.Application.Features.Commands.JobPosting.CreateJobPosting
                 CompanyName = request.CompanyName,
                 Experience = request.Experience,
                 Location = request.Location,
-                Operation = request.Operation,
+                ModeOfOperation = request.ModeOfOperation,
                 Description = request.Description,
                 Qualifications = request.Qualifications,
                 Benefits = request.Benefits,

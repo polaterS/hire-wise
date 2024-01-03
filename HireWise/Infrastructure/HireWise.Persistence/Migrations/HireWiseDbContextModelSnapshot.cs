@@ -584,7 +584,7 @@ namespace HireWise.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Operation")
+                    b.Property<string>("ModeOfOperation")
                         .IsRequired()
                         .HasColumnType("text");
 
