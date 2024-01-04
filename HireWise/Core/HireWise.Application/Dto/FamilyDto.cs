@@ -8,6 +8,6 @@
 
         public string LastName { get; set; }
 
-        public bool IsAlive { get; set; }
+        public int FamilyPhoneNumber { get; set; }
     }
 }

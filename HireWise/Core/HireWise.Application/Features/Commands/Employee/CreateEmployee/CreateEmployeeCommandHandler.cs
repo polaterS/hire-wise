@@ -85,6 +85,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
                 FamilyType = dto.FamilyType,
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
+                FamilyPhoneNumber = dto.FamilyPhoneNumber
             }).ToList();
         }
 

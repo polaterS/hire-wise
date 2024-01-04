@@ -3754,3 +3754,124 @@ Content-Type: application/json; charset=utf-8
 2024-01-04 14:54:32.978 +03:00 [INF] ResponseBody: {}
 2024-01-04 14:54:32.982 +03:00 [INF] HTTP POST /api/Families responded 201 in 1603.3496 ms
 2024-01-04 14:54:32.996 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Families application/json 125 - 201 - application/json;+charset=utf-8 1629.3501ms
+2024-01-04 15:14:23.581 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-04 15:14:23.832 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-04 15:14:23.833 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-04 15:14:23.836 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-04 15:14:23.837 +03:00 [INF] Hosting environment: Development
+2024-01-04 15:14:23.838 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-04 15:14:24.164 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-04 15:14:24.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 211.0333ms
+2024-01-04 15:14:24.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-04 15:14:24.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-04 15:14:24.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.7016ms
+2024-01-04 15:14:26.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 2568.1066ms
+2024-01-04 15:14:26.998 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-04 15:14:27.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.0275ms
+2024-01-04 15:14:52.078 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 1120
+2024-01-04 15:14:52.098 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1120
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-04 15:14:52.105 +03:00 [INF] CORS policy execution successful.
+2024-01-04 15:14:52.127 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-04 15:14:52.336 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-04 15:14:52.360 +03:00 [INF] RequestBody: {
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "phone": "string",
+  "dateOfBirth": "2024-01-04T12:14:41.675Z",
+  "citizenshipNumber": "string",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "name": "string",
+      "proficiencyLevel": "string"
+    }
+  ],
+  "addresses": [
+    {
+      "title": "string",
+      "street": "string",
+      "city": "string",
+      "country": "string",
+      "postalCode": 0
+    }
+  ],
+  "families": [
+    {
+      "familyType": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "familyPhoneNumber": 0
+    }
+  ],
+  "schoolExperiences": [
+    {
+      "schoolName": "string",
+      "schoolType": "string",
+      "grade": 0,
+      "schoolDateOfStartOnUtc": "2024-01-04T12:14:41.675Z",
+      "schoolDateOfEndOnUtc": "2024-01-04T12:14:41.675Z"
+    }
+  ],
+  "workExperiences": [
+    {
+      "companyName": "string",
+      "departmant": "string",
+      "position": "string",
+      "workDateOfStart": "2024-01-04T12:14:41.675Z",
+      "workDateOfEnd": "2024-01-04T12:14:41.675Z"
+    }
+  ]
+}
+2024-01-04 15:14:53.673 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-04 15:14:54.147 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-04 15:14:54.219 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p20='?' (DbType = DateTime), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?', @p25='?', @p26='?' (DbType = DateTime), @p27='?' (DbType = DateTime), @p28='?' (DbType = Int32), @p29='?', @p30='?', @p31='?' (DbType = DateTime), @p32='?' (DbType = DateTime), @p33='?' (DbType = Int32), @p34='?' (DbType = Decimal), @p35='?' (DbType = DateTime), @p36='?' (DbType = DateTime), @p37='?', @p38='?', @p39='?' (DbType = DateTime), @p40='?', @p41='?' (DbType = DateTime), @p42='?', @p43='?' (DbType = Int32), @p44='?', @p45='?' (DbType = DateTime), @p46='?' (DbType = DateTime), @p47='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Addresses" ("City", "Country", "CreatedDate", "EmployeeId", "PostalCode", "Street", "Title", "UpdatedDate")
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+RETURNING "Id";
+INSERT INTO "Families" ("CreatedDate", "EmployeeId", "FamilyPhoneNumber", "FamilyType", "FirstName", "LastName", "UpdatedDate")
+VALUES (@p20, @p21, @p22, @p23, @p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "Name", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p27, @p28, @p29, @p30, @p31)
+RETURNING "Id";
+INSERT INTO "SchoolExperiences" ("CreatedDate", "EmployeeId", "Grade", "SchoolDateOfEndOnUtc", "SchoolDateOfStartOnUtc", "SchoolName", "SchoolType", "UpdatedDate")
+VALUES (@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39)
+RETURNING "Id";
+INSERT INTO "WorkExperiences" ("CompanyName", "CreatedDate", "Departmant", "EmployeeId", "Position", "UpdatedDate", "WorkDateOfEnd", "WorkDateOfStart")
+VALUES (@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47)
+RETURNING "Id";
+2024-01-04 15:14:54.281 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-04 15:14:54.289 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 1945.9747ms
+2024-01-04 15:14:54.292 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-04 15:14:54.297 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-04 15:14:54.300 +03:00 [INF] HTTP POST /api/Employees responded 201 in 2208.7283 ms
+2024-01-04 15:14:54.317 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 1120 - 201 0 - 2239.1157ms
