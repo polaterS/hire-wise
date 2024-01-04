@@ -85,7 +85,6 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
                 FamilyType = dto.FamilyType,
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
-                IsAlive = dto.IsAlive
             }).ToList();
         }
 

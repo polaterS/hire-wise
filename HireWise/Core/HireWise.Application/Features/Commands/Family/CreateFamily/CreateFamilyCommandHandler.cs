@@ -19,7 +19,6 @@ namespace HireWise.Application.Features.Commands.Family.CreateFamily
                 FamilyType = request.FamilyType,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                IsAlive = request.IsAlive,
             });
             await _familyWriteRepository.SaveAsync();
 

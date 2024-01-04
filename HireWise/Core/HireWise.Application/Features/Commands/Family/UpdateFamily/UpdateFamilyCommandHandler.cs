@@ -20,7 +20,6 @@ namespace HireWise.Application.Features.Commands.Family.UpdateFamily
             family.FirstName = request.FirstName;
             family.LastName = request.LastName;
             family.FamilyType = request.FamilyType;
-            family.IsAlive = request.IsAlive;
             await _familyWriteRepository.SaveAsync();
             return new();
         }

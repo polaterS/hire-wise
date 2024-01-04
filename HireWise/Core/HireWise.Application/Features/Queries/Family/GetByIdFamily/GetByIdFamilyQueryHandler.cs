@@ -20,7 +20,6 @@ namespace HireWise.Application.Features.Queries.Family.GetByIdFamily
                 FirstName = family.FirstName,
                 LastName = family.LastName,
                 FamilyType = family.FamilyType,
-                IsAlive = family.IsAlive,
             };
         }
     }
