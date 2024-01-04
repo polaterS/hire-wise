@@ -17,7 +17,7 @@ namespace HireWise.Application.Features.Queries.Language.GetByIdLanguage
             return new()
             {
                 EmployeeId = language.EmployeeId,
-                Name = language.Name,
+                LanguageEnum = language.LanguageEnum,
                 ProficiencyLevel = language.ProficiencyLevel
             };
         }

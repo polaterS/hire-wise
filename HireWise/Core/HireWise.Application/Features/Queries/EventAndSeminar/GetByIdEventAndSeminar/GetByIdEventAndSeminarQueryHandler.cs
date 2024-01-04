@@ -16,9 +16,9 @@ namespace HireWise.Application.Features.Queries.EventAndSeminar.GetByIdEventAndS
             HireWise.Domain.Entities.EventAndSeminar eventAndSeminar = await _eventAndSeminarReadRepository.GetByIdAsync(request.Id, false);
             return new()
             {
-                Name = eventAndSeminar.Name,
+                EventName = eventAndSeminar.EventName,
                 EventDate = eventAndSeminar.EventDate,
-                Location = eventAndSeminar.Location,
+                EventLocation = eventAndSeminar.EventLocation,
                 Description = eventAndSeminar.Description,
             };
         }

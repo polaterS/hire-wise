@@ -57,7 +57,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
 
             return dtos.Select(dto => new Domain.Entities.Language
             {
-                Name = dto.Name,
+                LanguageEnum = dto.LanguageEnum,
                 ProficiencyLevel = dto.ProficiencyLevel
             }).ToList();
         }

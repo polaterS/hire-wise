@@ -15,9 +15,9 @@ namespace HireWise.Application.Features.Commands.EventAndSeminar.CreateEventAndS
         {
             await _eventAndSeminarWriteRepository.AddAsync(new()
             {
-                Name = request.Name,
+                EventName = request.EventName,
                 EventDate = request.EventDate,
-                Location = request.Location,
+                EventLocation = request.EventLocation,
                 Description = request.Description
             });
             await _eventAndSeminarWriteRepository.SaveAsync();

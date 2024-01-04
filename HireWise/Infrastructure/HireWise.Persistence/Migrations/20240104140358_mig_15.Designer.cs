@@ -3,6 +3,7 @@ using System;
 using HireWise.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HireWise.Persistence.Migrations
 {
     [DbContext(typeof(HireWiseDbContext))]
-    partial class HireWiseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240104140358_mig_15")]
+    partial class mig_15
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -335,11 +337,11 @@ namespace HireWise.Persistence.Migrations
                     b.Property<DateTime>("EventDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("EventLocation")
+                    b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("EventName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -618,9 +620,8 @@ namespace HireWise.Persistence.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("LanguageEnum")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("LanguageEnum")
+                        .HasColumnType("integer");
 
                     b.Property<string>("ProficiencyLevel")
                         .IsRequired()

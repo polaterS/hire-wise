@@ -1,8 +1,11 @@
 ﻿using HireWise.Domain.Entities;
 using HireWise.Domain.Entities.Common;
 using HireWise.Domain.Entities.Identity;
+using HireWise.Domain.Enums;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.Reflection.Emit;
 
 namespace HireWise.Persistence.Context
 {
@@ -32,6 +35,17 @@ namespace HireWise.Persistence.Context
         public DbSet<EmployeeReport> EmployeeReport { get; set; }
         public DbSet<DepartmentReport> DepartmentReport { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            var languageEnumToStringConverter = new EnumToStringConverter<LanguageEnum>();
+
+            modelBuilder
+                .Entity<Language>()
+                .Property(e => e.LanguageEnum)
+                .HasConversion(languageEnumToStringConverter);
+        }
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var datas = ChangeTracker.Entries<BaseEntity>();

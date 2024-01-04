@@ -18,8 +18,8 @@ namespace HireWise.Application.Features.Queries.EventAndSeminar.GetAllEventAndSe
             .Select(d => new
             {
                 d.Id,
-                d.Name,
-                d.Location,
+                d.EventName,
+                d.EventLocation,
                 d.EventDate,
                 d.Description,
             }).ToList();

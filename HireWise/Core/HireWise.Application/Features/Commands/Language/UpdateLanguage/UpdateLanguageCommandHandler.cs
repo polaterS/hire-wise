@@ -17,7 +17,7 @@ namespace HireWise.Application.Features.Commands.Language.UpdateLanguage
             HireWise.Domain.Entities.Language language = await _languageReadRepository.GetByIdAsync(request.Id);
 
             language.EmployeeId = request.EmployeeId;
-            language.Name = request.Name;
+            language.LanguageEnum = request.LanguageEnum;
             language.ProficiencyLevel = request.ProficiencyLevel;
 
             await _languageWriteRepository.SaveAsync();

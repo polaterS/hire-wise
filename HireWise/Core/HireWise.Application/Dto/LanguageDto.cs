@@ -1,8 +1,10 @@
-﻿namespace HireWise.Application.Dto
+﻿using HireWise.Domain.Enums;
+
+namespace HireWise.Application.Dto
 {
     public class LanguageDto
     {
-        public string Name { get; set; }
+        public LanguageEnum LanguageEnum { get; set; }
         public string ProficiencyLevel { get; set; }
     }
 }

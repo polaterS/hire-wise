@@ -15,7 +15,7 @@ namespace HireWise.Application.Features.Commands.Language.CreateLanguage
         {
             await _languageWriteRepository.AddAsync(new()
             {
-                Name = request.Name,
+                LanguageEnum = request.LanguageEnum,
                 ProficiencyLevel = request.ProficiencyLevel,
                 EmployeeId = request.EmployeeId,
             });
