@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using HireWise.Application.Dto;
+using MediatR;
 
 namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
 {
@@ -14,5 +15,12 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
         public int DepartmentId { get; set; }
         public int GenderId { get; set; }
         public int MaritalStatuId { get; set; }
+        public int? PositionId { get; set; }
+        //public List<EmployeeImageFileDto> EmployeeImageFiles { get; set; }
+        public List<LanguageDto> Languages { get; set; }
+        public List<AddressDto> Addresses { get; set; }
+        public List<FamilyDto> Families { get; set; }
+        public List<SchoolExperienceDto> SchoolExperiences { get; set; }
+        public List<WorkExperienceDto> WorkExperiences { get; set; }
     }
 }
