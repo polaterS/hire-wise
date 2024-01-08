@@ -19,6 +19,7 @@ namespace HireWise.Application.Features.Commands.Family.CreateFamily
                 FamilyType = request.FamilyType,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
+                FamilyPhoneNumber = request.FamilyPhoneNumber,
             });
             await _familyWriteRepository.SaveAsync();
 

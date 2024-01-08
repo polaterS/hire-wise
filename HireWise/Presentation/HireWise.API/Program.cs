@@ -77,14 +77,14 @@ builder.Services.AddHttpLogging(logging =>
     logging.RequestBodyLogLimit = 4096;
     logging.ResponseBodyLogLimit = 4096;
 });
-
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add<ValidationFilter>();
-    options.Filters.Add<RolePermissionFilter>();
-})
-    .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<Create_Employee_Validator>())
-    .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter =true);
+builder.Services.AddControllers();
+//builder.Services.AddControllers(options =>
+//{
+//    options.Filters.Add<ValidationFilter>();
+//    options.Filters.Add<RolePermissionFilter>();
+//})
+//    .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<Create_Employee_Validator>())
+//    .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter =true);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

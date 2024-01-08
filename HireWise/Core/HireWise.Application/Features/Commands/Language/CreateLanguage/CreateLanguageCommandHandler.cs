@@ -17,7 +17,7 @@ namespace HireWise.Application.Features.Commands.Language.CreateLanguage
             {
                 LanguageEnum = request.LanguageEnum,
                 ProficiencyLevel = request.ProficiencyLevel,
-                EmployeeId = request.EmployeeId,
+                EmployeeId = request.EmployeeId
             });
             await _languageWriteRepository.SaveAsync();
 

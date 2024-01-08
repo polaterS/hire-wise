@@ -5708,3 +5708,1617 @@ Content-Type: application/json; charset=utf-8
 2024-01-08 14:17:51.297 +03:00 [INF] ResponseBody: {"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-08T11:12:02.238Z","citizenshipNumber":"string","departmentId":1,"genderId":1,"maritalStatuId":2}
 2024-01-08 14:17:51.298 +03:00 [INF] HTTP GET /api/Employees/18 responded 200 in 47.1919 ms
 2024-01-08 14:17:51.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees/18 - - - 200 - application/json;+charset=utf-8 51.7796ms
+2024-01-08 15:20:16.924 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 15:20:17.170 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 15:20:17.172 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 15:20:17.174 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 15:20:17.175 +03:00 [INF] Hosting environment: Development
+2024-01-08 15:20:17.176 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 15:20:17.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 15:20:17.910 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 234.1456ms
+2024-01-08 15:20:17.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 15:20:17.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 15:20:17.931 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.6386ms
+2024-01-08 15:20:17.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.2150ms
+2024-01-08 15:20:18.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 15:20:18.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.1221ms
+2024-01-08 15:20:30.385 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Languages application/json 55
+2024-01-08 15:20:30.397 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Languages
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 55
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 15:20:30.405 +03:00 [INF] CORS policy execution successful.
+2024-01-08 15:20:30.421 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:20:30.582 +03:00 [INF] Route matched with {action = "Post", controller = "Languages"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandRequest) on controller HireWise.API.Controllers.LanguagesController (HireWise.API).
+2024-01-08 15:20:30.602 +03:00 [INF] RequestBody: {
+  "languageEnum": 1,
+  "proficiencyLevel": "string"
+}
+2024-01-08 15:20:31.569 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 15:20:31.826 +03:00 [ERR] Failed executing DbCommand (40ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2024-01-08 15:20:31.899 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'HireWise.Persistence.Context.HireWiseDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-08 15:20:32.050 +03:00 [INF] Executed action HireWise.API.Controllers.LanguagesController.Post (HireWise.API) in 1460.9989ms
+2024-01-08 15:20:32.055 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:20:32.128 +03:00 [ERR] HTTP POST /api/Languages responded 500 in 1735.9337 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-08 15:20:32.192 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-08 15:20:32.208 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2024-01-08 15:20:32.222 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Languages application/json 55 - 500 - application/json 1837.2555ms
+2024-01-08 15:20:42.329 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Languages application/json 55
+2024-01-08 15:20:42.338 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Languages
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 55
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 15:20:42.344 +03:00 [INF] CORS policy execution successful.
+2024-01-08 15:20:42.346 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:20:42.355 +03:00 [INF] Route matched with {action = "Post", controller = "Languages"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandRequest) on controller HireWise.API.Controllers.LanguagesController (HireWise.API).
+2024-01-08 15:20:42.358 +03:00 [INF] RequestBody: {
+  "languageEnum": 0,
+  "proficiencyLevel": "string"
+}
+2024-01-08 15:20:42.388 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 15:20:42.398 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2024-01-08 15:20:42.404 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'HireWise.Persistence.Context.HireWiseDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-08 15:20:42.544 +03:00 [INF] Executed action HireWise.API.Controllers.LanguagesController.Post (HireWise.API) in 186.2905ms
+2024-01-08 15:20:42.546 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:20:42.604 +03:00 [ERR] HTTP POST /api/Languages responded 500 in 266.3685 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-08 15:20:42.619 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-08 15:20:42.631 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2024-01-08 15:20:42.632 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Languages application/json 55 - 500 - application/json 303.8771ms
+2024-01-08 15:21:08.931 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Languages application/json 55
+2024-01-08 15:21:08.933 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Languages
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 55
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 15:21:08.935 +03:00 [INF] CORS policy execution successful.
+2024-01-08 15:21:08.940 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:21:08.951 +03:00 [INF] Route matched with {action = "Post", controller = "Languages"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandRequest) on controller HireWise.API.Controllers.LanguagesController (HireWise.API).
+2024-01-08 15:21:08.955 +03:00 [INF] RequestBody: {
+  "languageEnum": 0,
+  "proficiencyLevel": "string"
+}
+2024-01-08 15:21:08.963 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 15:21:08.977 +03:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2024-01-08 15:21:08.983 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'HireWise.Persistence.Context.HireWiseDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-08 15:21:09.111 +03:00 [INF] Executed action HireWise.API.Controllers.LanguagesController.Post (HireWise.API) in 156.0798ms
+2024-01-08 15:21:09.114 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.LanguagesController.Post (HireWise.API)'
+2024-01-08 15:21:09.171 +03:00 [ERR] HTTP POST /api/Languages responded 500 in 238.6763 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-08 15:21:09.188 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Languages" violates foreign key constraint "FK_Languages_Employees_EmployeeId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Languages
+    ConstraintName: FK_Languages_Employees_EmployeeId
+    File: ri_triggers.c
+    Line: 2596
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at HireWise.Persistence.Context.HireWiseDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Context\HireWiseDbContext.cs:line 61
+   at HireWise.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\WriteRepository.cs:line 56
+   at HireWise.Application.Features.Commands.Language.CreateLanguage.CreateLanguageCommandHandler.Handle(CreateLanguageCommandRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Commands\Language\CreateLanguage\CreateLanguageCommandHandler.cs:line 21
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.LanguagesController.Post(CreateLanguageCommandRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\LanguagesController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-08 15:21:09.203 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2024-01-08 15:21:09.204 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Languages application/json 55 - 500 - application/json 273.2967ms
+2024-01-08 15:24:22.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 15:24:22.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 21.6419ms
+2024-01-08 15:24:22.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 15:24:22.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 15:24:22.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 3.8235ms
+2024-01-08 15:24:22.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.4261ms
+2024-01-08 15:24:22.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 15:24:22.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.5400ms
+2024-01-08 16:05:08.519 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:05:08.744 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:05:08.745 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:05:08.748 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:05:08.749 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:05:08.750 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:05:10.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:05:10.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 246.1381ms
+2024-01-08 16:05:10.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:05:10.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 6.0440ms
+2024-01-08 16:05:10.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:05:10.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.6223ms
+2024-01-08 16:05:11.024 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:05:11.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.3473ms
+2024-01-08 16:09:12.629 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 375
+2024-01-08 16:09:12.656 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 375
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:09:12.663 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:09:12.682 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:09:13.389 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:09:13.416 +03:00 [INF] RequestBody: {
+  "firstName": "furkan",
+  "lastName": "duran",
+  "email": "furkanozgurduran@gmail.com",
+  "phone": "50559887878",
+  "dateOfBirth": "2000-01-08T13:07:43.247Z",
+  "citizenshipNumber": "11111111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 0,
+      "proficiencyLevel": "a1"
+    }
+  ],
+  ]
+}
+2024-01-08 16:09:13.450 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:09:13.461 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:09:13.472 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 71.986ms
+2024-01-08 16:09:13.475 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:09:13.476 +03:00 [INF] ResponseBody: [{"key":"$","value":["']' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 17 | BytePositionInLine: 2."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:09:13.479 +03:00 [INF] HTTP POST /api/Employees responded 400 in 825.0903 ms
+2024-01-08 16:09:13.485 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 375 - 400 - application/json;+charset=utf-8 855.5962ms
+2024-01-08 16:09:37.637 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 370
+2024-01-08 16:09:37.648 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 370
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:09:37.654 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:09:37.661 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:09:37.676 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:09:37.684 +03:00 [INF] RequestBody: {
+  "firstName": "furkan",
+  "lastName": "duran",
+  "email": "furkanozgurduran@gmail.com",
+  "phone": "50559887878",
+  "dateOfBirth": "2000-01-08T13:07:43.247Z",
+  "citizenshipNumber": "11111111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 0,
+      "proficiencyLevel": "a"
+    }
+  ],
+}
+2024-01-08 16:09:37.719 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:09:37.721 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:09:37.723 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 42.1821ms
+2024-01-08 16:09:37.726 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:09:37.729 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 17 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:09:37.731 +03:00 [INF] HTTP POST /api/Employees responded 400 in 82.9041 ms
+2024-01-08 16:09:37.733 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 370 - 400 - application/json;+charset=utf-8 96.0545ms
+2024-01-08 16:10:02.873 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 1146
+2024-01-08 16:10:02.881 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1146
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:10:02.883 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:10:02.886 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:10:02.897 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:10:02.906 +03:00 [INF] RequestBody: {
+  "firstName": "furkan",
+  "lastName": "duran",
+  "email": "furkanozgurduran@gmail.com",
+  "phone": "50559887878",
+  "dateOfBirth": "2000-01-08T13:07:43.247Z",
+  "citizenshipNumber": "11111111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 0,
+      "proficiencyLevel": "a1"
+    }
+  ],
+  "addresses": [
+    {
+      "title": "string",
+      "street": "string",
+      "city": "string",
+      "country": "string",
+      "postalCode": 0
+    }
+  ],
+  "families": [
+    {
+      "familyType": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "familyPhoneNumber": 0
+    }
+  ],
+  "schoolExperiences": [
+    {
+      "schoolName": "string",
+      "schoolType": "string",
+      "grade": 0,
+      "schoolDateOfStartOnUtc": "2024-01-08T13:07:43.247Z",
+      "schoolDateOfEndOnUtc": "2024-01-08T13:07:43.247Z"
+    }
+  ],
+  "workExperiences": [
+    {
+      "companyName": "string",
+      "departmant": "string",
+      "position": "string",
+      "workDateOfStart": "2024-01-08T13:07:43.247Z",
+      "workDateOfEnd": "2024-01-08T13:07:43.247Z"
+    }
+  ]
+}
+2024-01-08 16:10:05.725 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 16:10:11.022 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-08 16:10:11.086 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p20='?' (DbType = DateTime), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?', @p25='?', @p26='?' (DbType = DateTime), @p27='?' (DbType = DateTime), @p28='?' (DbType = Int32), @p29='?', @p30='?', @p31='?' (DbType = DateTime), @p32='?' (DbType = DateTime), @p33='?' (DbType = Int32), @p34='?' (DbType = Decimal), @p35='?' (DbType = DateTime), @p36='?' (DbType = DateTime), @p37='?', @p38='?', @p39='?' (DbType = DateTime), @p40='?', @p41='?' (DbType = DateTime), @p42='?', @p43='?' (DbType = Int32), @p44='?', @p45='?' (DbType = DateTime), @p46='?' (DbType = DateTime), @p47='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Addresses" ("City", "Country", "CreatedDate", "EmployeeId", "PostalCode", "Street", "Title", "UpdatedDate")
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+RETURNING "Id";
+INSERT INTO "Families" ("CreatedDate", "EmployeeId", "FamilyPhoneNumber", "FamilyType", "FirstName", "LastName", "UpdatedDate")
+VALUES (@p20, @p21, @p22, @p23, @p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p27, @p28, @p29, @p30, @p31)
+RETURNING "Id";
+INSERT INTO "SchoolExperiences" ("CreatedDate", "EmployeeId", "Grade", "SchoolDateOfEndOnUtc", "SchoolDateOfStartOnUtc", "SchoolName", "SchoolType", "UpdatedDate")
+VALUES (@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39)
+RETURNING "Id";
+INSERT INTO "WorkExperiences" ("CompanyName", "CreatedDate", "Departmant", "EmployeeId", "Position", "UpdatedDate", "WorkDateOfEnd", "WorkDateOfStart")
+VALUES (@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47)
+RETURNING "Id";
+2024-01-08 16:10:17.458 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-08 16:10:17.462 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 14560.5554ms
+2024-01-08 16:10:17.464 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:10:17.782 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-08 16:10:17.786 +03:00 [INF] HTTP POST /api/Employees responded 201 in 14904.6863 ms
+2024-01-08 16:10:17.794 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 1146 - 201 0 - 14921.3973ms
+2024-01-08 16:11:39.314 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 1213
+2024-01-08 16:11:39.324 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1213
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:11:39.332 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:11:39.335 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:11:39.337 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:11:39.341 +03:00 [INF] RequestBody: {
+  "firstName": "furkan2",
+  "lastName": "duran",
+  "email": "furkanozgurduran@gmail.com",
+  "phone": "50559887878",
+  "dateOfBirth": "2000-01-08T13:07:43.247Z",
+  "citizenshipNumber": "11111111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 0,
+      "proficiencyLevel": "a1"
+    },
+{
+      "languageEnum": 0,
+      "proficiencyLevel": "a1"
+    }
+
+  ],
+  "addresses": [
+    {
+      "title": "string",
+      "street": "string",
+      "city": "string",
+      "country": "string",
+      "postalCode": 0
+    }
+  ],
+  "families": [
+    {
+      "familyType": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "familyPhoneNumber": 0
+    }
+  ],
+  "schoolExperiences": [
+    {
+      "schoolName": "string",
+      "schoolType": "string",
+      "grade": 0,
+      "schoolDateOfStartOnUtc": "2024-01-08T13:07:43.247Z",
+      "schoolDateOfEndOnUtc": "2024-01-08T13:07:43.247Z"
+    }
+  ],
+  "workExperiences": [
+    {
+      "companyName": "string",
+      "departmant": "string",
+      "position": "string",
+      "workDateOfStart": "2024-01-08T13:07:43.247Z",
+      "workDateOfEnd": "2024-01-08T13:07:43.247Z"
+    }
+  ]
+}
+2024-01-08 16:11:40.861 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 16:11:40.869 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-08 16:11:40.876 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p20='?' (DbType = DateTime), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?', @p25='?', @p26='?' (DbType = DateTime), @p27='?' (DbType = DateTime), @p28='?' (DbType = Int32), @p29='?', @p30='?', @p31='?' (DbType = DateTime), @p32='?' (DbType = DateTime), @p33='?' (DbType = Int32), @p34='?', @p35='?', @p36='?' (DbType = DateTime), @p37='?' (DbType = DateTime), @p38='?' (DbType = Int32), @p39='?' (DbType = Decimal), @p40='?' (DbType = DateTime), @p41='?' (DbType = DateTime), @p42='?', @p43='?', @p44='?' (DbType = DateTime), @p45='?', @p46='?' (DbType = DateTime), @p47='?', @p48='?' (DbType = Int32), @p49='?', @p50='?' (DbType = DateTime), @p51='?' (DbType = DateTime), @p52='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Addresses" ("City", "Country", "CreatedDate", "EmployeeId", "PostalCode", "Street", "Title", "UpdatedDate")
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+RETURNING "Id";
+INSERT INTO "Families" ("CreatedDate", "EmployeeId", "FamilyPhoneNumber", "FamilyType", "FirstName", "LastName", "UpdatedDate")
+VALUES (@p20, @p21, @p22, @p23, @p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p27, @p28, @p29, @p30, @p31)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p32, @p33, @p34, @p35, @p36)
+RETURNING "Id";
+INSERT INTO "SchoolExperiences" ("CreatedDate", "EmployeeId", "Grade", "SchoolDateOfEndOnUtc", "SchoolDateOfStartOnUtc", "SchoolName", "SchoolType", "UpdatedDate")
+VALUES (@p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44)
+RETURNING "Id";
+INSERT INTO "WorkExperiences" ("CompanyName", "CreatedDate", "Departmant", "EmployeeId", "Position", "UpdatedDate", "WorkDateOfEnd", "WorkDateOfStart")
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52)
+RETURNING "Id";
+2024-01-08 16:11:41.739 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-08 16:11:41.740 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 2400.116ms
+2024-01-08 16:11:41.742 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:11:41.743 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-08 16:11:41.744 +03:00 [INF] HTTP POST /api/Employees responded 201 in 2420.9869 ms
+2024-01-08 16:11:41.746 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 1213 - 201 0 - 2432.1710ms
+2024-01-08 16:13:26.411 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 1213
+2024-01-08 16:13:26.416 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1213
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:13:26.420 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:13:26.421 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:13:26.424 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:13:26.428 +03:00 [INF] RequestBody: {
+  "firstName": "furkan3",
+  "lastName": "duran",
+  "email": "furkanozgurduran@gmail.com",
+  "phone": "50559887878",
+  "dateOfBirth": "2000-01-08T13:07:43.247Z",
+  "citizenshipNumber": "11111111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 0,
+      "proficiencyLevel": "a1"
+    },
+{
+      "languageEnum": 1,
+      "proficiencyLevel": "a1"
+    }
+
+  ],
+  "addresses": [
+    {
+      "title": "string",
+      "street": "string",
+      "city": "string",
+      "country": "string",
+      "postalCode": 0
+    }
+  ],
+  "families": [
+    {
+      "familyType": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "familyPhoneNumber": 0
+    }
+  ],
+  "schoolExperiences": [
+    {
+      "schoolName": "string",
+      "schoolType": "string",
+      "grade": 0,
+      "schoolDateOfStartOnUtc": "2024-01-08T13:07:43.247Z",
+      "schoolDateOfEndOnUtc": "2024-01-08T13:07:43.247Z"
+    }
+  ],
+  "workExperiences": [
+    {
+      "companyName": "string",
+      "departmant": "string",
+      "position": "string",
+      "workDateOfStart": "2024-01-08T13:07:43.247Z",
+      "workDateOfEnd": "2024-01-08T13:07:43.247Z"
+    }
+  ]
+}
+2024-01-08 16:13:27.953 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 16:13:28.003 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-08 16:13:28.008 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p12='?', @p13='?', @p14='?' (DbType = DateTime), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p20='?' (DbType = DateTime), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?', @p24='?', @p25='?', @p26='?' (DbType = DateTime), @p27='?' (DbType = DateTime), @p28='?' (DbType = Int32), @p29='?', @p30='?', @p31='?' (DbType = DateTime), @p32='?' (DbType = DateTime), @p33='?' (DbType = Int32), @p34='?', @p35='?', @p36='?' (DbType = DateTime), @p37='?' (DbType = DateTime), @p38='?' (DbType = Int32), @p39='?' (DbType = Decimal), @p40='?' (DbType = DateTime), @p41='?' (DbType = DateTime), @p42='?', @p43='?', @p44='?' (DbType = DateTime), @p45='?', @p46='?' (DbType = DateTime), @p47='?', @p48='?' (DbType = Int32), @p49='?', @p50='?' (DbType = DateTime), @p51='?' (DbType = DateTime), @p52='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Addresses" ("City", "Country", "CreatedDate", "EmployeeId", "PostalCode", "Street", "Title", "UpdatedDate")
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+RETURNING "Id";
+INSERT INTO "Families" ("CreatedDate", "EmployeeId", "FamilyPhoneNumber", "FamilyType", "FirstName", "LastName", "UpdatedDate")
+VALUES (@p20, @p21, @p22, @p23, @p24, @p25, @p26)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p27, @p28, @p29, @p30, @p31)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p32, @p33, @p34, @p35, @p36)
+RETURNING "Id";
+INSERT INTO "SchoolExperiences" ("CreatedDate", "EmployeeId", "Grade", "SchoolDateOfEndOnUtc", "SchoolDateOfStartOnUtc", "SchoolName", "SchoolType", "UpdatedDate")
+VALUES (@p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44)
+RETURNING "Id";
+INSERT INTO "WorkExperiences" ("CompanyName", "CreatedDate", "Departmant", "EmployeeId", "Position", "UpdatedDate", "WorkDateOfEnd", "WorkDateOfStart")
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52)
+RETURNING "Id";
+2024-01-08 16:13:28.015 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-08 16:13:28.016 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 1587.8855ms
+2024-01-08 16:13:28.017 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:13:28.018 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-08 16:13:28.019 +03:00 [INF] HTTP POST /api/Employees responded 201 in 1603.1246 ms
+2024-01-08 16:13:28.021 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 1213 - 201 0 - 1610.3626ms
+2024-01-08 16:15:30.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:15:30.647 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 19.9212ms
+2024-01-08 16:15:30.673 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:15:30.677 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:15:30.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 6.5564ms
+2024-01-08 16:15:30.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.0399ms
+2024-01-08 16:15:30.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:15:30.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 26.3562ms
+2024-01-08 16:15:37.948 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:15:38.165 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:15:38.167 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:15:38.170 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:15:38.171 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:15:38.172 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:15:41.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:15:41.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 195.4310ms
+2024-01-08 16:15:41.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:15:41.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:15:41.919 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.0233ms
+2024-01-08 16:15:41.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.7721ms
+2024-01-08 16:15:42.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:15:42.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 144.6883ms
+2024-01-08 16:16:14.143 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 272
+2024-01-08 16:16:14.160 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 272
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:16:14.166 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:16:14.187 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:16:14.377 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:16:14.401 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "asfasfasf",
+  "email": "asfasfsafasfaf",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:15:50.344Z",
+  "citizenshipNumber": "1241241241",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+}
+2024-01-08 16:16:14.431 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:16:14.444 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:16:14.454 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 67.4583ms
+2024-01-08 16:16:14.458 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:16:14.460 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 11 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:16:14.463 +03:00 [INF] HTTP POST /api/Employees responded 400 in 309.2919 ms
+2024-01-08 16:16:14.467 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 272 - 400 - application/json;+charset=utf-8 324.6718ms
+2024-01-08 16:17:34.096 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 272
+2024-01-08 16:17:34.111 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 272
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:17:34.114 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:17:34.117 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:17:34.126 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:17:34.134 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "asfasfasf",
+  "email": "asfasfsafasfaf",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:15:50.344Z",
+  "citizenshipNumber": "1241241241",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+}
+2024-01-08 16:17:34.194 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:17:34.196 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:17:34.197 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 66.0676ms
+2024-01-08 16:17:34.200 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:17:34.204 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 11 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:17:34.205 +03:00 [INF] HTTP POST /api/Employees responded 400 in 94.1183 ms
+2024-01-08 16:17:34.208 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 272 - 400 - application/json;+charset=utf-8 113.2899ms
+2024-01-08 16:17:44.580 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 272
+2024-01-08 16:17:44.583 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 272
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:17:44.585 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:17:44.587 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:17:44.595 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:17:44.601 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "asfasfasf",
+  "email": "asfasfsafasfaf",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:15:50.344Z",
+  "citizenshipNumber": "1241241241",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+}
+2024-01-08 16:17:44.604 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:17:44.605 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:17:44.607 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 9.1586ms
+2024-01-08 16:17:44.608 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:17:44.609 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 11 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:17:44.610 +03:00 [INF] HTTP POST /api/Employees responded 400 in 27.4236 ms
+2024-01-08 16:17:44.612 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 272 - 400 - application/json;+charset=utf-8 31.5895ms
+2024-01-08 16:18:06.413 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:18:06.672 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:18:06.674 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:18:06.677 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:18:06.678 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:18:06.679 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:18:07.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:18:07.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 197.3923ms
+2024-01-08 16:18:07.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:18:07.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:18:07.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.2300ms
+2024-01-08 16:18:07.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.5912ms
+2024-01-08 16:18:07.485 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:18:07.617 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.0914ms
+2024-01-08 16:18:16.360 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 272
+2024-01-08 16:18:16.377 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 272
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:18:16.383 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:18:16.396 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:18:16.574 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:18:16.601 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "asfasfasf",
+  "email": "asfasfsafasfaf",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:15:50.344Z",
+  "citizenshipNumber": "1241241241",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+}
+2024-01-08 16:18:16.635 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:18:16.647 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:18:16.656 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 74.6842ms
+2024-01-08 16:18:16.660 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:18:16.661 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 11 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:18:16.665 +03:00 [INF] HTTP POST /api/Employees responded 400 in 294.2732 ms
+2024-01-08 16:18:16.672 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 272 - 400 - application/json;+charset=utf-8 312.3815ms
+2024-01-08 16:19:35.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:19:35.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 14.2805ms
+2024-01-08 16:19:35.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:19:35.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:19:35.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 2.0712ms
+2024-01-08 16:19:35.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.7073ms
+2024-01-08 16:19:35.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:19:35.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 26.6843ms
+2024-01-08 16:19:42.144 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:19:42.383 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:19:42.384 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:19:42.387 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:19:42.388 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:19:42.389 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:19:42.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:19:42.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 211.2608ms
+2024-01-08 16:19:42.962 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:19:42.967 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:19:42.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 10.7734ms
+2024-01-08 16:19:43.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.0613ms
+2024-01-08 16:19:43.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:19:43.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.5168ms
+2024-01-08 16:19:49.155 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 272
+2024-01-08 16:19:49.167 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 272
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:19:49.174 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:19:49.188 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:19:49.372 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:19:49.407 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "asfasfasf",
+  "email": "asfasfsafasfaf",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:15:50.344Z",
+  "citizenshipNumber": "1241241241",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+}
+2024-01-08 16:19:49.445 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][]'.
+2024-01-08 16:19:49.464 +03:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-01-08 16:19:49.475 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 93.0946ms
+2024-01-08 16:19:49.482 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:19:49.484 +03:00 [INF] ResponseBody: [{"key":"$","value":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 11 | BytePositionInLine: 0."]},{"key":"createEmployeeCommandRequest","value":["The createEmployeeCommandRequest field is required."]}]
+2024-01-08 16:19:49.489 +03:00 [INF] HTTP POST /api/Employees responded 400 in 324.1075 ms
+2024-01-08 16:19:49.495 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 272 - 400 - application/json;+charset=utf-8 340.1301ms
+2024-01-08 16:20:02.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:20:02.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 12.1683ms
+2024-01-08 16:20:02.280 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:20:02.280 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:20:02.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.2098ms
+2024-01-08 16:20:02.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.3568ms
+2024-01-08 16:20:02.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:20:02.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.6646ms
+2024-01-08 16:21:36.447 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:21:36.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 17.9958ms
+2024-01-08 16:21:36.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:21:36.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:21:36.491 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.1258ms
+2024-01-08 16:21:36.494 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.6352ms
+2024-01-08 16:21:41.533 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:21:41.745 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:21:41.745 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:21:41.748 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:21:41.749 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:21:41.750 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:21:44.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:21:45.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 211.7753ms
+2024-01-08 16:21:45.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:21:45.224 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:21:45.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.8780ms
+2024-01-08 16:21:45.274 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.7449ms
+2024-01-08 16:21:45.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:21:45.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.3308ms
+2024-01-08 16:22:26.298 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 266
+2024-01-08 16:22:26.315 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 266
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:22:26.320 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:22:26.334 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:22:26.357 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:22:26.525 +03:00 [INF] RequestBody: {
+  "firstName": "furkan",
+  "lastName": "duran",
+  "email": "msfaklnlaksfafs",
+  "phone": "12412412414",
+  "dateOfBirth": "2000-01-08T13:21:51.331Z",
+  "citizenshipNumber": "11111111",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1
+}
+2024-01-08 16:22:34.212 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 16:22:34.526 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-08 16:22:34.623 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-08 16:22:34.630 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 8265.3168ms
+2024-01-08 16:22:34.633 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:22:34.636 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-08 16:22:34.640 +03:00 [INF] HTTP POST /api/Employees responded 201 in 8327.3547 ms
+2024-01-08 16:22:34.654 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 266 - 201 0 - 8356.9399ms
+2024-01-08 16:43:41.253 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:43:41.607 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:43:41.608 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:43:41.612 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:43:41.614 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:43:41.615 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:43:41.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:43:42.113 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 208.6889ms
+2024-01-08 16:43:42.125 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:43:42.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:43:42.131 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.6314ms
+2024-01-08 16:43:42.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.6255ms
+2024-01-08 16:43:42.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:43:42.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.0648ms
+2024-01-08 16:43:49.689 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 16:43:49.972 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 16:43:49.974 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 16:43:49.977 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 16:43:49.978 +03:00 [INF] Hosting environment: Development
+2024-01-08 16:43:49.979 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 16:43:50.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 16:43:50.591 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 238.0271ms
+2024-01-08 16:43:50.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 16:43:50.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 16:43:50.612 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 6.9554ms
+2024-01-08 16:43:50.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.4282ms
+2024-01-08 16:43:50.813 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 16:43:50.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.5869ms
+2024-01-08 16:44:42.186 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Employees application/json 347
+2024-01-08 16:44:42.210 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 347
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-08 16:44:42.217 +03:00 [INF] CORS policy execution successful.
+2024-01-08 16:44:42.243 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:44:42.279 +03:00 [INF] Route matched with {action = "Post", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-08 16:44:42.476 +03:00 [INF] RequestBody: {
+  "firstName": "asfasf",
+  "lastName": "striasng",
+  "email": "string",
+  "phone": "string",
+  "dateOfBirth": "2004-01-08T13:44:02.601Z",
+  "citizenshipNumber": "string",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 1,
+      "proficiencyLevel": "deafas"
+    }
+  ]
+}
+2024-01-08 16:44:47.024 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-08 16:44:47.425 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?', @p5='?', @p6='?' (DbType = Int32), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("CitizenshipNumber", "CreatedDate", "DateOfBirth", "DepartmentId", "Email", "FirstName", "GenderId", "LastName", "MaritalStatuId", "Phone", "PositionId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)
+RETURNING "Id";
+2024-01-08 16:44:47.490 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p12='?' (DbType = DateTime), @p13='?' (DbType = Int32), @p14='?', @p15='?', @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p12, @p13, @p14, @p15, @p16)
+RETURNING "Id";
+2024-01-08 16:44:47.573 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-08 16:44:47.583 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API) in 5290.8827ms
+2024-01-08 16:44:47.586 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Post (HireWise.API)'
+2024-01-08 16:44:47.590 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-08 16:44:47.596 +03:00 [INF] HTTP POST /api/Employees responded 201 in 5389.9690 ms
+2024-01-08 16:44:47.624 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 347 - 201 0 - 5437.9247ms

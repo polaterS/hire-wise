@@ -68,6 +68,13 @@ namespace HireWise.API.Controllers.EmployeesController
             return Ok(response);
         }
 
+        //[HttpGet("{Id}")]
+        //public async Task<IActionResult> GetLanguages([FromRoute] GetEmployeeLanguagesQueryRequest request)
+        //{
+        //    GetEmployeeLanguagesQueryRequest response = await _mediator.Send(request);
+        //    return Ok(response);
+        //}
+
         //[Authorize(AuthenticationSchemes = "Admin")]
         //[AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Writing, Definition = "Create Employee")]
         [HttpPost]
