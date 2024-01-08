@@ -3,7 +3,6 @@ using HireWise.API.Configurations.ColumnWriters;
 using HireWise.API.Extensions;
 using HireWise.API.Filters;
 using HireWise.Application;
-using HireWise.Application.Validators.Employees;
 using HireWise.Infrastructure;
 using HireWise.Infrastructure.Filter;
 using HireWise.Infrastructure.Services.Storage.Local;

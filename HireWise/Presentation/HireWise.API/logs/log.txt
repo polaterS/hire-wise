@@ -7322,3 +7322,17 @@ RETURNING "Id";
 StatusCode: 201
 2024-01-08 16:44:47.596 +03:00 [INF] HTTP POST /api/Employees responded 201 in 5389.9690 ms
 2024-01-08 16:44:47.624 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Employees application/json 347 - 201 0 - 5437.9247ms
+2024-01-08 17:06:59.165 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-08 17:06:59.377 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-08 17:06:59.378 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-08 17:06:59.380 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 17:06:59.382 +03:00 [INF] Hosting environment: Development
+2024-01-08 17:06:59.383 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-08 17:07:01.051 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-08 17:07:01.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 198.9369ms
+2024-01-08 17:07:01.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-08 17:07:01.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-08 17:07:01.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.8455ms
+2024-01-08 17:07:01.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.0964ms
+2024-01-08 17:07:01.410 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-08 17:07:01.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.2877ms
