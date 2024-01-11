@@ -1,6 +1,8 @@
 ﻿using HireWise.Application.Features.Commands.Language.CreateLanguage;
 using HireWise.Application.Features.Commands.Language.RemoveLanguage;
 using HireWise.Application.Features.Commands.Language.UpdateLanguage;
+using HireWise.Application.Features.Queries.Employee.GetAllEmployee;
+using HireWise.Application.Features.Queries.Language.GetAllLanguage;
 using HireWise.Application.Features.Queries.Language.GetByIdLanguage;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +19,13 @@ namespace HireWise.API.Controllers
         public LanguagesController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get([FromQuery] GetAllLanguageQueryRequest getAllLanguageQueryRequest)
+        {
+            GetAllLanguageQueryResponse response = await _mediator.Send(getAllLanguageQueryRequest);
+            return Ok(response);
         }
 
         [HttpGet("{Id}")]
