@@ -84,7 +84,7 @@ namespace HireWise.API.Controllers.EmployeesController
             return StatusCode((int)HttpStatusCode.Created);    
         }
 
-        [HttpPut]
+        [HttpPut("{Id}")]
         //[Authorize(AuthenticationSchemes = "Admin")]
         //[AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Employees, ActionType = ActionType.Updating, Definition = "Update Employee")]
         public async Task<IActionResult> Put([FromBody]UpdateEmployeeCommandRequest updateEmployeeCommandRequest)
