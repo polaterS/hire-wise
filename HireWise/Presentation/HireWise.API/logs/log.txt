@@ -7657,3 +7657,309 @@ Content-Type: application/json; charset=utf-8
 2024-01-11 12:41:20.002 +03:00 [INF] ResponseBody: {"totalLanguageCount":16,"languages":[{"id":1,"languageEnum":0,"proficiencyLevel":"beginner"},{"id":2,"languageEnum":0,"proficiencyLevel":"beginner"},{"id":8,"languageEnum":0,"proficiencyLevel":"string"},{"id":9,"languageEnum":0,"proficiencyLevel":"string"},{"id":10,"languageEnum":0,"proficiencyLevel":"string"},{"id":11,"languageEnum":0,"proficiencyLevel":"string"},{"id":12,"languageEnum":0,"proficiencyLevel":"begginer"},{"id":13,"languageEnum":0,"proficiencyLevel":"string"},{"id":14,"languageEnum":3,"proficiencyLevel":"string"},{"id":15,"languageEnum":1,"proficiencyLevel":"string"},{"id":19,"languageEnum":0,"proficiencyLevel":"a1"},{"id":20,"languageEnum":0,"proficiencyLevel":"a1"},{"id":21,"languageEnum":0,"proficiencyLevel":"a1"},{"id":22,"languageEnum":0,"proficiencyLevel":"a1"},{"id":23,"languageEnum":1,"proficiencyLevel":"a1"},{"id":24,"languageEnum":1,"proficiencyLevel":"deafas"}]}
 2024-01-11 12:41:20.003 +03:00 [INF] HTTP GET /api/Languages responded 200 in 80.7517 ms
 2024-01-11 12:41:20.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Languages - - - 200 - application/json;+charset=utf-8 88.7775ms
+2024-01-12 13:43:29.894 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-12 13:43:30.532 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-12 13:43:30.533 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-12 13:43:30.535 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-12 13:43:30.536 +03:00 [INF] Hosting environment: Development
+2024-01-12 13:43:30.537 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-12 13:43:35.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-12 13:43:35.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 261.0800ms
+2024-01-12 13:43:35.891 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-12 13:43:35.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-12 13:43:35.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.3009ms
+2024-01-12 13:43:35.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.4442ms
+2024-01-12 13:43:36.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-12 13:43:36.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.7875ms
+2024-01-12 13:43:54.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-12 13:43:54.353 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-12 13:43:54.373 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 13:43:54.426 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-12 13:43:55.961 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-12 13:43:56.199 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-12 13:43:56.204 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-12 13:43:56.392 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-12 13:43:56.438 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-12 13:43:56.462 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-12 13:43:56.474 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 2033.3356ms
+2024-01-12 13:43:56.477 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 13:43:56.484 +03:00 [INF] ResponseBody: {"totalEmployeeCount":11,"employees":[{"id":6,"firstName":"Serkan","lastName":"Yılmaz","email":"sk@example.com","phone":"533333333333","dateOfBirth":"2023-09-28T08:39:19.514Z","citizenshipNumber":"77777999996666","createdDate":"2023-09-28T08:40:03.050711Z","updatedDate":"0001-01-01T00:00:00"},{"id":5,"firstName":"Salih","lastName":"Yalın","email":"sy@example.com","phone":"05444444444","dateOfBirth":"2023-09-28T10:48:24.743Z","citizenshipNumber":"4448498484984984","createdDate":"2023-09-24T17:22:03.382317Z","updatedDate":"2023-09-28T10:49:11.303707Z"},{"id":8,"firstName":"Muhammed Süheyb","lastName":"Polater","email":"suheybpolater@icloud.com","phone":"5344029056","dateOfBirth":"2023-12-21T08:15:53.879Z","citizenshipNumber":"3841857458458458","createdDate":"2023-12-21T08:16:33.206751Z","updatedDate":"0001-01-01T00:00:00"},{"id":9,"firstName":"ubeydullah yılmaz","lastName":"saklan","email":"ubeydullahyılmaz@gmail.com","phone":"654894848875","dateOfBirth":"2023-12-25T11:57:13.129Z","citizenshipNumber":"5849898484984","createdDate":"2023-12-25T11:58:05.327574Z","updatedDate":"0001-01-01T00:00:00"},{"id":17,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-04T07:32:35.867Z","citizenshipNumber":"string","createdDate":"2024-01-04T07:33:05.232154Z","updatedDate":"0001-01-01T00:00:00"},{"id":18,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-08T11:12:02.238Z","citizenshipNumber":"string","createdDate":"2024-01-04T12:14:53.948494Z","updatedDate":"2024-01-08T11:17:35.110661Z"},{"id":19,"firstName":"furkan","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:10:10.857856Z","updatedDate":"0001-01-01T00:00:00"},{"id":20,"firstName":"furkan2","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:11:40.866351Z","updatedDate":"0001-01-01T00:00:00"},{"id":21,"firstName":"furkan3","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:13:27.958389Z","updatedDate":"0001-01-01T00:00:00"},{"id":22,"firstName":"furkan","lastName":"duran","email":"msfaklnlaksfafs","phone":"12412412414","dateOfBirth":"2000-01-08T13:21:51.331Z","citizenshipNumber":"11111111","createdDate":"2024-01-08T13:22:34.330342Z","updatedDate":"0001-01-01T00:00:00"},{"id":23,"firstName":"asfasf","lastName":"striasng","email":"string","phone":"string","dateOfBirth":"2004-01-08T13:44:02.601Z","citizenshipNumber":"string","createdDate":"2024-01-08T13:44:47.234304Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-01-12 13:43:56.490 +03:00 [INF] HTTP GET /api/Employees responded 200 in 2140.9420 ms
+2024-01-12 13:43:56.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 2171.3517ms
+2024-01-12 13:45:02.205 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7298/api/Employees application/json 1174
+2024-01-12 13:45:02.222 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: PUT
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1174
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-12 13:45:02.226 +03:00 [INF] CORS policy execution successful.
+2024-01-12 13:45:02.228 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Put (HireWise.API)'
+2024-01-12 13:45:02.237 +03:00 [INF] Route matched with {action = "Put", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(HireWise.Application.Features.Commands.Employee.UpdateEmployee.UpdateEmployeeCommandRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-12 13:45:02.337 +03:00 [INF] RequestBody: {
+  "id": "20",
+  "firstName": "asdasdasd",
+  "lastName": "dasdasdas",
+  "email": "dasdasdas@gmail.com",
+  "phone": "9999999999999",
+  "dateOfBirth": "2024-01-12T10:43:47.992Z",
+  "citizenshipNumber": "9999999999999",
+  "departmentId": 1,
+  "genderId": 1,
+  "maritalStatuId": 1,
+  "positionId": 1,
+  "languages": [
+    {
+      "languageEnum": 1,
+      "proficiencyLevel": "Professional"
+    }
+  ],
+  "addresses": [
+    {
+      "title": "string",
+      "street": "string",
+      "city": "string",
+      "country": "string",
+      "postalCode": 0
+    }
+  ],
+  "families": [
+    {
+      "familyType": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "familyPhoneNumber": 0
+    }
+  ],
+  "schoolExperiences": [
+    {
+      "schoolName": "string",
+      "schoolType": "string",
+      "grade": 0,
+      "schoolDateOfStartOnUtc": "2024-01-12T10:43:47.992Z",
+      "schoolDateOfEndOnUtc": "2024-01-12T10:43:47.992Z"
+    }
+  ],
+  "workExperiences": [
+    {
+      "companyName": "string",
+      "departmant": "string",
+      "position": "string",
+      "workDateOfStart": "2024-01-12T10:43:47.992Z",
+      "workDateOfEnd": "2024-01-12T10:43:47.992Z"
+    }
+  ]
+}
+2024-01-12 13:45:02.404 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-12 13:45:02.511 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CitizenshipNumber", e."CreatedDate", e."DateOfBirth", e."DepartmentId", e."Email", e."FirstName", e."GenderId", e."LastName", e."MaritalStatuId", e."Phone", e."PositionId", e."UpdatedDate"
+FROM "Employees" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-12 13:45:02.920 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p15='?' (DbType = Int32), @p8='?', @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?' (DbType = DateTime), @p16='?' (DbType = DateTime), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?', @p20='?', @p21='?', @p22='?' (DbType = DateTime), @p23='?' (DbType = DateTime), @p24='?' (DbType = Int32), @p25='?', @p26='?', @p27='?' (DbType = DateTime), @p28='?' (DbType = DateTime), @p29='?' (DbType = Int32), @p30='?' (DbType = Decimal), @p31='?' (DbType = DateTime), @p32='?' (DbType = DateTime), @p33='?', @p34='?', @p35='?' (DbType = DateTime), @p36='?', @p37='?' (DbType = DateTime), @p38='?', @p39='?' (DbType = Int32), @p40='?', @p41='?' (DbType = DateTime), @p42='?' (DbType = DateTime), @p43='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Addresses" ("City", "Country", "CreatedDate", "EmployeeId", "PostalCode", "Street", "Title", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+UPDATE "Employees" SET "CitizenshipNumber" = @p8, "DateOfBirth" = @p9, "Email" = @p10, "FirstName" = @p11, "LastName" = @p12, "Phone" = @p13, "UpdatedDate" = @p14
+WHERE "Id" = @p15;
+INSERT INTO "Families" ("CreatedDate", "EmployeeId", "FamilyPhoneNumber", "FamilyType", "FirstName", "LastName", "UpdatedDate")
+VALUES (@p16, @p17, @p18, @p19, @p20, @p21, @p22)
+RETURNING "Id";
+INSERT INTO "Languages" ("CreatedDate", "EmployeeId", "LanguageEnum", "ProficiencyLevel", "UpdatedDate")
+VALUES (@p23, @p24, @p25, @p26, @p27)
+RETURNING "Id";
+INSERT INTO "SchoolExperiences" ("CreatedDate", "EmployeeId", "Grade", "SchoolDateOfEndOnUtc", "SchoolDateOfStartOnUtc", "SchoolName", "SchoolType", "UpdatedDate")
+VALUES (@p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35)
+RETURNING "Id";
+INSERT INTO "WorkExperiences" ("CompanyName", "CreatedDate", "Departmant", "EmployeeId", "Position", "UpdatedDate", "WorkDateOfEnd", "WorkDateOfStart")
+VALUES (@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43)
+RETURNING "Id";
+2024-01-12 13:45:02.995 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-12 13:45:02.999 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Put (HireWise.API) in 758.5542ms
+2024-01-12 13:45:03.002 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Put (HireWise.API)'
+2024-01-12 13:45:03.005 +03:00 [INF] Response:
+StatusCode: 200
+2024-01-12 13:45:03.007 +03:00 [INF] HTTP PUT /api/Employees responded 200 in 786.3400 ms
+2024-01-12 13:45:03.011 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7298/api/Employees application/json 1174 - 200 0 - 806.1213ms
+2024-01-12 13:45:19.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-12 13:45:19.862 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-12 13:45:19.867 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 13:45:19.870 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-12 13:45:19.889 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-12 13:45:19.900 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-12 13:45:19.907 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-12 13:45:19.911 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-12 13:45:19.914 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 40.374ms
+2024-01-12 13:45:19.956 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 13:45:19.959 +03:00 [INF] ResponseBody: {"totalEmployeeCount":11,"employees":[{"id":6,"firstName":"Serkan","lastName":"Yılmaz","email":"sk@example.com","phone":"533333333333","dateOfBirth":"2023-09-28T08:39:19.514Z","citizenshipNumber":"77777999996666","createdDate":"2023-09-28T08:40:03.050711Z","updatedDate":"0001-01-01T00:00:00"},{"id":5,"firstName":"Salih","lastName":"Yalın","email":"sy@example.com","phone":"05444444444","dateOfBirth":"2023-09-28T10:48:24.743Z","citizenshipNumber":"4448498484984984","createdDate":"2023-09-24T17:22:03.382317Z","updatedDate":"2023-09-28T10:49:11.303707Z"},{"id":8,"firstName":"Muhammed Süheyb","lastName":"Polater","email":"suheybpolater@icloud.com","phone":"5344029056","dateOfBirth":"2023-12-21T08:15:53.879Z","citizenshipNumber":"3841857458458458","createdDate":"2023-12-21T08:16:33.206751Z","updatedDate":"0001-01-01T00:00:00"},{"id":9,"firstName":"ubeydullah yılmaz","lastName":"saklan","email":"ubeydullahyılmaz@gmail.com","phone":"654894848875","dateOfBirth":"2023-12-25T11:57:13.129Z","citizenshipNumber":"5849898484984","createdDate":"2023-12-25T11:58:05.327574Z","updatedDate":"0001-01-01T00:00:00"},{"id":17,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-04T07:32:35.867Z","citizenshipNumber":"string","createdDate":"2024-01-04T07:33:05.232154Z","updatedDate":"0001-01-01T00:00:00"},{"id":18,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-08T11:12:02.238Z","citizenshipNumber":"string","createdDate":"2024-01-04T12:14:53.948494Z","updatedDate":"2024-01-08T11:17:35.110661Z"},{"id":19,"firstName":"furkan","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:10:10.857856Z","updatedDate":"0001-01-01T00:00:00"},{"id":21,"firstName":"furkan3","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:13:27.958389Z","updatedDate":"0001-01-01T00:00:00"},{"id":22,"firstName":"furkan","lastName":"duran","email":"msfaklnlaksfafs","phone":"12412412414","dateOfBirth":"2000-01-08T13:21:51.331Z","citizenshipNumber":"11111111","createdDate":"2024-01-08T13:22:34.330342Z","updatedDate":"0001-01-01T00:00:00"},{"id":23,"firstName":"asfasf","lastName":"striasng","email":"string","phone":"string","dateOfBirth":"2004-01-08T13:44:02.601Z","citizenshipNumber":"string","createdDate":"2024-01-08T13:44:47.234304Z","updatedDate":"0001-01-01T00:00:00"},{"id":20,"firstName":"asdasdasd","lastName":"dasdasdas","email":"dasdasdas@gmail.com","phone":"9999999999999","dateOfBirth":"2024-01-12T10:43:47.992Z","citizenshipNumber":"9999999999999","createdDate":"2024-01-08T13:11:40.866351Z","updatedDate":"2024-01-12T10:45:02.764863Z"}]}
+2024-01-12 13:45:19.963 +03:00 [INF] HTTP GET /api/Employees responded 200 in 101.1498 ms
+2024-01-12 13:45:19.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 107.9559ms
+2024-01-12 14:37:28.676 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees/20 - -
+2024-01-12 14:37:28.687 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees/20
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-12 14:37:28.690 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 14:37:28.696 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetByIdEmployee.GetByIdEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-12 14:37:28.710 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-12 14:37:28.797 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CitizenshipNumber", e."CreatedDate", e."DateOfBirth", e."DepartmentId", e."Email", e."FirstName", e."GenderId", e."LastName", e."MaritalStatuId", e."Phone", e."PositionId", e."UpdatedDate"
+FROM "Employees" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-12 14:37:28.805 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetByIdEmployee.GetByIdEmployeeQueryResponse'.
+2024-01-12 14:37:28.809 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-12 14:37:28.810 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 112.1183ms
+2024-01-12 14:37:28.811 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 14:37:28.812 +03:00 [INF] ResponseBody: {"firstName":"asdasdasd","lastName":"dasdasdas","email":"dasdasdas@gmail.com","phone":"9999999999999","dateOfBirth":"2024-01-12T10:43:47.992Z","citizenshipNumber":"9999999999999","departmentId":1,"genderId":1,"maritalStatuId":1}
+2024-01-12 14:37:28.814 +03:00 [INF] HTTP GET /api/Employees/20 responded 200 in 126.2591 ms
+2024-01-12 14:37:28.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees/20 - - - 200 - application/json;+charset=utf-8 141.1228ms
+2024-01-12 15:08:34.167 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-12 15:08:34.995 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-12 15:08:34.997 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-12 15:08:35.000 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-12 15:08:35.001 +03:00 [INF] Hosting environment: Development
+2024-01-12 15:08:35.001 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-12 15:08:35.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-12 15:08:35.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 288.1722ms
+2024-01-12 15:08:35.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-12 15:08:35.911 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 7.1230ms
+2024-01-12 15:08:35.920 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-12 15:08:36.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 100.9071ms
+2024-01-12 15:08:36.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-12 15:08:36.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.5233ms
+2024-01-12 15:08:45.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees/20 - -
+2024-01-12 15:08:45.361 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees/20
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-12 15:08:45.389 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 15:08:45.434 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetByIdEmployee.GetByIdEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-12 15:08:47.007 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-12 15:08:47.693 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CitizenshipNumber", e."CreatedDate", e."DateOfBirth", e."DepartmentId", e."Email", e."FirstName", e."GenderId", e."LastName", e."MaritalStatuId", e."Phone", e."PositionId", e."UpdatedDate"
+FROM "Employees" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-12 15:08:47.787 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__employee_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."EmployeeId", l."LanguageEnum", l."ProficiencyLevel", l."UpdatedDate"
+FROM "Languages" AS l
+WHERE l."EmployeeId" = @__employee_Id_0
+2024-01-12 15:08:47.860 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employee_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."City", a."Country", a."CreatedDate", a."EmployeeId", a."PostalCode", a."Street", a."Title", a."UpdatedDate"
+FROM "Addresses" AS a
+WHERE a."EmployeeId" = @__employee_Id_0
+2024-01-12 15:08:47.881 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__employee_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."CreatedDate", f."EmployeeId", f."FamilyPhoneNumber", f."FamilyType", f."FirstName", f."LastName", f."UpdatedDate"
+FROM "Families" AS f
+WHERE f."EmployeeId" = @__employee_Id_0
+2024-01-12 15:08:47.906 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employee_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedDate", s."EmployeeId", s."Grade", s."SchoolDateOfEndOnUtc", s."SchoolDateOfStartOnUtc", s."SchoolName", s."SchoolType", s."UpdatedDate"
+FROM "SchoolExperiences" AS s
+WHERE s."EmployeeId" = @__employee_Id_0
+2024-01-12 15:08:47.942 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__employee_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT w."Id", w."CompanyName", w."CreatedDate", w."Departmant", w."EmployeeId", w."Position", w."UpdatedDate", w."WorkDateOfEnd", w."WorkDateOfStart"
+FROM "WorkExperiences" AS w
+WHERE w."EmployeeId" = @__employee_Id_0
+2024-01-12 15:08:47.973 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetByIdEmployee.GetByIdEmployeeQueryResponse'.
+2024-01-12 15:08:47.998 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-12 15:08:48.006 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 2562.5371ms
+2024-01-12 15:08:48.008 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-12 15:08:48.013 +03:00 [INF] ResponseBody: {"firstName":"asdasdasd","lastName":"dasdasdas","email":"dasdasdas@gmail.com","phone":"9999999999999","dateOfBirth":"2024-01-12T10:43:47.992Z","citizenshipNumber":"9999999999999","departmentId":1,"genderId":1,"maritalStatuId":1,"positionId":1,"languages":[{"languageEnum":0,"proficiencyLevel":"a1"},{"languageEnum":0,"proficiencyLevel":"a1"},{"languageEnum":1,"proficiencyLevel":"Professional"}],"addresses":[{"title":"string","street":"string","city":"string","country":"string","postalCode":0},{"title":"string","street":"string","city":"string","country":"string","postalCode":0}],"families":[{"familyType":"string","firstName":"string","lastName":"string","familyPhoneNumber":0},{"familyType":"string","firstName":"string","lastName":"string","familyPhoneNumber":0}],"schoolExperiences":[{"schoolName":"string","schoolType":"string","grade":0,"schoolDateOfStartOnUtc":"2024-01-08T13:07:43.247Z","schoolDateOfEndOnUtc":"2024-01-08T13:07:43.247Z"},{"schoolName":"string","schoolType":"string","grade":0,"schoolDateOfStartOnUtc":"2024-01-12T10:43:47.992Z","schoolDateOfEndOnUtc":"2024-01-12T10:43:47.992Z"}],"workExperiences":[{"companyName":"string","departmant":"string","position":"string","workDateOfStart":"2024-01-08T13:07:43.247Z","workDateOfEnd":"2024-01-08T13:07:43.247Z"},{"companyName":"string","departmant":"string","position":"string","workDateOfStart":"2024-01-12T10:43:47.992Z","workDateOfEnd":"2024-01-12T10:43:47.992Z"}]}
+2024-01-12 15:08:48.021 +03:00 [INF] HTTP GET /api/Employees/20 responded 200 in 2663.7223 ms
+2024-01-12 15:08:48.042 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees/20 - - - 200 - application/json;+charset=utf-8 2699.3343ms
