@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a3f80c3adcf272ce6a7feb0253387ec059b3b6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4a3afb1d7fc2b0c39a12551e1e5145bfc297f09")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

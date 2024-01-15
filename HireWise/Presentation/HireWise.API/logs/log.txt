@@ -8385,3 +8385,374 @@ Content-Type: application/json; charset=utf-8
 }
 2024-01-15 14:35:28.183 +03:00 [INF] HTTP GET /api/Employees responded 200 in 1807.0448 ms
 2024-01-15 14:35:28.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 1826.4980ms
+2024-01-15 14:39:17.313 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:39:17.587 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:39:17.588 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:39:17.591 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:39:17.592 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:39:17.594 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:39:18.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:39:18.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 208.1971ms
+2024-01-15 14:39:18.397 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:39:18.402 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.8812ms
+2024-01-15 14:39:18.403 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:39:18.451 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.4521ms
+2024-01-15 14:39:18.562 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:39:18.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.6636ms
+2024-01-15 14:40:42.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-15 14:40:42.393 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:40:42.407 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:40:42.431 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-15 14:40:43.951 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:40:44.144 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:40:44.146 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:40:44.287 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-15 14:40:44.316 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-15 14:40:44.329 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-15 14:40:44.339 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 1897.073ms
+2024-01-15 14:40:44.341 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:40:44.343 +03:00 [INF] ResponseBody: {
+  "TotalEmployeeCount": 11,
+  "Employees": [
+    {
+      "Id": 6,
+      "FirstName": "Serkan",
+      "LastName": "Yılmaz",
+      "Email": "sk@example.com",
+      "Phone": "533333333333",
+      "DateOfBirth": "2023-09-28",
+      "CitizenshipNumber": "77777999996666",
+      "CreatedDate": "2023-09-28",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 5,
+      "FirstName": "Salih",
+      "LastName": "Yalın",
+      "Email": "sy@example.com",
+      "Phone": "05444444444",
+      "DateOfBirth": "2023-09-28",
+      "CitizenshipNumber": "4448498484984984",
+      "CreatedDate": "2023-09-24",
+      "UpdatedDate": "2023-09-28"
+    },
+    {
+      "Id": 8,
+      "FirstName": "Muhammed Süheyb",
+      "LastName": "Polater",
+      "Email": "suheybpolater@icloud.com",
+      "Phone": "5344029056",
+      "DateOfBirth": "2023-12-21",
+      "CitizenshipNumber": "3841857458458458",
+      "CreatedDate": "2023-12-21",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 9,
+      "FirstName": "ubeydullah yılmaz",
+      "LastName": "saklan",
+      "Email": "ubeydullahyılmaz@gmail.com",
+      "Phone": "654894848875",
+      "DateOfBirth": "2023-12-25",
+      "CitizenshipNumber": "5849898484984",
+      "CreatedDate": "2023-12-25",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 17,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-04",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-04",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 18,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-08",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-04",
+      "UpdatedDate": "2024-01-08"
+    },
+    {
+      "Id": 19,
+      "FirstName": "furkan",
+      "LastName": "duran",
+      "Email": "furkanozgurduran@gmail.com",
+      "Phone": "50559887878",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 21,
+      "FirstName": "furkan3",
+      "LastName": "duran",
+      "Email": "furkanozgurduran@gmail.com",
+      "Phone": "50559887878",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 22,
+      "FirstName": "furkan",
+      "LastName": "duran",
+      "Email": "msfaklnlaksfafs",
+      "Phone": "12412412414",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 23,
+      "FirstName": "asfasf",
+      "LastName": "striasng",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2004-01-08",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 20,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-12",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "2024-01-12"
+    }
+  ]
+}
+2024-01-15 14:40:44.349 +03:00 [INF] HTTP GET /api/Employees responded 200 in 1959.4178 ms
+2024-01-15 14:40:44.362 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 1984.0217ms
+2024-01-15 14:43:22.351 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:43:22.588 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:43:22.589 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:43:22.591 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:43:22.592 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:43:22.593 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:43:23.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:43:23.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 231.4959ms
+2024-01-15 14:43:23.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:43:23.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.6958ms
+2024-01-15 14:43:23.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:43:23.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.0120ms
+2024-01-15 14:43:23.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:43:23.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.6717ms
+2024-01-15 14:45:11.251 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:45:11.468 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:45:11.469 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:45:11.472 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:45:11.473 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:45:11.474 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:45:15.015 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:45:15.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 207.6947ms
+2024-01-15 14:45:15.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:45:15.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:45:15.238 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 7.5713ms
+2024-01-15 14:45:15.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.2376ms
+2024-01-15 14:45:15.395 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:45:15.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.9682ms
+2024-01-15 14:47:02.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:47:07.162 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:47:07.373 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:47:07.379 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:47:07.382 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:47:07.383 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:47:07.385 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:47:07.655 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:47:07.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 200.9776ms
+2024-01-15 14:47:07.857 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:47:07.865 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:47:07.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 9.8356ms
+2024-01-15 14:47:07.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.7414ms
+2024-01-15 14:47:08.019 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:47:08.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - -
+2024-01-15 14:47:08.050 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-01-15 14:47:08.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - - - 200 628 image/png 15.8881ms
+2024-01-15 14:47:08.161 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.1752ms
+2024-01-15 14:49:50.436 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:49:50.809 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:49:50.811 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:49:50.814 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:49:50.815 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:49:50.816 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:49:51.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:49:51.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 201.8380ms
+2024-01-15 14:49:51.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:49:51.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.6948ms
+2024-01-15 14:49:51.437 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:49:51.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.5295ms
+2024-01-15 14:49:51.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:49:51.762 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.4545ms
+2024-01-15 14:49:56.204 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Departments - -
+2024-01-15 14:49:56.219 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Departments
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:49:56.234 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.DepartmentsController.Get (HireWise.API)'
+2024-01-15 14:49:56.260 +03:00 [INF] Route matched with {action = "Get", controller = "Departments"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Department.GetAllDepartment.GetAllDepartmentQueryRequest) on controller HireWise.API.Controllers.DepartmentsController (HireWise.API).
+2024-01-15 14:49:57.308 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:49:57.587 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Departments" AS d
+2024-01-15 14:49:57.638 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:49:57.640 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:49:57.682 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT d."Id", d."Name"
+FROM "Departments" AS d
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-15 14:49:57.701 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Department.GetAllDepartment.GetAllDepartmentQueryResponse'.
+2024-01-15 14:49:57.713 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-15 14:49:57.725 +03:00 [INF] Executed action HireWise.API.Controllers.DepartmentsController.Get (HireWise.API) in 1455.6916ms
+2024-01-15 14:49:57.727 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.DepartmentsController.Get (HireWise.API)'
+2024-01-15 14:49:57.732 +03:00 [INF] ResponseBody: {"totalDepartmentCount":5,"departments":[{"id":1,"name":"IT"},{"id":3,"name":"HR"},{"id":4,"name":"string"},{"id":5,"name":"string"},{"id":6,"name":"adsdasas"}]}
+2024-01-15 14:49:57.736 +03:00 [INF] HTTP GET /api/Departments responded 200 in 1520.5155 ms
+2024-01-15 14:49:57.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Departments - - - 200 - application/json;+charset=utf-8 1549.6644ms
+2024-01-15 14:51:17.037 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:51:17.329 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:51:17.331 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:51:17.334 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:51:17.335 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:51:17.336 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:51:17.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:51:17.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 231.6979ms
+2024-01-15 14:51:17.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:51:17.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 3.7817ms
+2024-01-15 14:51:17.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:51:17.983 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.2811ms
+2024-01-15 14:51:18.144 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:51:18.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.4539ms
+2024-01-15 14:51:23.281 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Departments - -
+2024-01-15 14:51:23.293 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Departments
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:51:23.310 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.DepartmentsController.Get (HireWise.API)'
+2024-01-15 14:51:23.337 +03:00 [INF] Route matched with {action = "Get", controller = "Departments"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Department.GetAllDepartment.GetAllDepartmentQueryRequest) on controller HireWise.API.Controllers.DepartmentsController (HireWise.API).
+2024-01-15 14:51:24.359 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:51:24.632 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Departments" AS d
+2024-01-15 14:51:24.678 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:51:24.680 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:51:24.712 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT d."Id", d."Name"
+FROM "Departments" AS d
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-15 14:51:24.724 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Department.GetAllDepartment.GetAllDepartmentQueryResponse'.
+2024-01-15 14:51:24.730 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-15 14:51:24.737 +03:00 [INF] Executed action HireWise.API.Controllers.DepartmentsController.Get (HireWise.API) in 1393.9137ms
+2024-01-15 14:51:24.739 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.DepartmentsController.Get (HireWise.API)'
+2024-01-15 14:51:24.743 +03:00 [INF] ResponseBody: {"totalDepartmentCount":5,"departments":[{"id":1,"name":"IT"},{"id":3,"name":"HR"},{"id":4,"name":"string"},{"id":5,"name":"string"},{"id":6,"name":"adsdasas"}]}
+2024-01-15 14:51:24.746 +03:00 [INF] HTTP GET /api/Departments responded 200 in 1455.7397 ms
+2024-01-15 14:51:24.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Departments - - - 200 - application/json;+charset=utf-8 1475.1701ms
+2024-01-15 14:51:29.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-15 14:51:29.251 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:51:29.253 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:51:29.262 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-15 14:51:29.312 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:51:29.319 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:51:29.320 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:51:29.327 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-15 14:51:29.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-15 14:51:29.346 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-15 14:51:29.348 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 84.1288ms
+2024-01-15 14:51:29.354 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:51:29.357 +03:00 [INF] ResponseBody: {"totalEmployeeCount":11,"employees":[{"id":6,"firstName":"Serkan","lastName":"Yılmaz","email":"sk@example.com","phone":"533333333333","dateOfBirth":"2023-09-28T08:39:19.514Z","citizenshipNumber":"77777999996666","createdDate":"2023-09-28T08:40:03.050711Z","updatedDate":"0001-01-01T00:00:00"},{"id":5,"firstName":"Salih","lastName":"Yalın","email":"sy@example.com","phone":"05444444444","dateOfBirth":"2023-09-28T10:48:24.743Z","citizenshipNumber":"4448498484984984","createdDate":"2023-09-24T17:22:03.382317Z","updatedDate":"2023-09-28T10:49:11.303707Z"},{"id":8,"firstName":"Muhammed Süheyb","lastName":"Polater","email":"suheybpolater@icloud.com","phone":"5344029056","dateOfBirth":"2023-12-21T08:15:53.879Z","citizenshipNumber":"3841857458458458","createdDate":"2023-12-21T08:16:33.206751Z","updatedDate":"0001-01-01T00:00:00"},{"id":9,"firstName":"ubeydullah yılmaz","lastName":"saklan","email":"ubeydullahyılmaz@gmail.com","phone":"654894848875","dateOfBirth":"2023-12-25T11:57:13.129Z","citizenshipNumber":"5849898484984","createdDate":"2023-12-25T11:58:05.327574Z","updatedDate":"0001-01-01T00:00:00"},{"id":17,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-04T07:32:35.867Z","citizenshipNumber":"string","createdDate":"2024-01-04T07:33:05.232154Z","updatedDate":"0001-01-01T00:00:00"},{"id":18,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-08T11:12:02.238Z","citizenshipNumber":"string","createdDate":"2024-01-04T12:14:53.948494Z","updatedDate":"2024-01-08T11:17:35.110661Z"},{"id":19,"firstName":"furkan","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:10:10.857856Z","updatedDate":"0001-01-01T00:00:00"},{"id":21,"firstName":"furkan3","lastName":"duran","email":"furkanozgurduran@gmail.com","phone":"50559887878","dateOfBirth":"2000-01-08T13:07:43.247Z","citizenshipNumber":"11111111111","createdDate":"2024-01-08T13:13:27.958389Z","updatedDate":"0001-01-01T00:00:00"},{"id":22,"firstName":"furkan","lastName":"duran","email":"msfaklnlaksfafs","phone":"12412412414","dateOfBirth":"2000-01-08T13:21:51.331Z","citizenshipNumber":"11111111","createdDate":"2024-01-08T13:22:34.330342Z","updatedDate":"0001-01-01T00:00:00"},{"id":23,"firstName":"asfasf","lastName":"striasng","email":"string","phone":"string","dateOfBirth":"2004-01-08T13:44:02.601Z","citizenshipNumber":"string","createdDate":"2024-01-08T13:44:47.234304Z","updatedDate":"0001-01-01T00:00:00"},{"id":20,"firstName":"string","lastName":"string","email":"string","phone":"string","dateOfBirth":"2024-01-12T13:04:23.088Z","citizenshipNumber":"string","createdDate":"2024-01-08T13:11:40.866351Z","updatedDate":"2024-01-12T13:05:08.163453Z"}]}
+2024-01-15 14:51:29.360 +03:00 [INF] HTTP GET /api/Employees responded 200 in 109.1089 ms
+2024-01-15 14:51:29.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 118.0135ms
