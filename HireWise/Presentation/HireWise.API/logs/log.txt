@@ -8153,3 +8153,235 @@ RETURNING "Id";
 StatusCode: 200
 2024-01-12 16:05:08.386 +03:00 [INF] HTTP PUT /api/Employees/20 responded 200 in 809.5545 ms
 2024-01-12 16:05:08.391 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7298/api/Employees/20 application/json 1135 - 200 0 - 831.5115ms
+2024-01-15 14:24:09.934 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:24:10.638 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:24:10.639 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:24:10.642 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:24:10.643 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:24:10.644 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:24:11.140 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:24:11.370 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 229.2384ms
+2024-01-15 14:24:11.374 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:24:11.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 3.6491ms
+2024-01-15 14:24:11.381 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:24:13.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 2408.1317ms
+2024-01-15 14:24:13.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:24:13.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.9944ms
+2024-01-15 14:24:22.952 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Departments application/json 24
+2024-01-15 14:24:22.968 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Departments
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 24
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:24:22.974 +03:00 [INF] CORS policy execution successful.
+2024-01-15 14:24:22.991 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.DepartmentsController.Post (HireWise.API)'
+2024-01-15 14:24:23.014 +03:00 [INF] Route matched with {action = "Post", controller = "Departments"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.Department.CreateDepartment.CreateDepartmentCommandRequest) on controller HireWise.API.Controllers.DepartmentsController (HireWise.API).
+2024-01-15 14:24:23.074 +03:00 [INF] RequestBody: {
+  "name": "adsdasas"
+}
+2024-01-15 14:24:24.501 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:24:24.814 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Departments" ("CreatedDate", "Name", "UpdatedDate")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2024-01-15 14:24:24.909 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-15 14:24:24.916 +03:00 [INF] Executed action HireWise.API.Controllers.DepartmentsController.Post (HireWise.API) in 1891.2538ms
+2024-01-15 14:24:24.918 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.DepartmentsController.Post (HireWise.API)'
+2024-01-15 14:24:24.921 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-15 14:24:24.924 +03:00 [INF] HTTP POST /api/Departments responded 201 in 1964.5131 ms
+2024-01-15 14:24:24.936 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Departments application/json 24 - 201 0 - 1984.2486ms
+2024-01-15 14:35:15.775 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 14:35:16.078 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-15 14:35:16.080 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-15 14:35:16.083 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 14:35:16.084 +03:00 [INF] Hosting environment: Development
+2024-01-15 14:35:16.085 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-15 14:35:16.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-15 14:35:16.899 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 239.6874ms
+2024-01-15 14:35:16.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-15 14:35:16.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 14:35:16.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 7.6629ms
+2024-01-15 14:35:16.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.9526ms
+2024-01-15 14:35:17.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-15 14:35:17.486 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 179.6315ms
+2024-01-15 14:35:26.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-15 14:35:26.380 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-15 14:35:26.397 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:35:26.436 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-15 14:35:27.759 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-15 14:35:27.970 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:35:27.973 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-15 14:35:28.117 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-15 14:35:28.149 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-15 14:35:28.163 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-15 14:35:28.171 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 1727.9632ms
+2024-01-15 14:35:28.173 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-15 14:35:28.176 +03:00 [INF] ResponseBody: {
+  "TotalEmployeeCount": 11,
+  "Employees": [
+    {
+      "Id": 6,
+      "FirstName": "Serkan",
+      "LastName": "Yılmaz",
+      "Email": "sk@example.com",
+      "Phone": "533333333333",
+      "DateOfBirth": "2023-09-28",
+      "CitizenshipNumber": "77777999996666",
+      "CreatedDate": "2023-09-28",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 5,
+      "FirstName": "Salih",
+      "LastName": "Yalın",
+      "Email": "sy@example.com",
+      "Phone": "05444444444",
+      "DateOfBirth": "2023-09-28",
+      "CitizenshipNumber": "4448498484984984",
+      "CreatedDate": "2023-09-24",
+      "UpdatedDate": "2023-09-28"
+    },
+    {
+      "Id": 8,
+      "FirstName": "Muhammed Süheyb",
+      "LastName": "Polater",
+      "Email": "suheybpolater@icloud.com",
+      "Phone": "5344029056",
+      "DateOfBirth": "2023-12-21",
+      "CitizenshipNumber": "3841857458458458",
+      "CreatedDate": "2023-12-21",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 9,
+      "FirstName": "ubeydullah yılmaz",
+      "LastName": "saklan",
+      "Email": "ubeydullahyılmaz@gmail.com",
+      "Phone": "654894848875",
+      "DateOfBirth": "2023-12-25",
+      "CitizenshipNumber": "5849898484984",
+      "CreatedDate": "2023-12-25",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 17,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-04",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-04",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 18,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-08",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-04",
+      "UpdatedDate": "2024-01-08"
+    },
+    {
+      "Id": 19,
+      "FirstName": "furkan",
+      "LastName": "duran",
+      "Email": "furkanozgurduran@gmail.com",
+      "Phone": "50559887878",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 21,
+      "FirstName": "furkan3",
+      "LastName": "duran",
+      "Email": "furkanozgurduran@gmail.com",
+      "Phone": "50559887878",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 22,
+      "FirstName": "furkan",
+      "LastName": "duran",
+      "Email": "msfaklnlaksfafs",
+      "Phone": "12412412414",
+      "DateOfBirth": "2000-01-08",
+      "CitizenshipNumber": "11111111",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 23,
+      "FirstName": "asfasf",
+      "LastName": "striasng",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2004-01-08",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "0001-01-01"
+    },
+    {
+      "Id": 20,
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "DateOfBirth": "2024-01-12",
+      "CitizenshipNumber": "string",
+      "CreatedDate": "2024-01-08",
+      "UpdatedDate": "2024-01-12"
+    }
+  ]
+}
+2024-01-15 14:35:28.183 +03:00 [INF] HTTP GET /api/Employees responded 200 in 1807.0448 ms
+2024-01-15 14:35:28.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 1826.4980ms

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireWise.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d38de2a4b3500f3e9f0eddef625e4e3191147ec9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a3f80c3adcf272ce6a7feb0253387ec059b3b6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireWise.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireWise.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

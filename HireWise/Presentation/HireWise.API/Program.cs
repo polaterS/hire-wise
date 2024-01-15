@@ -15,6 +15,7 @@ using NpgsqlTypes;
 using Serilog;
 using Serilog.Context;
 using Serilog.Sinks.PostgreSQL;
+using System.ComponentModel;
 using System.Security.Claims;
 using System.Text;
 
@@ -76,7 +77,13 @@ builder.Services.AddHttpLogging(logging =>
     logging.RequestBodyLogLimit = 4096;
     logging.ResponseBodyLogLimit = 4096;
 });
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        options.JsonSerializerOptions.WriteIndented = true;
+        options.JsonSerializerOptions.Converters.Add(new CustomDateConverter());
+    });
 //builder.Services.AddControllers(options =>
 //{
 //    options.Filters.Add<ValidationFilter>();
