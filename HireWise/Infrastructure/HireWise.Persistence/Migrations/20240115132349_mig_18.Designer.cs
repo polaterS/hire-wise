@@ -3,6 +3,7 @@ using System;
 using HireWise.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HireWise.Persistence.Migrations
 {
     [DbContext(typeof(HireWiseDbContext))]
-    partial class HireWiseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240115132349_mig_18")]
+    partial class mig_18
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

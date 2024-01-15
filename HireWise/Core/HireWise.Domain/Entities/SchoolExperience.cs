@@ -12,9 +12,9 @@ namespace HireWise.Domain.Entities
 
         public decimal Grade { get; set; }
 
-        public DateTime SchoolDateOfStartOnUtc { get; set; }
+        public string SchoolDateOfStartOnUtc { get; set; }
 
-        public DateTime? SchoolDateOfEndOnUtc { get; set; }
+        public string SchoolDateOfEndOnUtc { get; set; }
 
         public Employee Employee { get; set; }
     }
