@@ -69,8 +69,8 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
             return dtos.Select(dto => new HireWise.Domain.Entities.Family
             {
                 FamilyType = dto.FamilyType,
-                FirstName = dto.FirstName,
-                LastName = dto.LastName,
+                FamilyFirstName = dto.FamilyFirstName,
+                FamilyLastName = dto.FamilyLastName,
                 FamilyPhoneNumber = dto.FamilyPhoneNumber
             }).ToList();
         }

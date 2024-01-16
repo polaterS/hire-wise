@@ -70,8 +70,8 @@ namespace HireWise.Application.Features.Queries.Employee.GetByIdEmployee
 
                 Families = families.Select(f => new FamilyDto {
                     FamilyType = f.FamilyType,
-                    FirstName = f.FirstName,
-                    LastName = f.LastName,
+                    FamilyFirstName = f.FamilyFirstName,
+                    FamilyLastName = f.FamilyLastName,
                     FamilyPhoneNumber = f.FamilyPhoneNumber
                 }).ToList(),
 

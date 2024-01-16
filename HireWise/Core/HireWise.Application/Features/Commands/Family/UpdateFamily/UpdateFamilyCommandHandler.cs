@@ -17,8 +17,8 @@ namespace HireWise.Application.Features.Commands.Family.UpdateFamily
         {
             HireWise.Domain.Entities.Family family = await _familyReadRepository.GetByIdAsync(request.Id);
             family.EmployeeId = request.EmployeeId;
-            family.FirstName = request.FirstName;
-            family.LastName = request.LastName;
+            family.FamilyFirstName = request.FamilyFirstName;
+            family.FamilyLastName = request.FamilyLastName;
             family.FamilyType = request.FamilyType;
             family.FamilyPhoneNumber = request.FamilyPhoneNumber;
             await _familyWriteRepository.SaveAsync();

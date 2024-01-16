@@ -195,8 +195,9 @@ namespace HireWise.Persistence.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("DateOfBirth")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("DepartmentId")
                         .HasColumnType("integer");
@@ -365,18 +366,18 @@ namespace HireWise.Persistence.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("FamilyFirstName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FamilyLastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("FamilyPhoneNumber")
                         .HasColumnType("integer");
 
                     b.Property<string>("FamilyType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -777,11 +778,13 @@ namespace HireWise.Persistence.Migrations
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("WorkDateOfEnd")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("WorkDateOfEnd")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("WorkDateOfStart")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("WorkDateOfStart")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

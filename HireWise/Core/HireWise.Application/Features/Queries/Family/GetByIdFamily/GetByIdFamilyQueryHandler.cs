@@ -17,8 +17,8 @@ namespace HireWise.Application.Features.Queries.Family.GetByIdFamily
             return new()
             {
                 EmployeeId = family.EmployeeId,
-                FirstName = family.FirstName,
-                LastName = family.LastName,
+                FamilyFirstName = family.FamilyFirstName,
+                FamilyLastName = family.FamilyLastName,
                 FamilyType = family.FamilyType,
             };
         }
