@@ -21,6 +21,10 @@ namespace HireWise.Application.Features.Queries.Employee.GetAllEmployee
                 e.Phone,
                 e.DateOfBirth,
                 e.CitizenshipNumber,
+                e.GenderId,
+                e.DepartmentId,
+                e.PositionId,
+                e.MaritalStatuId,
                 e.CreatedDate,
                 e.UpdatedDate,
             }).ToList();
