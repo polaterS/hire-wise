@@ -24,15 +24,44 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
             employee.Phone = request.Phone;
             employee.DateOfBirth = request.DateOfBirth;
             employee.CitizenshipNumber = request.CitizenshipNumber;
-            employee.DepartmentId = request.DepartmentId;
-            employee.GenderId = request.GenderId;
-            employee.MaritalStatuId = request.MaritalStatuId;
-            employee.PositionId = request.PositionId;
-            employee.Languages = MapLanguages(request.Languages);
-            employee.Addresses = MapAddresses(request.Addresses);
-            employee.Families = MapFamilies(request.Families);
-            employee.SchoolExperiences = MapSchoolExperiences(request.SchoolExperiences);
-            employee.WorkExperiences = MapWorkExperiences(request.WorkExperiences);
+
+            if (request.DepartmentId.HasValue)
+                employee.DepartmentId = request.DepartmentId.Value;
+
+            if (request.GenderId.HasValue)
+                employee.GenderId = request.GenderId.Value;
+
+            if (request.MaritalStatuId.HasValue)
+                employee.MaritalStatuId = request.MaritalStatuId.Value;
+
+            if (request.PositionId.HasValue)
+                employee.PositionId = request.PositionId.Value;
+
+            if (employee.Languages != null)
+                employee.Languages.Clear();
+            if (employee.Addresses != null)
+                employee.Addresses.Clear();
+            if (employee.Families != null)
+                employee.Families.Clear();
+            if (employee.SchoolExperiences != null)
+                employee.SchoolExperiences.Clear();
+            if (employee.WorkExperiences != null)
+                employee.WorkExperiences.Clear();
+
+            if (request.Languages != null)
+                employee.Languages = MapLanguages(request.Languages);
+            if (request.Addresses != null)
+                employee.Addresses = MapAddresses(request.Addresses);
+            if (request.Families != null)
+                employee.Families = MapFamilies(request.Families);
+            if (request.SchoolExperiences != null)
+                employee.SchoolExperiences = MapSchoolExperiences(request.SchoolExperiences);
+            if (request.WorkExperiences != null)
+                employee.WorkExperiences = MapWorkExperiences(request.WorkExperiences);
+
+
+
+
             await _employeeWriteRepository.SaveAsync();
             return new();
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireWise.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e3f6e4cb00a48f41a1990235d1eb2aac3dfaef3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8880eb55a56db20a7facc5518cc95f590351f3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireWise.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireWise.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
