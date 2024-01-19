@@ -18,12 +18,23 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
         public async Task<UpdateEmployeeCommandResponse> Handle(UpdateEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
             HireWise.Domain.Entities.Employee employee = await _employeeReadRepository.GetByIdAsync(request.Id);
-            employee.FirstName = request.FirstName;
-            employee.LastName = request.LastName;
-            employee.Email = request.Email;
-            employee.Phone = request.Phone;
-            employee.DateOfBirth = request.DateOfBirth;
-            employee.CitizenshipNumber = request.CitizenshipNumber;
+            if (request.FirstName != null)
+                employee.FirstName = request.FirstName;
+
+            if (request.LastName != null)
+                employee.LastName = request.LastName;
+
+            if (request.Email != null)
+                employee.Email = request.Email;
+
+            if (request.Phone != null)
+                employee.Phone = request.Phone;
+
+            if (request.DateOfBirth != null)
+                employee.DateOfBirth = request.DateOfBirth;
+
+            if (request.CitizenshipNumber != null)
+                employee.CitizenshipNumber = request.CitizenshipNumber;
 
             if (request.DepartmentId.HasValue)
                 employee.DepartmentId = request.DepartmentId.Value;
