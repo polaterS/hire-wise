@@ -18,6 +18,7 @@ namespace HireWise.Domain.Entities
         public Position Position { get; set; }
         public int MaritalStatuId { get; set; }
         public MaritalStatu MaritalStatu { get; set; }
+        public ICollection<EmployeeLeaveDays> LeaveDays { get; set; }
         public ICollection<EmployeeImageFile> EmployeeImageFiles { get; set; }
         public ICollection<Language> Languages { get; set; }
         public ICollection<Address> Addresses { get; set; }

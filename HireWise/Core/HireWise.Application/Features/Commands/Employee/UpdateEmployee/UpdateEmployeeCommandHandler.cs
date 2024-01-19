@@ -50,6 +50,8 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
 
             if (employee.Languages != null)
                 employee.Languages.Clear();
+            if (employee.LeaveDays != null)
+                employee.LeaveDays.Clear();
             if (employee.Addresses != null)
                 employee.Addresses.Clear();
             if (employee.Families != null)
@@ -61,6 +63,8 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
 
             if (request.Languages != null)
                 employee.Languages = MapLanguages(request.Languages);
+            if (request.LeaveDays != null)
+                employee.LeaveDays = MapLeaveDays(request.LeaveDays);
             if (request.Addresses != null)
                 employee.Addresses = MapAddresses(request.Addresses);
             if (request.Families != null)
@@ -85,6 +89,21 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
             {
                 LanguageEnum = dto.LanguageEnum,
                 ProficiencyLevel = dto.ProficiencyLevel
+            }).ToList();
+        }
+
+        private ICollection<Domain.Entities.EmployeeLeaveDays> MapLeaveDays(List<EmployeeLeaveDaysDto> dtos)
+        {
+            if (dtos == null) return null; // Null kontrolü
+
+            return dtos.Select(dto => new Domain.Entities.EmployeeLeaveDays
+            {
+                LeaveStartDate = dto.LeaveStartDate,
+                LeaveEndDate = dto.LeaveEndDate,
+                LeaveReason = dto.LeaveReason,
+                LeaveTypeName = dto.LeaveTypeName,
+                LeaveStatusName = dto.LeaveStatusName,
+                ApprovalComments = dto.ApprovalComments,
             }).ToList();
         }
 

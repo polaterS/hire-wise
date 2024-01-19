@@ -86,6 +86,9 @@ namespace HireWise.Persistence
 
             services.AddScoped<IDepartmentReportReadRepository, DepartmentReportReadRepository>();
             services.AddScoped<IDepartmentReportWriteRepository, DepartmentReportWriteRepository>();
+
+            services.AddScoped<IEmployeeLeaveDaysReadRepository, EmployeeLeaveDaysReadRepository>();
+            services.AddScoped<IEmployeeLeaveDaysWriteRepository, EmployeeLeaveDaysWriteRepository>();
         }
     }
 }

@@ -243,6 +243,54 @@ namespace HireWise.Persistence.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("HireWise.Domain.Entities.EmployeeLeaveDays", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApprovalComments")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("LeaveEndDate")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LeaveReason")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LeaveStartDate")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LeaveStatusName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LeaveTypeName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("EmployeeLeaveDays");
+                });
+
             modelBuilder.Entity("HireWise.Domain.Entities.EmployeeReport", b =>
                 {
                     b.Property<int>("Id")
@@ -982,6 +1030,17 @@ namespace HireWise.Persistence.Migrations
                     b.Navigation("Position");
                 });
 
+            modelBuilder.Entity("HireWise.Domain.Entities.EmployeeLeaveDays", b =>
+                {
+                    b.HasOne("HireWise.Domain.Entities.Employee", "Employee")
+                        .WithMany("LeaveDays")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+                });
+
             modelBuilder.Entity("HireWise.Domain.Entities.Endpoint", b =>
                 {
                     b.HasOne("HireWise.Domain.Entities.Menu", "Menu")
@@ -1113,6 +1172,8 @@ namespace HireWise.Persistence.Migrations
                     b.Navigation("Families");
 
                     b.Navigation("Languages");
+
+                    b.Navigation("LeaveDays");
 
                     b.Navigation("SchoolExperiences");
 

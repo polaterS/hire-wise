@@ -34,6 +34,7 @@ namespace HireWise.Persistence.Context
         public DbSet<JobPosting> JobPosts { get; set; }
         public DbSet<EmployeeReport> EmployeeReport { get; set; }
         public DbSet<DepartmentReport> DepartmentReport { get; set; }
+        public DbSet<EmployeeLeaveDays> EmployeeLeaveDays { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

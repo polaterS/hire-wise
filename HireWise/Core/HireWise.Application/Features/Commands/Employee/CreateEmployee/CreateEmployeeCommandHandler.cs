@@ -28,6 +28,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
                 MaritalStatuId = request.MaritalStatuId,
                 PositionId = request.PositionId,
                 //EmployeeImageFiles = MapEmployeeImageFiles(request.EmployeeImageFiles),
+                LeaveDays = MapLeaveDays(request.LeaveDays),
                 Languages = MapLanguages(request.Languages),
                 Addresses = MapAddresses(request.Addresses),
                 Families = MapFamilies(request.Families),
@@ -59,6 +60,20 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
             {
                 LanguageEnum = dto.LanguageEnum,
                 ProficiencyLevel = dto.ProficiencyLevel
+            }).ToList();
+        }
+        private ICollection<Domain.Entities.EmployeeLeaveDays> MapLeaveDays(List<EmployeeLeaveDaysDto> dtos)
+        {
+            if (dtos == null) return null; // Null kontrolü
+
+            return dtos.Select(dto => new Domain.Entities.EmployeeLeaveDays
+            {
+                LeaveStartDate = dto.LeaveStartDate,
+                LeaveEndDate = dto.LeaveEndDate,
+                LeaveReason = dto.LeaveReason,
+                LeaveTypeName = dto.LeaveTypeName,
+                LeaveStatusName = dto.LeaveStatusName,
+                ApprovalComments = dto.ApprovalComments,
             }).ToList();
         }
 

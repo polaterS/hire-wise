@@ -27715,3 +27715,100 @@ LIMIT 1
 StatusCode: 200
 2024-01-19 16:08:15.343 +03:00 [INF] HTTP PUT /api/Employees/26 responded 200 in 124.6168 ms
 2024-01-19 16:08:15.345 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7298/api/Employees/26 application/json 121 - 200 0 - 142.9331ms
+2024-01-19 16:52:56.074 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-19 16:52:56.317 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-19 16:52:56.318 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-19 16:52:56.321 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-19 16:52:56.322 +03:00 [INF] Hosting environment: Development
+2024-01-19 16:52:56.323 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-19 16:52:56.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-19 16:52:56.984 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 199.5482ms
+2024-01-19 16:52:56.998 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-19 16:52:57.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-19 16:52:57.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 6.8591ms
+2024-01-19 16:52:57.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.6490ms
+2024-01-19 16:52:57.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-19 16:52:57.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.9599ms
+2024-01-19 16:54:16.320 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-19 16:54:16.614 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-19 16:54:16.615 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-19 16:54:16.618 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-19 16:54:16.619 +03:00 [INF] Hosting environment: Development
+2024-01-19 16:54:16.621 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-19 16:54:16.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-19 16:54:17.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 186.2342ms
+2024-01-19 16:54:17.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-19 16:54:17.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-19 16:54:17.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.2830ms
+2024-01-19 16:54:17.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.6463ms
+2024-01-19 16:54:17.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-19 16:54:17.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.3309ms
+2024-01-19 16:55:14.033 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-19 16:55:14.381 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-19 16:55:14.383 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-19 16:55:14.388 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-19 16:55:14.389 +03:00 [INF] Hosting environment: Development
+2024-01-19 16:55:14.390 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-19 16:55:14.776 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-19 16:55:14.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 187.0242ms
+2024-01-19 16:55:14.972 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-19 16:55:14.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-19 16:55:14.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.8207ms
+2024-01-19 16:55:15.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.5226ms
+2024-01-19 16:55:15.080 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-19 16:55:15.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 124.4466ms
+2024-01-19 16:55:24.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays - -
+2024-01-19 16:55:24.067 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-19 16:55:24.091 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-19 16:55:24.126 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployeeLeaveDays.GetAllEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-19 16:55:25.569 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-19 16:55:25.918 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "EmployeeLeaveDays" AS e
+2024-01-19 16:55:25.978 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-19 16:55:25.982 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-19 16:55:26.027 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."LeaveStatusName", e."LeaveStartDate", e."LeaveEndDate", e."LeaveTypeName", e."LeaveReason", e."ApprovalComments"
+FROM "EmployeeLeaveDays" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-19 16:55:26.038 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployeeLeaveDays.GetAllEmployeeLeaveDaysQueryResponse'.
+2024-01-19 16:55:26.048 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-19 16:55:26.056 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 1919.3435ms
+2024-01-19 16:55:26.058 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-19 16:55:26.061 +03:00 [INF] ResponseBody: {"totalEmployeeLeaveDaysCount":0,"employeeLeaveDays":[]}
+2024-01-19 16:55:26.064 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays responded 200 in 2002.7828 ms
+2024-01-19 16:55:26.076 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays - - - 200 - application/json;+charset=utf-8 2025.6560ms
+2024-01-19 17:06:20.818 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-19 17:06:21.044 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-19 17:06:21.046 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-19 17:06:21.051 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-19 17:06:21.052 +03:00 [INF] Hosting environment: Development
+2024-01-19 17:06:21.054 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-19 17:06:21.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-19 17:06:21.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 176.7922ms
+2024-01-19 17:06:21.759 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-19 17:06:21.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 4.0287ms
+2024-01-19 17:06:21.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-19 17:06:21.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.9685ms
+2024-01-19 17:06:21.902 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-19 17:06:22.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 113.7719ms
