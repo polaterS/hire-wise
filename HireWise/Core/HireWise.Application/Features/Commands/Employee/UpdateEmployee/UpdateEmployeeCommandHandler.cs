@@ -103,7 +103,6 @@ namespace HireWise.Application.Features.Commands.Employee.UpdateEmployee
                 LeaveReason = dto.LeaveReason,
                 LeaveTypeName = dto.LeaveTypeName,
                 LeaveStatusName = dto.LeaveStatusName,
-                ApprovalComments = dto.ApprovalComments,
             }).ToList();
         }
 

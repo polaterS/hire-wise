@@ -189,39 +189,33 @@ namespace HireWise.Persistence.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CitizenshipNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("DateOfBirth")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<int?>("DepartmentId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("GenderId")
+                    b.Property<int?>("GenderId")
                         .HasColumnType("integer");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("MaritalStatuId")
+                    b.Property<int?>("MaritalStatuId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int?>("PositionId")
@@ -250,10 +244,6 @@ namespace HireWise.Persistence.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ApprovalComments")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -1001,21 +991,15 @@ namespace HireWise.Persistence.Migrations
                 {
                     b.HasOne("HireWise.Domain.Entities.Department", "Department")
                         .WithMany("Employees")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DepartmentId");
 
                     b.HasOne("HireWise.Domain.Entities.Gender", "Gender")
                         .WithMany()
-                        .HasForeignKey("GenderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GenderId");
 
                     b.HasOne("HireWise.Domain.Entities.MaritalStatu", "MaritalStatu")
                         .WithMany()
-                        .HasForeignKey("MaritalStatuId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaritalStatuId");
 
                     b.HasOne("HireWise.Domain.Entities.Position", "Position")
                         .WithMany("Employees")

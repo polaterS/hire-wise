@@ -21,7 +21,6 @@ namespace HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmploye
                 LeaveReason = employeeLeaveDays.LeaveReason,
                 LeaveTypeName = employeeLeaveDays.LeaveTypeName,
                 LeaveStatusName = employeeLeaveDays.LeaveStatusName,
-                ApprovalComments = employeeLeaveDays.ApprovalComments
             };
         }
     }

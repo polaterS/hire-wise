@@ -10,9 +10,9 @@ namespace HireWise.Application.Features.Queries.Employee.GetByIdEmployee
         public string Phone { get; set; }
         public string DateOfBirth { get; set; }
         public string CitizenshipNumber { get; set; }
-        public int DepartmentId { get; set; }
-        public int GenderId { get; set; }
-        public int MaritalStatuId { get; set; }
+        public int? DepartmentId { get; set; }
+        public int? GenderId { get; set; }
+        public int? MaritalStatuId { get; set; }
         public int? PositionId { get; set; }
         //public List<EmployeeImageFileDto> EmployeeImageFiles { get; set; }
         public List<LanguageDto>? Languages { get; set; }

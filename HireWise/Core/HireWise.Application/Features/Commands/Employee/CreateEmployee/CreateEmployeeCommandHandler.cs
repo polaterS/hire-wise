@@ -5,7 +5,6 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
 {
     public class CreateEmployeeCommandHandler : IRequestHandler<CreateEmployeeCommandRequest, CreateEmployeeCommandResponse>
     {
-
         readonly IEmployeeWriteRepository _employeeWriteRepository;
 
         public CreateEmployeeCommandHandler(IEmployeeWriteRepository employeeWriteRepository)
@@ -15,30 +14,62 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
 
         public async Task<CreateEmployeeCommandResponse> Handle(CreateEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
-            await _employeeWriteRepository.AddAsync(new()
-            {
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                Email = request.Email,
-                Phone = request.Phone,
-                DateOfBirth = request.DateOfBirth,
-                CitizenshipNumber = request.CitizenshipNumber,
-                DepartmentId = request.DepartmentId,
-                GenderId = request.GenderId,
-                MaritalStatuId = request.MaritalStatuId,
-                PositionId = request.PositionId,
-                //EmployeeImageFiles = MapEmployeeImageFiles(request.EmployeeImageFiles),
-                LeaveDays = MapLeaveDays(request.LeaveDays),
-                Languages = MapLanguages(request.Languages),
-                Addresses = MapAddresses(request.Addresses),
-                Families = MapFamilies(request.Families),
-                SchoolExperiences = MapSchoolExperiences(request.SchoolExperiences),
-                WorkExperiences = MapWorkExperiences(request.WorkExperiences),
-            });
+
+            var newEmployee = new HireWise.Domain.Entities.Employee();
+
+            if (request.FirstName != null)
+                newEmployee.FirstName = request.FirstName;
+
+            if (request.LastName != null)
+                newEmployee.LastName = request.LastName;
+
+            if (request.Email != null)
+                newEmployee.Email = request.Email;
+
+            if (request.Phone != null)
+                newEmployee.Phone = request.Phone;
+
+            if (request.DateOfBirth != null)
+                newEmployee.DateOfBirth = request.DateOfBirth;
+
+            if (request.CitizenshipNumber != null)
+                newEmployee.CitizenshipNumber = request.CitizenshipNumber;
+
+            if (request.DepartmentId.HasValue)
+                newEmployee.DepartmentId = request.DepartmentId.Value;
+
+            if (request.GenderId.HasValue)
+                newEmployee.GenderId = request.GenderId.Value;
+
+            if (request.MaritalStatuId.HasValue)
+                newEmployee.MaritalStatuId = request.MaritalStatuId.Value;
+
+            if (request.PositionId.HasValue)
+                newEmployee.PositionId = request.PositionId.Value;
+
+            // EmployeeImageFiles mapping could be added here similar to other properties
+
+            if (request.Languages != null)
+                newEmployee.Languages = MapLanguages(request.Languages);
+
+            if (request.Addresses != null)
+                newEmployee.Addresses = MapAddresses(request.Addresses);
+
+            if (request.Families != null)
+                newEmployee.Families = MapFamilies(request.Families);
+
+            if (request.SchoolExperiences != null)
+                newEmployee.SchoolExperiences = MapSchoolExperiences(request.SchoolExperiences);
+
+            if (request.WorkExperiences != null)
+                newEmployee.WorkExperiences = MapWorkExperiences(request.WorkExperiences);
+
+            await _employeeWriteRepository.AddAsync(newEmployee);
             await _employeeWriteRepository.SaveAsync();
 
             return new();
         }
+
 
         //private ICollection<HireWise.Domain.Entities.EmployeeImageFile> MapEmployeeImageFiles(List<EmployeeImageFileDto> dtos)
         //{
@@ -62,20 +93,7 @@ namespace HireWise.Application.Features.Commands.Employee.CreateEmployee
                 ProficiencyLevel = dto.ProficiencyLevel
             }).ToList();
         }
-        private ICollection<Domain.Entities.EmployeeLeaveDays> MapLeaveDays(List<EmployeeLeaveDaysDto> dtos)
-        {
-            if (dtos == null) return null; // Null kontrolü
-
-            return dtos.Select(dto => new Domain.Entities.EmployeeLeaveDays
-            {
-                LeaveStartDate = dto.LeaveStartDate,
-                LeaveEndDate = dto.LeaveEndDate,
-                LeaveReason = dto.LeaveReason,
-                LeaveTypeName = dto.LeaveTypeName,
-                LeaveStatusName = dto.LeaveStatusName,
-                ApprovalComments = dto.ApprovalComments,
-            }).ToList();
-        }
+        
 
         private ICollection<HireWise.Domain.Entities.Address> MapAddresses(List<AddressDto> dtos)
         {

@@ -21,7 +21,6 @@ namespace HireWise.Application.Features.Commands.EmployeeLeaveDays.UpdateEmploye
             employeeLeaveDays.LeaveReason = request.LeaveReason;
             employeeLeaveDays.LeaveTypeName = request.LeaveTypeName;
             employeeLeaveDays.LeaveStatusName = request.LeaveStatusName;
-            employeeLeaveDays.ApprovalComments = request.ApprovalComments;
             await _employeeLeaveDaysWriteRepository.SaveAsync();
             return new();
         }

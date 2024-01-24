@@ -24,7 +24,5 @@ namespace HireWise.Domain.Entities
         // İzin talebinin mevcut durumunu (beklemede, onaylandı, reddedildi)
         public string LeaveStatusName { get; set; }
 
-        // Yöneticinin izin talebi ile ilgili yorumları veya açıklamaları
-        public string ApprovalComments { get; set; }
     }
 }

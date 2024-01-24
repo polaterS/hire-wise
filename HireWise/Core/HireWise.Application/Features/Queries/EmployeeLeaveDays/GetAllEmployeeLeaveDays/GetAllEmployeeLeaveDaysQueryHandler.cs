@@ -23,7 +23,6 @@ namespace HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployee
                 d.LeaveEndDate,
                 d.LeaveTypeName,
                 d.LeaveReason,
-                d.ApprovalComments,
             }).ToList();
 
             return new()
