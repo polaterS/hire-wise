@@ -37515,3 +37515,1038 @@ StatusCode: 200
 2024-01-24 03:53:32.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
 2024-01-24 03:53:32.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1674.5660ms
 2024-01-24 03:53:32.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.8676ms
+2024-01-26 15:45:42.874 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 15:45:45.207 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-26 15:45:45.216 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-26 15:45:45.227 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 15:45:45.230 +03:00 [INF] Hosting environment: Development
+2024-01-26 15:45:45.235 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-26 15:45:48.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-26 15:45:50.031 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 1059.4955ms
+2024-01-26 15:45:50.043 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-26 15:45:50.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 12.7336ms
+2024-01-26 15:45:50.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-26 15:45:50.319 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 232.2947ms
+2024-01-26 15:45:50.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-26 15:45:51.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 525.5709ms
+2024-01-26 15:49:04.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - -
+2024-01-26 15:49:04.783 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/1
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 15:49:04.807 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:04.850 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 15:49:08.036 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 15:49:09.158 +03:00 [ERR] An error occurred using the connection to database 'HireWiseDb' on server ''.
+2024-01-26 15:49:09.413 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HireWise.Persistence.Context.HireWiseDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|193_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|31_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|193_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|31_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-01-26 15:49:10.052 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 5186.603ms
+2024-01-26 15:49:10.078 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:10.399 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/1 responded 500 in 5619.1677 ms
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|193_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|31_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByIdAsync(String id, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 51
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryHandler.Handle(GetByIdEmployeeLeaveDaysQueryRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetByIdEmployeeLeaveDays\GetByIdEmployeeLeaveDaysQueryHandler.cs:line 16
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.Get(GetByIdEmployeeLeaveDaysQueryRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 15:49:10.692 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|193_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|31_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByIdAsync(String id, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 51
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryHandler.Handle(GetByIdEmployeeLeaveDaysQueryRequest request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetByIdEmployeeLeaveDays\GetByIdEmployeeLeaveDaysQueryHandler.cs:line 16
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.Get(GetByIdEmployeeLeaveDaysQueryRequest request) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 15:49:10.727 +03:00 [ERR] An exception has been raised that is likely due to a transient failure.
+2024-01-26 15:49:10.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - - - 500 - application/json 6007.3330ms
+2024-01-26 15:49:17.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays - -
+2024-01-26 15:49:17.042 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 15:49:17.054 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:17.077 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployeeLeaveDays.GetAllEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 15:49:17.152 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 15:49:17.549 +03:00 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "EmployeeLeaveDays" AS e
+2024-01-26 15:49:17.617 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 15:49:17.620 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 15:49:17.689 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."LeaveStatusName", e."LeaveStartDate", e."LeaveEndDate", e."LeaveTypeName", e."LeaveReason"
+FROM "EmployeeLeaveDays" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-26 15:49:17.712 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployeeLeaveDays.GetAllEmployeeLeaveDaysQueryResponse'.
+2024-01-26 15:49:17.728 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 15:49:17.732 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 641.8107ms
+2024-01-26 15:49:17.740 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:17.749 +03:00 [INF] ResponseBody: {"totalEmployeeLeaveDaysCount":1,"employeeLeaveDays":[{"id":1,"leaveStatusName":"string","leaveStartDate":"asdasdas","leaveEndDate":"string","leaveTypeName":"string","leaveReason":"string"}]}
+2024-01-26 15:49:17.752 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays responded 200 in 709.8354 ms
+2024-01-26 15:49:17.762 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays - - - 200 - application/json;+charset=utf-8 725.4804ms
+2024-01-26 15:49:23.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - -
+2024-01-26 15:49:23.767 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/1
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 15:49:23.774 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:23.778 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 15:49:23.800 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 15:49:23.845 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CreatedDate", e."EmployeeId", e."LeaveEndDate", e."LeaveReason", e."LeaveStartDate", e."LeaveStatusName", e."LeaveTypeName", e."UpdatedDate"
+FROM "EmployeeLeaveDays" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-26 15:49:23.898 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryResponse'.
+2024-01-26 15:49:23.904 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 15:49:23.905 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 117.4618ms
+2024-01-26 15:49:23.909 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 15:49:23.912 +03:00 [INF] ResponseBody: {"leaveStartDate":"asdasdas","leaveEndDate":"string","leaveReason":"string","leaveTypeName":"string","leaveStatusName":"string"}
+2024-01-26 15:49:23.915 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays/1 responded 200 in 147.7377 ms
+2024-01-26 15:49:23.920 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - - - 200 - application/json;+charset=utf-8 157.1047ms
+2024-01-26 16:47:35.203 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 16:47:36.422 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-26 16:47:36.427 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-26 16:47:36.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 16:47:36.436 +03:00 [INF] Hosting environment: Development
+2024-01-26 16:47:36.437 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-26 16:47:37.129 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-26 16:47:37.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 510.3792ms
+2024-01-26 16:47:37.641 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-26 16:47:37.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 8.4799ms
+2024-01-26 16:47:37.673 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-26 16:47:37.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.3148ms
+2024-01-26 16:47:38.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-26 16:47:38.741 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 403.5129ms
+2024-01-26 16:47:48.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - -
+2024-01-26 16:47:48.821 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/34
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:47:48.860 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:47:48.927 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:47:52.471 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:47:52.850 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 3891.9431ms
+2024-01-26 16:47:52.878 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:47:52.930 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/34 responded 500 in 4112.9874 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:47:54.051 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:47:54.085 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:47:54.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - - - 500 - application/json 5348.4060ms
+2024-01-26 16:48:14.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - -
+2024-01-26 16:48:14.973 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/34
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:48:15.015 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:15.017 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:48:15.133 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:48:15.276 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 254.2188ms
+2024-01-26 16:48:15.280 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:15.575 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/34 responded 500 in 602.8378 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:48:15.596 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:48:15.617 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:48:15.677 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - - - 500 - application/json 781.6155ms
+2024-01-26 16:48:19.550 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - -
+2024-01-26 16:48:19.552 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/34
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:48:19.573 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:19.578 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:48:19.610 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:48:19.734 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 149.9725ms
+2024-01-26 16:48:19.746 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:19.781 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/34 responded 500 in 229.0553 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:48:19.826 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:48:19.876 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:48:19.884 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - - - 500 - application/json 334.6511ms
+2024-01-26 16:48:27.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - -
+2024-01-26 16:48:27.306 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/34
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:48:27.311 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:27.315 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:48:27.321 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:48:27.456 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 136.9072ms
+2024-01-26 16:48:27.469 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:48:27.501 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/34 responded 500 in 194.6722 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:48:27.523 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:48:27.536 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:48:27.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/34 - - - 500 - application/json 236.6100ms
+2024-01-26 16:48:36.474 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - -
+2024-01-26 16:48:36.483 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/1
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:48:36.491 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 16:48:36.510 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:48:36.598 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:48:38.065 +03:00 [INF] Executed DbCommand (70ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CreatedDate", e."EmployeeId", e."LeaveEndDate", e."LeaveReason", e."LeaveStartDate", e."LeaveStatusName", e."LeaveTypeName", e."UpdatedDate"
+FROM "EmployeeLeaveDays" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-26 16:48:38.203 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryResponse'.
+2024-01-26 16:48:38.216 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 16:48:38.223 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 1698.9964ms
+2024-01-26 16:48:38.229 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 16:48:38.243 +03:00 [INF] ResponseBody: {"leaveStartDate":"asdasdas","leaveEndDate":"string","leaveReason":"string","leaveTypeName":"string","leaveStatusName":"string"}
+2024-01-26 16:48:38.247 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays/1 responded 200 in 1764.6474 ms
+2024-01-26 16:48:38.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/1 - - - 200 - application/json;+charset=utf-8 1788.8250ms
+2024-01-26 16:48:58.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Employees - -
+2024-01-26 16:48:58.620 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Employees
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:48:58.626 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-26 16:48:58.649 +03:00 [INF] Route matched with {action = "Get", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryRequest) on controller HireWise.API.Controllers.EmployeesController.EmployeesController (HireWise.API).
+2024-01-26 16:48:58.670 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:48:58.696 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 16:48:58.703 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 16:48:58.778 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."FirstName", e."LastName", e."Email", e."Phone", e."DateOfBirth", e."CitizenshipNumber", e."GenderId", e."DepartmentId", e."PositionId", e."MaritalStatuId", e."CreatedDate", e."UpdatedDate"
+FROM "Employees" AS e
+LIMIT @__p_1 OFFSET @__p_0
+2024-01-26 16:48:58.803 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeeQueryResponse'.
+2024-01-26 16:48:58.831 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 16:48:58.835 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API) in 179.0116ms
+2024-01-26 16:48:58.849 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeesController.EmployeesController.Get (HireWise.API)'
+2024-01-26 16:48:58.853 +03:00 [INF] ResponseBody: {"totalEmployeeCount":14,"employees":[{"id":38,"firstName":"string","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T07:42:19.713313Z","updatedDate":"0001-01-01T00:00:00"},{"id":39,"firstName":"string","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":null,"maritalStatuId":1,"createdDate":"2024-01-22T07:42:43.229842Z","updatedDate":"0001-01-01T00:00:00"},{"id":34,"firstName":"string","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T07:41:42.477909Z","updatedDate":"2024-01-22T08:18:49.608792Z"},{"id":47,"firstName":"string","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:07:50.912229Z","updatedDate":"2024-01-22T10:07:49.513588Z"},{"id":48,"firstName":"string","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:10:20.895153Z","updatedDate":"2024-01-22T10:08:02.891314Z"},{"id":49,"firstName":"test1","lastName":"aa","email":"string","phone":"aaa","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:11:10.436028Z","updatedDate":"2024-01-22T10:10:39.399351Z"},{"id":54,"firstName":"afasfasfas","lastName":"asfasf","email":"asfasfaf","phone":"asfasfsafasf","dateOfBirth":"asfasfasf","citizenshipNumber":"asfasfasfa","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:19:52.186123Z","updatedDate":"2024-01-22T10:19:46.46742Z"},{"id":56,"firstName":"tesettetet","lastName":"jjnajsf","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:26:41.820338Z","updatedDate":"2024-01-22T10:26:37.991895Z"},{"id":57,"firstName":"denemeaafa23232323232","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:28:43.017075Z","updatedDate":"2024-01-22T10:28:36.924339Z"},{"id":58,"firstName":"denemeaafa23232323232","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:29:06.889824Z","updatedDate":"2024-01-22T10:28:58.887592Z"},{"id":59,"firstName":"test4444","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T10:30:49.052437Z","updatedDate":"2024-01-22T10:34:39.654837Z"},{"id":60,"firstName":"test","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":1,"departmentId":1,"positionId":1,"maritalStatuId":1,"createdDate":"2024-01-22T18:26:26.169383Z","updatedDate":"0001-01-01T00:00:00"},{"id":61,"firstName":"test","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":null,"departmentId":null,"positionId":null,"maritalStatuId":null,"createdDate":"2024-01-22T18:27:02.330206Z","updatedDate":"0001-01-01T00:00:00"},{"id":62,"firstName":"testtt","lastName":"string","email":"string","phone":"string","dateOfBirth":"string","citizenshipNumber":"string","genderId":null,"departmentId":null,"positionId":null,"maritalStatuId":null,"createdDate":"2024-01-23T19:46:40.380082Z","updatedDate":"2024-01-23T19:48:56.075565Z"}]}
+2024-01-26 16:48:58.859 +03:00 [INF] HTTP GET /api/Employees responded 200 in 238.2955 ms
+2024-01-26 16:48:58.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Employees - - - 200 - application/json;+charset=utf-8 264.4968ms
+2024-01-26 16:49:11.092 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/EmployeeLeaveDays application/json 199
+2024-01-26 16:49:11.118 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 199
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:49:11.125 +03:00 [INF] CORS policy execution successful.
+2024-01-26 16:49:11.128 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Post (HireWise.API)'
+2024-01-26 16:49:11.137 +03:00 [INF] Route matched with {action = "Post", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HireWise.Application.Features.Commands.EmployeeLeaveDays.CreateEmployeeLeaveDays.CreateEmployeeLeaveDaysCommandRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:49:11.168 +03:00 [INF] RequestBody: {
+  "employeeId": 38,
+  "leaveStartDate": "string",
+  "leaveEndDate": "string",
+  "leaveReason": "string",
+  "leaveTypeName": "string",
+  "leaveStatusName": "string",
+  "approvalComments": "string"
+}
+2024-01-26 16:49:11.197 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:49:11.786 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "EmployeeLeaveDays" ("CreatedDate", "EmployeeId", "LeaveEndDate", "LeaveReason", "LeaveStartDate", "LeaveStatusName", "LeaveTypeName", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2024-01-26 16:49:11.943 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-01-26 16:49:11.946 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Post (HireWise.API) in 795.4668ms
+2024-01-26 16:49:11.948 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Post (HireWise.API)'
+2024-01-26 16:49:11.951 +03:00 [INF] Response:
+StatusCode: 201
+2024-01-26 16:49:11.953 +03:00 [INF] HTTP POST /api/EmployeeLeaveDays responded 201 in 837.9481 ms
+2024-01-26 16:49:11.957 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/EmployeeLeaveDays application/json 199 - 201 0 - 865.8127ms
+2024-01-26 16:49:17.934 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/2 - -
+2024-01-26 16:49:17.940 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/2
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:49:17.943 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 16:49:17.950 +03:00 [INF] Route matched with {action = "Get", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryRequest) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:49:17.968 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:49:18.002 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CreatedDate", e."EmployeeId", e."LeaveEndDate", e."LeaveReason", e."LeaveStartDate", e."LeaveStatusName", e."LeaveTypeName", e."UpdatedDate"
+FROM "EmployeeLeaveDays" AS e
+WHERE e."Id" = @__Parse_0
+LIMIT 1
+2024-01-26 16:49:18.018 +03:00 [INF] Executing OkObjectResult, writing value of type 'HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays.GetByIdEmployeeLeaveDaysQueryResponse'.
+2024-01-26 16:49:18.028 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 16:49:18.033 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API) in 67.0699ms
+2024-01-26 16:49:18.037 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.Get (HireWise.API)'
+2024-01-26 16:49:18.041 +03:00 [INF] ResponseBody: {"leaveStartDate":"string","leaveEndDate":"string","leaveReason":"string","leaveTypeName":"string","leaveStatusName":"string"}
+2024-01-26 16:49:18.045 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays/2 responded 200 in 105.1185 ms
+2024-01-26 16:49:18.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/2 - - - 200 - application/json;+charset=utf-8 124.9414ms
+2024-01-26 16:49:22.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - -
+2024-01-26 16:49:22.471 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/38
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:49:22.476 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:49:22.486 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:49:22.503 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:49:22.637 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 136.705ms
+2024-01-26 16:49:22.643 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:49:22.689 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/38 responded 500 in 217.7806 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:49:22.721 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:49:22.746 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:49:22.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - - - 500 - application/json 287.7408ms
+2024-01-26 16:49:24.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - -
+2024-01-26 16:49:24.783 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/38
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:49:24.788 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:49:24.806 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(System.String) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:49:24.817 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:49:24.941 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 124.7043ms
+2024-01-26 16:49:24.947 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:49:24.976 +03:00 [ERR] HTTP GET /api/EmployeeLeaveDays/ByEmployee/38 responded 500 in 192.7122 ms
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-26 16:49:25.009 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+   at System.Linq.Expressions.Expression.GetEqualityComparisonOperator(ExpressionType binaryType, String opName, Expression left, Expression right, Boolean liftToNull)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right, Boolean liftToNull, MethodInfo method)
+   at System.Linq.Expressions.Expression.Equal(Expression left, Expression right)
+   at HireWise.Persistence.Repositories.ReadRepository`1.GetByEmployeeIdAsync(String employeeId, Boolean tracking) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Infrastructure\HireWise.Persistence\Repositories\ReadRepository.cs:line 70
+   at HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee.GetEmployeeLeaveDaysByEmployeeQueryHandler.Handle(GetEmployeeLeaveDaysByEmployeeQuery request, CancellationToken cancellationToken) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Core\HireWise.Application\Features\Queries\EmployeeLeaveDays\GetEmployeeLeaveDaysByEmployee\GetEmployeeLeaveDaysByEmployeeQueryHandler.cs:line 20
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee(String employeeId) in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Controllers\EmployeeLeaveDaysController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\Program.cs:line 164
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-01-26 16:49:25.025 +03:00 [ERR] The binary operator Equal is not defined for the types 'System.Int32' and 'System.String'.
+2024-01-26 16:49:25.027 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - - - 500 - application/json 247.6197ms
+2024-01-26 16:51:21.589 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 16:51:21.952 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-26 16:51:21.960 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-26 16:51:21.976 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 16:51:21.982 +03:00 [INF] Hosting environment: Development
+2024-01-26 16:51:21.985 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-26 16:51:22.448 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-26 16:51:22.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 378.2563ms
+2024-01-26 16:51:22.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-26 16:51:22.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 17.2405ms
+2024-01-26 16:51:22.855 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-26 16:51:22.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 138.2486ms
+2024-01-26 16:51:23.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-26 16:51:23.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 245.1171ms
+2024-01-26 16:51:30.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - -
+2024-01-26 16:51:30.132 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/EmployeeLeaveDays/ByEmployee/38
+Accept: */*
+Host: localhost:7298
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-01-26 16:51:30.174 +03:00 [INF] Executing endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:51:30.243 +03:00 [INF] Route matched with {action = "GetEmployeeLeaveDaysByEmployee", controller = "EmployeeLeaveDays"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveDaysByEmployee(Int32) on controller HireWise.API.Controllers.EmployeeLeaveDaysController (HireWise.API).
+2024-01-26 16:51:33.121 +03:00 [INF] Entity Framework Core 6.0.0 initialized 'HireWiseDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700' with options: None
+2024-01-26 16:51:34.114 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CreatedDate", e."EmployeeId", e."LeaveEndDate", e."LeaveReason", e."LeaveStartDate", e."LeaveStatusName", e."LeaveTypeName", e."UpdatedDate"
+FROM "EmployeeLeaveDays" AS e
+WHERE e."EmployeeId" = 38
+2024-01-26 16:51:34.364 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HireWise.Application.Dto.EmployeeLeaveDaysDto, HireWise.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-26 16:51:34.374 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-01-26 16:51:34.392 +03:00 [INF] Executed action HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API) in 4127.6714ms
+2024-01-26 16:51:34.397 +03:00 [INF] Executed endpoint 'HireWise.API.Controllers.EmployeeLeaveDaysController.GetEmployeeLeaveDaysByEmployee (HireWise.API)'
+2024-01-26 16:51:34.409 +03:00 [INF] ResponseBody: [{"leaveStartDate":"string","leaveEndDate":"string","leaveReason":"string","leaveTypeName":"string","leaveStatusName":"string"}]
+2024-01-26 16:51:34.420 +03:00 [INF] HTTP GET /api/EmployeeLeaveDays/ByEmployee/38 responded 200 in 4293.4382 ms
+2024-01-26 16:51:34.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/EmployeeLeaveDays/ByEmployee/38 - - - 200 - application/json;+charset=utf-8 4353.9819ms
+2024-01-26 16:51:49.656 +03:00 [INF] User profile is available. Using 'C:\Users\Polater\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 16:51:50.015 +03:00 [INF] Now listening on: https://localhost:7298
+2024-01-26 16:51:50.018 +03:00 [INF] Now listening on: http://localhost:5232
+2024-01-26 16:51:50.023 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 16:51:50.024 +03:00 [INF] Hosting environment: Development
+2024-01-26 16:51:50.027 +03:00 [INF] Content root path: C:\Users\Polater\Documents\GitHub\hire-wise\HireWise\Presentation\HireWise.API\
+2024-01-26 16:51:50.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - -
+2024-01-26 16:51:51.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - - - 200 - text/html;charset=utf-8 403.9379ms
+2024-01-26 16:51:51.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - -
+2024-01-26 16:51:51.265 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 11.6046ms
+2024-01-26 16:51:51.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - -
+2024-01-26 16:51:51.412 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.0566ms
+2024-01-26 16:51:51.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - -
+2024-01-26 16:51:52.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 244.3881ms

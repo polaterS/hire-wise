@@ -9,5 +9,7 @@ namespace HireWise.Application.Repositories
         IQueryable<T> GetWhere(Expression<Func<T, bool>> method, bool tracking = true);
         Task<T> GetSingleAsync(Expression<Func<T, bool>> method, bool tracking = true);
         Task<T> GetByIdAsync(string id, bool tracking = true);
+        Task<List<T>> GetByEmployeeIdAsync(int employeeId, bool tracking = true);
+
     }
 }

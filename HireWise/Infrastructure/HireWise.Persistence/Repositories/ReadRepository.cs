@@ -50,6 +50,34 @@ namespace HireWise.Persistence.Repositories
                 query = Table.AsNoTracking();
             return await query.FirstOrDefaultAsync(data => data.Id == int.Parse(id));
         }
-            
+
+        public async Task<List<T>> GetByEmployeeIdAsync(int employeeId, bool tracking = true)
+        {
+            var propertyInfo = typeof(T).GetProperty("EmployeeId");
+            if (propertyInfo != null)
+            {
+                var query = _context.Set<T>().AsQueryable();
+
+                if (!tracking)
+                {
+                    query = query.AsNoTracking();
+                }
+
+                // "EmployeeId" özelliğine göre filtreleme yapmak için dinamik bir yaklaşım
+                var parameter = Expression.Parameter(typeof(T), "e");
+                var property = Expression.Property(parameter, "EmployeeId");
+                var constant = Expression.Constant(employeeId);
+                var comparison = Expression.Equal(property, constant);
+                var lambda = Expression.Lambda<Func<T, bool>>(comparison, parameter);
+
+                return await query.Where(lambda).ToListAsync();
+            }
+            else
+            {
+                throw new InvalidOperationException("This entity does not support EmployeeId filtering.");
+            }
+        }
+
+
     }
 }

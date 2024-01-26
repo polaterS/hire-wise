@@ -8,6 +8,7 @@ using HireWise.Application.Features.Queries.Department.GetAllDepartment;
 using HireWise.Application.Features.Queries.Department.GetByIdDepartment;
 using HireWise.Application.Features.Queries.EmployeeLeaveDays.GetAllEmployeeLeaveDays;
 using HireWise.Application.Features.Queries.EmployeeLeaveDays.GetByIdEmployeeLeaveDays;
+using HireWise.Application.Features.Queries.EmployeeLeaveDays.GetEmployeeLeaveDaysByEmployee;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,14 @@ namespace HireWise.API.Controllers
         {
             GetByIdEmployeeLeaveDaysQueryResponse response = await _mediator.Send(request);
             return Ok(response);
+        }
+
+        [HttpGet("ByEmployee/{employeeId}")]
+        public async Task<IActionResult> GetEmployeeLeaveDaysByEmployee([FromRoute] int employeeId)
+        {
+            var query = new GetEmployeeLeaveDaysByEmployeeQuery { EmployeeId = employeeId };
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpPost]
